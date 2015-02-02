@@ -2,15 +2,15 @@
 
 ## Typography:
 
-+ I have used the following values to calulate my font sizes & line-height: 
+I have used the following values to calulate my font sizes & line-height: 
 ```
 16px, 18px, 21px, 24px, 36px, 48px, 60px, 72px
 ```
-+ My HTML font size is 16px at Desktop, so I have used this help convert my pixel values to em units. 
+My HTML font size is 16px at Desktop, so I have used this help convert my pixel values to em units. 
 ```
 48px / 16px = 3em
 ```
-+ The Baseline is 24px
+The Baseline is 24px
 ```
 24px / 16px = 1.5em
 ```
