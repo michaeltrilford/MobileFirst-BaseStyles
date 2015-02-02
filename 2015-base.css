@@ -1,0 +1,387 @@
+/* 2015 Combined Structure */
+
+/* normalize */
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;*display:inline;*zoom:1;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-size:100%;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}html,button,input,select,textarea{font-family:sans-serif;}body{margin:0;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;margin:0.67em 0;}h2{font-size:1.5em;margin:0.83em 0;}h3{font-size:1.17em;margin:1em 0;}h4{font-size:1em;margin:1.33em 0;}h5{font-size:0.83em;margin:1.67em 0;}h6{font-size:0.67em;margin:2.33em 0;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:bold;}blockquote{margin:1em 40px;}dfn{font-style:italic;}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0;}mark{background:#ff0;color:#000;}p,pre{margin:1em 0;}code,kbd,pre,samp{font-family:monospace,serif;_font-family:'courier new',monospace;font-size:1em;}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word;}q{quotes:none;}q:before,q:after{content:'';content:none;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-0.5em;}sub{bottom:-0.25em;}dl,menu,ol,ul{margin:1em 0;}dd{margin:0 0 0 40px;}menu,ol,ul{padding:0 0 0 40px;}nav ul,nav ol{list-style:none;list-style-image:none;}img{border:0;-ms-interpolation-mode:bicubic;}svg:not(:root){overflow:hidden;}figure{margin:0;}form{margin:0;}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em;}legend{border:0;padding:0;white-space:normal;*margin-left:-7px;}button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle;}button,input{line-height:normal;}button,select{text-transform:none;}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer;*overflow:visible;}button[disabled],html input[disabled]{cursor:default;}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;*height:13px;*width:13px;}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none;}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}
+
+/* html5 boilerplate */
+html,button,input,select,textarea{color:#222;}html{font-size:1em;line-height:1.4;}::-moz-selection{background:#b3d4fc;text-shadow:none;}::selection{background:#b3d4fc;text-shadow:none;}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0;}audio,canvas,img,video{vertical-align:middle;}fieldset{border:0;margin:0;padding:0;}textarea{resize:vertical;}
+
+/* =========================================================================
+  Browsehappy
+  ========================================================================== */
+  .browsehappy { text-align: center; padding: 0.75em; color: #ccc; background: #333; }
+  .browsehappy a { color: skyBlue; text-decoration: none; border-bottom: 0.0625em solid; }
+  .browsehappy a:hover { color: skyBlue; text-decoration: none; border-bottom: 0.0625em solid rgba(255,255,255,0.15); }
+
+/* =========================================================================
+  Typography
+  ==========================================================================
+
+  Scaled Used:
+  ------------ 
+  » 16px, 18px, 21px, 24px, 36px, 48px, 60px, 72px, 84px, 96px to calculate relative sizes.
+  » 30px has been used to calculate a suitable line-height for font-size: 21px;
+
+  Important information: 
+  ----------------------
+  » Even though the CSS is structured in a Mobile First approach, the Desktop base font-size: 16px; is used to calulate the em units.
+
+  H1 - fs:48px; / lh:60px;
+  H2 - fs:36px; / lh:48px;
+  H3 - fs:24px; / lh:36px;
+  H4 - fs:21px; / lh:30px;
+  H5 - fs:18px; / lh:24px;
+  H6 - fs:16px; / lh:24px;
+
+  medium - fs:18px; / lh:24px;
+  x-medium - fs:21px; / lh:30px;
+
+  large - fs:60px; / lh:72px;
+  x-large - fs:72px; / lh:84px; / mb:48px;
+  xx-large - fs:84px; / lh:96px; / mb:48px;
+
+  ========================================================================== */
+
+  html { font-size: 10px; line-height: 1.5; }
+
+  h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+  strong { font-weight: bold; }
+  em { font-style: italic; }
+
+  h1 { font-size: 3em; line-height: 1.25; }
+  h2 { font-size: 2.25em; line-height: 1.33333333333333; }                                       
+  h3 { font-size: 1.5em; line-height: 1.5; }                                                      
+  h4 { font-size: 1.3125em; line-height: 1.42857142857143; }                                   
+  h5 { font-size: 1.125em; line-height: 1.33333333333333; font-weight: bold; }                     
+  h6 { font-size: 1em; line-height: 1.5; font-weight: bold; }  
+  p { font-size: 1em; }
+  a { font-size: 1em; text-decoration: none; color: #333; border-bottom: 1px solid #333; }
+  a:hover { text-decoration: none; color: #333; border-bottom: none; }
+  a:focus { color: #333; outline: none; }
+
+  /* Medium */
+  .medium { font-size: 1.125em; line-height: 1.33333333333333; margin: 0 0 1.33333333333333em 0; } 
+  .x-medium { font-size: 1.3125em; line-height: 1.42857142857143; margin: 0 0 1.14285714285714em 0; }
+
+  /* Large */
+  .large { font-size: 3.75em; line-height: 1.2; margin-bottom: 0.4em; }                           
+  .x-large { font-size: 4.5em; line-height: 1.16666666666667; margin-bottom: 0.66666666666667em; }
+  .xx-large { font-size: 5.25em; line-height: 1.14285714285714; margin-bottom: 0.66666666666667em; }
+
+/* =========================================================================
+  Baseline Grid - 24px
+  ========================================================================== */
+  h1, h2, h3, p, header, footer, section, article, ul, aside, div { 
+    margin: 0 0 1.5em 0; 
+    width: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    }
+  h1 { margin: 0 0 0.5em 0; }
+  h2 { margin: 0 0 0.66666666666667em 0; }
+  h3 { margin: 0 0 1em 0; }
+  p { margin: 0 0 1.5em 0; }
+  h4 { margin: 0 0 1.14285714285714em 0; }
+  h5 { margin: 0 0 1.33333333333333em 0;  }
+  h6 { margin: 0 0 1.5em 0; }
+  li { margin: 0 0 1.5em 0; }
+
+/* =========================================================================
+  Clear styles
+  ==========================================================================
+  <header class="nmb">
+   <section class="wrapper">
+      <h1 class="nmb">Header</h1>
+   </section>
+  </header>
+  ========================================================================== */
+  /* No Margin top or bottom */
+  .nmb { margin-bottom: 0px; } .nmt { margin-top: 0px; } .nmr { margin-right: 0px; }
+  /* No Padding top or bottom */
+  .npb { padding-bottom: 0px; } .npt { padding-top: 0px; }
+  /* No border bottom */
+  .nbb, .nbb:hover { border-bottom: none; }
+
+/* =========================================================================
+  Wrapper Styles
+  ==========================================================================
+  <main>
+   <section class="wrapper"></section>
+  </main>
+  ========================================================================== */
+  .wrapper { width: 90%; width: calc( 100% - 3em ); max-width:73.75em; margin: 0 auto; padding: 1.5em 0; }
+
+/* =========================================================================
+  Selection Styles
+  ========================================================================== */
+  ::-moz-selection { background: #ee2741; color: white; text-shadow: none; }
+  ::selection { background: #ee2741; color: white; text-shadow: none; }
+
+/* =========================================================================
+  Box sizing
+  ========================================================================== */
+  *,
+  *:before,
+  *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    box-sizing:         border-box;
+    }
+
+/* =========================================================================
+  List Styles
+  ========================================================================== */
+  /* General List Styles */
+  ul, ol { padding: 0; list-style-position: inside; }
+
+/* =========================================================================
+  Fancy - Unordered List
+  ==========================================================================
+  <ul class="fancyList">
+   <li>Coffee</li>
+   <li>Tea</li>
+   <li>Milk</li>
+  </ul>
+  ========================================================================== */
+  ul.fancyList { list-style: none; }
+  .fancyList li { position: relative; padding-left: 1em; }
+  .fancyList li:after { 
+    content: "";
+    position: absolute;
+    top: 0.5em;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 0.375em solid #ccc;
+    border-top: 0.1875em solid transparent;
+    border-bottom: 0.1875em solid transparent;
+    }
+
+/* =========================================================================
+  Generic Table Styles
+  ============================================================================
+  <table>
+    <thead>
+    <tr>
+        <th>Head</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Body</td>
+    </tr>
+    </tbody>
+  </table>
+  ========================================================================== */
+  table { width: 100%; border-collapse: collapse; margin-bottom: 1em; }
+  tr { vertical-align: top; text-align: left; }
+  /* Zebra striping */
+  tr:nth-of-type(odd) { background: #eee; }
+  th { background: #333; color: white; font-weight: bold; padding: 1em 2em; }
+  td { padding: 2em; background: #F0F0F0; }
+  td, th { border: 1px solid #ccc; text-align: left; }
+
+/* ==========================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+========================================================================== */
+
+
+
+/* =========================================================================
+  Author's custom styles
+  ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================================
+  Helper classes
+  ========================================================================== */
+.ir{background-color:transparent;border:0;overflow:hidden;*text-indent:-9999px;}.ir:before{content:"";display:block;width:0;height:150%;}.hidden{display:none !important;visibility:hidden;}.visuallyhidden{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;}.visuallyhidden.focusable:active,.visuallyhidden.focusable:focus{clip:auto;height:auto;margin:0;overflow:visible;position:static;width:auto;}.invisible{visibility:hidden;}.cf:before,.cf:after{content:" ";display:table;}.cf:after{clear:both;}.cf{*zoom:1;}
+
+
+
+/* ==========================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+========================================================================== */
+
+
+
+/* =========================================================================
+  Media Queries / min-width: 500px
+  ========================================================================== */
+  @media only screen and (min-width: 500px) {
+
+    html {
+      font-size: 12px;
+    }
+
+  }
+
+
+
+/* ==========================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+========================================================================== */
+
+
+
+/* =========================================================================
+  Media Queries / min-width: 768px
+  ========================================================================== */
+  @media only screen and (min-width: 768px) {
+
+    html {
+      font-size: 14px;
+    }
+
+  }
+
+
+
+/* ==========================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+========================================================================== */
+
+
+
+/* =========================================================================
+  Media Queries / min-width: 850px
+  ========================================================================== */
+  @media only screen and (min-width: 850px) {
+
+    html {
+      font-size: 16px;
+    }
+
+  }
+
+
+
+/* ==========================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+========================================================================== */
+
+
+
+/* =========================================================================
+  Media Queries / min-width: 1180px
+  ========================================================================== */
+  @media only screen and (min-width: 1180px) {}
+
+
+
+/* ==========================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+========================================================================== */
+
+
+
+/* ==========================================================================
+   Media Queries / Print
+   ========================================================================== */
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important;}a,a:visited{text-decoration:underline;}a[href]:after{content:" (" attr(href) ")";}abbr[title]:after{content:" (" attr(title) ")";}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:"";}pre,blockquote{border:1px solid #999;page-break-inside:avoid;}thead{display:table-header-group;}tr,img{page-break-inside:avoid;}img{max-width:100% !important;}@page{margin:0.5cm;}p,h2,h3{orphans:3;widows:3;}h2,h3{page-break-after:avoid;}}
+
+
+
+/* ==========================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+=============================================================================
+========================================================================== */
