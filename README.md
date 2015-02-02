@@ -6,15 +6,28 @@
 2. My HTML font size is 16px at Desktop, so I have used this help convert my pixel values to em units. ( Eg: 48px / 16px = 3em )
 3. The Baseline is 24px ( Eg: 24px / 16px = 1.5em )
 
-## Viewport:
-
-+ Below 1180px the layout is purely fluid.
-+ Above 1180px the layout is fixed.
-
-Here's an example:
+## The Wrapper:
 
 ```
-function test() {
-  console.log("notice the blank line before this function?");
-}
+	<main>
+		<section class="wrapper"></section>
+	</main>
 ```
+
+### Fluid
+
+The layout is purely fluid & will have a left/right margin of 1.5em, which respects the baseline value of 24px. 
+If the browser doesn't support the calc property, the browser will adopt the 90% width.
+
+#### This is achieved with using: 
+```
+	.wrapper { width: 90%; width: calc( 100% - 3em ); }
+```
+
+### Fixed
+
+Once the viewport is at 1180px, the wrapper will now be fixed to this size.
+
+
+
+
