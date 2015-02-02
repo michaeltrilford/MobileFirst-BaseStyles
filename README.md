@@ -11,6 +11,10 @@
 + Below 1180px the layout is purely fluid.
 + Above 1180px the layout is fixed.
 
-	<main>
-		<section class="wrapper"></section>
-	</main>
+Here's an example:
+
+```
+function test() {
+  console.log("notice the blank line before this function?");
+}
+```
