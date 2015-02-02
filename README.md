@@ -36,19 +36,19 @@ If you religiously use the typographic scale below as a rule of thumb for margin
 Note: 30px has been added to calculate a suitable line-height for font-size: 21px;
 
 ```
-H1 - fs:48px; / lh:60px;
-H2 - fs:36px; / lh:48px;
-H3 - fs:24px; / lh:36px;
-H4 - fs:21px; / lh:30px;
-H5 - fs:18px; / lh:24px;
-H6 - fs:16px; / lh:24px;
+H1 - fs:48px; + lh:60px;
+H2 - fs:36px; + lh:48px;
+H3 - fs:24px; + lh:36px;
+H4 - fs:21px; + lh:30px;
+H5 - fs:18px; + lh:24px;
+H6 - fs:16px; + lh:24px;
 
-.medium - fs:18px; / lh:24px;
-.x-medium - fs:21px; / lh:30px;
+.medium - fs:18px; + lh:24px;
+.x-medium - fs:21px; + lh:30px;
 
-.large - fs:60px; / lh:72px;
-.x-large - fs:72px; / lh:84px; / mb:48px;
-.xx-large - fs:84px; / lh:96px; / mb:48px;
+.large - fs:60px; + lh:72px;
+.x-large - fs:72px; + lh:84px; + mb:48px;
+.xx-large - fs:84px; + lh:96px; + mb:48px;
 ```
 
 ## The Wrapper:
