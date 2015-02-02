@@ -5,7 +5,7 @@ This stylesheet acts as a starting point for projects. It isn’t a framework, b
 
 ## Important information: 
 ----------------------
-» Even though the CSS is structured in a Mobile First approach, the Desktop base font of 16px; is used to calulate the em units.
+» Even though the CSS is structured in a Mobile First approach, the desktop font-size: 16px; is used to calulate the em units.
 ```
 24px / 16px = 1.5em
 ```
@@ -21,7 +21,7 @@ To get the most out of these base styles, it would be recommended you convert ev
 
 ### FAQ
 #### Why is the font-size: 16px; when you recommend em units?
-Some browsers don't have consistent font-sizes, by adding a px value this will amend these browsers. 
+Some browsers don't have consistent font-sizes, by adding a px value this will amend certain issues. 
 
 ### Handy Hint
 If you religiously use the typographic scale below as a rule of thumb for margin/padding etc, you will start to remember the exact em values.
