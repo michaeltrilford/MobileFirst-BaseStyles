@@ -51,6 +51,22 @@ H6 - fs:16px; + lh:24px;
 .xx-large - fs:84px; + lh:96px; + mb:48px;
 ```
 
+## Baseline Grid
+
+The baseline is set 24px, so this value is divided into the context.
+
+```
+  h1, h2, h3, p, header, footer, section, article, ul, aside, div { margin: 0 0 1.5em 0; }
+  h1 { margin: 0 0 0.5em 0; }
+  h2 { margin: 0 0 0.66666666666667em 0; }
+  h3 { margin: 0 0 1em 0; }
+  p { margin: 0 0 1.5em 0; }
+  h4 { margin: 0 0 1.14285714285714em 0; }
+  h5 { margin: 0 0 1.33333333333333em 0;  }
+  h6 { margin: 0 0 1.5em 0; }
+  li { margin: 0 0 1.5em 0; }
+```
+
 ## The Wrapper:
 
 ```
