@@ -29,7 +29,7 @@ If you religiously use the typographic scale below as a rule of thumb for margin
 
 ## Typography:
 
-### Typographic Scaled:
+### Typographic Scale:
 ------------ 
 » 16px, 18px, 21px, 24px, 36px, 48px, 60px, 72px, 84px, 96px to calculate relative sizes.
 » 30px has been used to calculate a suitable line-height for font-size: 21px;
