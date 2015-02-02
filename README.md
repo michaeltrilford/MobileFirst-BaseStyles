@@ -8,5 +8,9 @@
 
 ## Viewport:
 
-1. The layout is purely fluid with 90% in width.
-2. At 1180px and above the layout is fixed.
++ Below 1180px the layout is purely fluid.
++ Above 1180px the layout is fixed.
+
+	<main>
+		<section class="wrapper"></section>
+	</main>
