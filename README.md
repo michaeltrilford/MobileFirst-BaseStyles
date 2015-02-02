@@ -8,19 +8,19 @@
 ```
 2. My HTML font size is 16px at Desktop, so I have used this help convert my pixel values to em units. 
 ```
-( Eg: 48px / 16px = 3em )
+48px / 16px = 3em
 ```
 3. The Baseline is 24px
 ```
-( Eg: 24px / 16px = 1.5em )
+24px / 16px = 1.5em
 ```
 
 ## The Wrapper:
 
 ```
-	<main>
-		<section class="wrapper"></section>
-	</main>
+<main>
+	<section class="wrapper"></section>
+</main>
 ```
 
 ### Fluid
@@ -30,7 +30,7 @@ If the browser doesn't support the calc property, the browser will adopt the 90%
 
 #### This is achieved with using: 
 ```
-	.wrapper { width: 90%; width: calc( 100% - 3em ); }
+.wrapper { width: 90%; width: calc( 100% - 3em ); }
 ```
 
 ### Fixed
