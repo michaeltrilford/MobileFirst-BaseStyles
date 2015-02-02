@@ -8,7 +8,7 @@
 	<li>The Baseline is 24px ( Eg: 24px / 16px = 1.5em )</li>
 </ul>
 
-<h1>Viewport:</h2>
+<h2>Viewport:</h2>
 
 
 
