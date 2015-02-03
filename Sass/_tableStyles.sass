@@ -1,0 +1,44 @@
+/* =========================================================================
+  Generic Table Styles
+  ============================================================================
+  <table>
+    <thead>
+    <tr>
+        <th>Head</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Body</td>
+    </tr>
+    </tbody>
+  </table>
+  ========================================================================== */
+table
+  width: 100%
+  border-collapse: collapse
+  margin-bottom: 1em
+
+tr
+  vertical-align: top
+  text-align: left
+  &:nth-of-type(odd)
+    background: #eee
+
+/* Zebra striping */
+
+th
+  background: #333
+  color: white
+  font-weight: bold
+  padding: 1em 2em
+
+td
+  padding: 2em
+  background: #F0F0F0
+  border: 0.0625em solid #ccc
+  text-align: left
+
+th
+  border: 0.0625em solid #ccc
+  text-align: left

@@ -1,0 +1,125 @@
+/* =========================================================================
+  Typography
+  ==========================================================================
+
+  Scaled Used:
+  ------------ 
+  » 16px, 18px, 21px, 24px, 36px, 48px, 60px, 72px, 84px, 96px to calculate relative sizes.
+  » 30px has been used to calculate a suitable line-height for font-size: 21px;
+
+  Important information: 
+  ----------------------
+  » Even though the CSS is structured in a Mobile First approach, the Desktop base font-size: 16px; is used to calulate the em units.
+
+  H1 - fs:48px; / lh:60px;
+  H2 - fs:36px; / lh:48px;
+  H3 - fs:24px; / lh:36px;
+  H4 - fs:21px; / lh:30px;
+  H5 - fs:18px; / lh:24px;
+  H6 - fs:16px; / lh:24px;
+
+  medium - fs:18px; / lh:24px;
+  x-medium - fs:21px; / lh:30px;
+
+  large - fs:60px; / lh:72px;
+  x-large - fs:72px; / lh:84px; / mb:48px;
+  xx-large - fs:84px; / lh:96px; / mb:48px;
+
+  ========================================================================== */
+
+
+html
+  font-size: 10px
+  line-height: 1.5
+  @media only screen and (min-width: 500px)
+    font-size: 12px
+  @media only screen and (min-width: 768px)
+    font-size: 14px
+  @media only screen and (min-width: 850px)
+    font-size: 16px
+
+h1, h2, h3, h4, h5, h6
+  font-weight: normal
+
+strong
+  font-weight: bold
+
+em
+  font-style: italic
+
+h1
+  font-size: 3em
+  line-height: 1.25
+
+h2
+  font-size: 2.25em
+  line-height: 1.33333333333333
+
+h3
+  font-size: 1.5em
+  line-height: 1.5
+
+h4
+  font-size: 1.3125em
+  line-height: 1.42857142857143
+
+h5
+  font-size: 1.125em
+  line-height: 1.33333333333333
+  font-weight: bold
+
+h6
+  font-size: 1em
+  line-height: 1.5
+  font-weight: bold
+
+p
+  font-size: 1em
+
+a
+  font-size: 1em
+  text-decoration: none
+  color: #333
+  border-bottom: 1px solid #333
+  &:hover
+    text-decoration: none
+    color: #333
+    border-bottom: none
+  &:focus
+    color: #333
+    outline: none
+
+/* Medium */
+
+.medium
+  font-size: 1.125em
+  line-height: 1.33333333333333
+  margin: 0 0 1.33333333333333em 0
+
+.x-medium
+  font-size: 1.3125em
+  line-height: 1.42857142857143
+  margin: 0 0 1.14285714285714em 0
+
+/* Large */
+
+.large
+  font-size: 3.75em
+  line-height: 1.2
+  margin-bottom: 0.4em
+
+.x-large
+  font-size: 4.5em
+  line-height: 1.16666666666667
+  margin-bottom: 0.66666666666667em
+
+.xx-large
+  font-size: 5.25em
+  line-height: 1.14285714285714
+  margin-bottom: 0.66666666666667em
+
+////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////
