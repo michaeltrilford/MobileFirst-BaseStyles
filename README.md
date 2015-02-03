@@ -5,7 +5,11 @@ This stylesheet acts as a starting point for projects. It isn’t a framework, b
 
 ## Important information: 
 ----------------------
-» Even though the CSS is structured in a Mobile First approach, the desktop font-size: 16px; is used to calulate the em units.
+
+Sass has just been added, but not tested.
+
+
+Even though the CSS is structured in a Mobile First approach, the desktop font-size: 16px; is used to calulate the em units.
 ```
 24px / 16px = 1.5em
 ```
