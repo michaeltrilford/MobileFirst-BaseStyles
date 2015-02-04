@@ -44,6 +44,8 @@ html,button,input,select,textarea{color:#222;}html{font-size:1em;line-height:1.4
 
   html { font-size: 10px; line-height: 1.5; }
 
+  html, button, input, select, textarea { font-family: Helvetica, Arial, sans-serif; }
+
   h1, h2, h3, h4, h5, h6 { font-weight: normal; }
   strong { font-weight: bold; }
   em { font-style: italic; }
