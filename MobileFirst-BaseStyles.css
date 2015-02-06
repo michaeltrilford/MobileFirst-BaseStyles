@@ -44,7 +44,7 @@ html,button,input,select,textarea{color:#222;}html{font-size:1em;line-height:1.4
 
   html { font-size: 10px; line-height: 1.5; }
 
-  html, button, input, select, textarea { font-family: Helvetica, Arial, sans-serif; }
+  html, button, input, select, textarea { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
   h1, h2, h3, h4, h5, h6 { font-weight: normal; }
   strong { font-weight: bold; }
@@ -73,7 +73,7 @@ html,button,input,select,textarea{color:#222;}html{font-size:1em;line-height:1.4
 /* =========================================================================
   Baseline Grid - 24px
   ========================================================================== */
-  h1, h2, h3, p, header, footer, section, article, ul, aside, div, hr { 
+  h1, h2, h3, p, header, footer, section, article, ul, aside, div, hr, fieldset, textarea, keygen, select, input { 
     margin: 0 0 1.5em 0; 
     width: 100%;
     -webkit-font-smoothing: antialiased;
@@ -87,6 +87,8 @@ html,button,input,select,textarea{color:#222;}html{font-size:1em;line-height:1.4
   h5 { margin: 0 0 1.33333333333333em 0;  }
   h6 { margin: 0 0 1.5em 0; }
   li { margin: 0 0 1.5em 0; }
+
+  label { margin-bottom: 0.5em; }
 
 /* =========================================================================
   Horizontal Rule
