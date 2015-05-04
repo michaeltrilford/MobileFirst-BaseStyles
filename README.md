@@ -27,7 +27,6 @@ To get the most out of these base styles, it would be recommended you convert ev
 ### Typographic Scale:
 
 6px, 7px, 8px, 9px, 10px, 11px, 12px, 14px, 16px, 18px, 21px, 24px, 36px, 48px, 60px, 72px, 84px, 96px, 108, 120
-|-------------- +1 --------------|------- +2 -------|--- +3 ---|--------------------- +12 --------------------|
 
 
 ```
