@@ -104,6 +104,8 @@ html,button,input,select,textarea{color:#222;}html{font-size:1em;line-height:1.4
 
 /* =========================================================================
   Baseline Grid - 24px w/ 12px subdivision ( http://basehold.it )
+
+  Comment this out when finished designing.
   ========================================================================== */
 
   body {
@@ -290,6 +292,10 @@ html,button,input,select,textarea{color:#222;}html{font-size:1em;line-height:1.4
 
 /* =========================================================================
   Grid Overlay 
+
+  Add this to your Javascript file, or just add the HTML code into your structure
+  
+  $("body").append('<div class="grid"><div class="wrapper"><div class="columnWrap"><div class="column"></div><div class="column"></div><div class="column"></div></div></div></div>')
   =========================================================================*/
 
 html, body { height: 100%; }
