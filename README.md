@@ -22,31 +22,24 @@ To get the most out of these base styles, it would be recommended you convert ev
   @media only screen and (min-width: 850px) { html { font-size: 16px; } }
 ```
 
-### FAQ
-#### Why is the font-size: 16px; when you recommend em units?
-Some browsers don't have consistent font-sizes, by adding a px value this will amend certain issues. 
-
-### Handy Hint
-If you religiously use the typographic scale below as a rule of thumb for margin/padding etc, you will start to remember the exact em values.
-
-
 ## Typography:
 
 ### Typographic Scale:
-16px, 18px, 21px, 24px, 36px, 48px, 60px, 72px, 84px, 96px is used to calculate relative sizes.
 
-Note: 30px has been added to calculate a suitable line-height for font-size: 21px;
+6px, 7px, 8px, 9px, 10px, 11px, 12px, 14px, 16px, 18px, 21px, 24px, 36px, 48px, 60px, 72px, 84px, 96px, 108, 120
+|-------------- +1 --------------|------- +2 -------|--- +3 ---|--------------------- +12 --------------------|
+
 
 ```
 H1 - fs:48px; + lh:60px;
 H2 - fs:36px; + lh:48px;
 H3 - fs:24px; + lh:36px;
-H4 - fs:21px; + lh:30px;
+H4 - fs:21px; + lh:24px;
 H5 - fs:18px; + lh:24px;
 H6 - fs:16px; + lh:24px;
 
 .medium - fs:18px; + lh:24px;
-.x-medium - fs:21px; + lh:30px;
+.x-medium - fs:21px; + lh:24px;
 
 .large - fs:60px; + lh:72px;
 .x-large - fs:72px; + lh:84px; + mb:48px;

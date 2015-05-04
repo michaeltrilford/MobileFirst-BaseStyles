@@ -1,0 +1,33 @@
+/* =========================================================================
+ *Grid Overlay 
+ *=========================================================================
+
+html, body
+  height: 100%
+
+.grid
+  height: 100%
+  margin-bottom: 0
+  *
+    height: 100%
+    margin-bottom: 0
+  position: fixed
+  width: 100%
+  top: 0
+  left: 0
+  margin: 0
+  z-index: 1000
+  .columnWrap
+    display: flex
+    justify-content: space-between
+  .column
+    box-shadow: 0 0 0 1px skyblue
+    flex: 0 0 calc(100% / 2 - (1.5em / 2))
+    &:last-child
+      display: none
+
+@media only screen and (min-width: 31.25em)
+  .grid .column
+    &:last-child
+      display: block
+    flex: 0 0 calc(100% / 3 - (3em / 3))

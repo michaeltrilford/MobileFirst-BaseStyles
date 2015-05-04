@@ -1,44 +1,47 @@
 /* =========================================================================
-  Typography
-  ==========================================================================
-
-  Scaled Used:
-  ------------ 
-  » 16px, 18px, 21px, 24px, 36px, 48px, 60px, 72px, 84px, 96px to calculate relative sizes.
-  » 30px has been used to calculate a suitable line-height for font-size: 21px;
-
-  Important information: 
-  ----------------------
-  » Even though the CSS is structured in a Mobile First approach, the Desktop base font-size: 16px; is used to calulate the em units.
-
-  H1 - fs:48px; / lh:60px;
-  H2 - fs:36px; / lh:48px;
-  H3 - fs:24px; / lh:36px;
-  H4 - fs:21px; / lh:30px;
-  H5 - fs:18px; / lh:24px;
-  H6 - fs:16px; / lh:24px;
-
-  medium - fs:18px; / lh:24px;
-  x-medium - fs:21px; / lh:30px;
-
-  large - fs:60px; / lh:72px;
-  x-large - fs:72px; / lh:84px; / mb:48px;
-  xx-large - fs:84px; / lh:96px; / mb:48px;
-
-  ========================================================================== */
-
+ *  Typography
+ *  ==========================================================================
+ *
+ *  Typographic Scale Used:
+ *
+ *  6px, 7px, 8px, 9px, 10px, 11px, 12px, 14px, 16px, 18px, 21px, 24px, 36px, 48px, 60px, 72px, 84px, 96px, 108, 120
+ *  |-------------- +1 --------------|------- +2 -------|--- +3 ---|--------------------- +12 --------------------|
+ *
+ *  Important information: 
+ *  ----------------------
+ *  » Even though the CSS is structured in a Mobile First approach, the Desktop base font-size: 16px; is used to calulate the em units.
+ *
+ *  H1 - fs:48px; / lh:60px;
+ *  H2 - fs:36px; / lh:48px;
+ *  H3 - fs:24px; / lh:36px;
+ *  H4 - fs:21px; / lh:24px;
+ *  H5 - fs:18px; / lh:24px;
+ *  H6 - fs:16px; / lh:24px;
+ *
+ *  medium - fs:18px; / lh:24px;
+ *  x-medium - fs:21px; / lh:24px;
+ *
+ *  large - fs:60px; / lh:72px;
+ *  x-large - fs:72px; / lh:84px; / mb:48px;
+ *  xx-large - fs:84px; / lh:96px; / mb:48px;
+ *
+ *  ========================================================================== 
 
 html
-  font-size: 10px
+  font-size: 0.75em
   line-height: 1.5
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
-  @media only screen and (min-width: 500px)
-    font-size: 12px
-  @media only screen and (min-width: 768px)
-    font-size: 14px
-  @media only screen and (min-width: 850px)
-    font-size: 16px
+  -webkit-font-feature-settings: "kern" 1, "liga" 1
+  -moz-font-feature-settings: "kern=1", "liga=1"
+  -moz-font-feature-settings: "kern" on, "liga" on
+  -ms-font-feature-settings: "kern" 1, "liga" 1
+  -o-font-feature-settings: "kern", "liga"
+  font-feature-settings: "kern", "liga"
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+
+button, input, select, textarea
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
 
 h1, h2, h3, h4, h5, h6
   font-weight: normal
@@ -63,7 +66,7 @@ h3
 
 h4
   font-size: 1.3125em
-  line-height: 1.42857142857143
+  line-height: 1.14285714285714
 
 h5
   font-size: 1.125em
@@ -91,7 +94,7 @@ a
     color: #333
     outline: none
 
-/* Medium */
+/* Medium
 
 .medium
   font-size: 1.125em
@@ -100,10 +103,10 @@ a
 
 .x-medium
   font-size: 1.3125em
-  line-height: 1.42857142857143
+  line-height: 1.14285714285714
   margin: 0 0 1.14285714285714em 0
 
-/* Large */
+/* Large
 
 .large
   font-size: 3.75em
@@ -118,10 +121,16 @@ a
 .xx-large
   font-size: 5.25em
   line-height: 1.14285714285714
-  margin-bottom: 0.66666666666667em
+  margin-bottom: 0.57142857142857em
 
-////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////
+.small-caps
+  -ms-font-feature-settings: "smcp"
+  -moz-font-feature-settings: "smcp"
+  -webkit-font-feature-settings: "smcp"
+  font-feature-settings: "smcp"
+
+.text-figures
+  -moz-font-feature-settings: 'onum'
+  -ms-font-feature-settings: 'onum'
+  -webkit-font-feature-settings: 'onum'
+  font-feature-settings: 'onum'

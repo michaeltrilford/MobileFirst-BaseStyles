@@ -13,14 +13,15 @@ html,button,input,select,textarea{color:#222;}html{font-size:1em;line-height:1.4
   .browsehappy a { color: skyBlue; text-decoration: none; border-bottom: 0.0625em solid; }
   .browsehappy a:hover { color: skyBlue; text-decoration: none; border-bottom: 0.0625em solid rgba(255,255,255,0.15); }
 
+
 /* =========================================================================
   Typography
   ==========================================================================
 
-  Scaled Used:
-  ------------ 
-  » 16px, 18px, 21px, 24px, 36px, 48px, 60px, 72px, 84px, 96px to calculate relative sizes.
-  » 30px has been used to calculate a suitable line-height for font-size: 21px;
+  Typographic Scale Used:
+
+  6px, 7px, 8px, 9px, 10px, 11px, 12px, 14px, 16px, 18px, 21px, 24px, 36px, 48px, 60px, 72px, 84px, 96px, 108, 120
+  |-------------- +1 --------------|------- +2 -------|--- +3 ---|--------------------- +12 --------------------|
 
   Important information: 
   ----------------------
@@ -29,12 +30,12 @@ html,button,input,select,textarea{color:#222;}html{font-size:1em;line-height:1.4
   H1 - fs:48px; / lh:60px;
   H2 - fs:36px; / lh:48px;
   H3 - fs:24px; / lh:36px;
-  H4 - fs:21px; / lh:30px;
+  H4 - fs:21px; / lh:24px;
   H5 - fs:18px; / lh:24px;
   H6 - fs:16px; / lh:24px;
 
   medium - fs:18px; / lh:24px;
-  x-medium - fs:21px; / lh:30px;
+  x-medium - fs:21px; / lh:24px;
 
   large - fs:60px; / lh:72px;
   x-large - fs:72px; / lh:84px; / mb:48px;
@@ -43,10 +44,16 @@ html,button,input,select,textarea{color:#222;}html{font-size:1em;line-height:1.4
   ========================================================================== */
 
   html { 
-    font-size: 12px; 
+    font-size: 0.75em;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    -webkit-font-feature-settings: "kern" 1, "liga" 1;
+     -moz-font-feature-settings: "kern=1", "liga=1";
+     -moz-font-feature-settings: "kern" on, "liga" on;
+      -ms-font-feature-settings: "kern" 1, "liga" 1;
+       -o-font-feature-settings: "kern", "liga";
+          font-feature-settings: "kern", "liga";
   }
 
   html, button, input, select, textarea { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
@@ -58,7 +65,7 @@ html,button,input,select,textarea{color:#222;}html{font-size:1em;line-height:1.4
   h1 { font-size: 3em; line-height: 1.25; }
   h2 { font-size: 2.25em; line-height: 1.33333333333333; }                                       
   h3 { font-size: 1.5em; line-height: 1.5; }                                                      
-  h4 { font-size: 1.3125em; line-height: 1.42857142857143; }                                   
+  h4 { font-size: 1.3125em; line-height: 1.14285714285714; }                                   
   h5 { font-size: 1.125em; line-height: 1.33333333333333; font-weight: bold; }                     
   h6 { font-size: 1em; line-height: 1.5; font-weight: bold; }  
   p { font-size: 1em; }
@@ -67,14 +74,27 @@ html,button,input,select,textarea{color:#222;}html{font-size:1em;line-height:1.4
   a:focus { color: #333; outline: none; }
 
   /* Medium */
-  .medium { font-size: 1.125em; line-height: 1.33333333333333; margin: 0 0 1.33333333333333em 0; } 
-  .x-medium { font-size: 1.3125em; line-height: 1.42857142857143; margin: 0 0 1.14285714285714em 0; }
+  .medium { font-size: 1.125em; line-height: 1.33333333333333; margin: 0 0 1.33333333333333em 0; }
+  .x-medium { font-size: 1.3125em; line-height: 1.14285714285714; margin: 0 0 1.14285714285714em 0; }
 
   /* Large */
   .large { font-size: 3.75em; line-height: 1.2; margin-bottom: 0.4em; }                           
   .x-large { font-size: 4.5em; line-height: 1.16666666666667; margin-bottom: 0.66666666666667em; }
-  .xx-large { font-size: 5.25em; line-height: 1.14285714285714; margin-bottom: 0.66666666666667em; }
+  .xx-large { font-size: 5.25em; line-height: 1.14285714285714; margin-bottom: 0.57142857142857em; }
 
+  .small-caps {
+      -ms-font-feature-settings: "smcp";
+      -moz-font-feature-settings: "smcp";
+      -webkit-font-feature-settings: "smcp";
+      font-feature-settings: "smcp";
+  }
+
+  .text-figures { 
+      -moz-font-feature-settings: 'onum';
+      -ms-font-feature-settings: 'onum';
+      -webkit-font-feature-settings: 'onum';
+      font-feature-settings: 'onum';
+  }
 
 /* =========================================================================
   Add Formalize-css here if needed 
@@ -83,8 +103,53 @@ html,button,input,select,textarea{color:#222;}html{font-size:1em;line-height:1.4
   
 
 /* =========================================================================
-  Baseline Grid - 24px
+  Baseline Grid - 24px w/ 12px subdivision ( http://basehold.it )
   ========================================================================== */
+
+  body {
+    position: relative;
+  }
+
+  body:after {
+    position: absolute;
+    width: auto;
+    height: auto;
+    z-index: 9999;
+    content: '';
+    display: block;
+    pointer-events: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url("../img/basehold-18.png") repeat top left;
+
+  }
+
+  body:active:after {
+    display: none;
+  }
+
+  @media only screen and (min-width: 48em) { 
+    body:after {
+      background-image: url("../img/basehold-21.png");
+    } 
+  }
+
+  @media only screen and (min-width: 53.125em) { 
+    body:after {
+      background-image: url("../img/basehold-24.png");
+    } 
+  }
+
+/* =========================================================================
+
+  Baseline Scale Values:
+
+  0.75em (12px), 1.5em (24px), 2.25em (36px), 3em (48px), 3.75em (60px), 4.5em (72px), 5.25em (84px), 6em (96px), 6.75em (108px), 7.5em (120px)
+
+  ========================================================================== */
+
   h1, h2, h3, p, header, footer, section, article, ul, aside, div, hr, fieldset, textarea, keygen, select, input { 
     margin: 0 0 1.5em 0; 
     width: 100%;
@@ -109,6 +174,7 @@ html,button,input,select,textarea{color:#222;}html{font-size:1em;line-height:1.4
   hr {
     box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1), 0 1px 0px 0 rgba(255, 255, 255, 0.1);
     border-top: none;
+    margin-top: -1px;
     }
 
 /* =========================================================================
@@ -222,14 +288,45 @@ html,button,input,select,textarea{color:#222;}html{font-size:1em;line-height:1.4
 ========================================================================== */
 
 
+/* =========================================================================
+  Grid Overlay 
+  =========================================================================*/
+
+html, body { height: 100%; }
+
+.grid,
+.grid * { height: 100%; margin-bottom: 0; }
+
+.grid {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  z-index: 1000;
+  }
+
+.grid .columnWrap { 
+  display: flex; 
+  justify-content: space-between; }
+
+.grid .column {
+    box-shadow: 0 0 0 1px skyblue;
+    flex: 0 0 calc(100% / 2 - (1.5em / 2));
+    }
+
+.grid .column:last-child { display: none; }
+
+@media only screen and (min-width: 31.25em) {
+  .grid .column:last-child { display: block; }
+  .grid .column {
+    flex: 0 0 calc(100% / 3 - (3em / 3));
+    }
+}
 
 /* =========================================================================
   Author's custom styles
   ========================================================================== */
-
-
-
-
 
 
 
@@ -249,31 +346,13 @@ html,button,input,select,textarea{color:#222;}html{font-size:1em;line-height:1.4
 .ir{background-color:transparent;border:0;overflow:hidden;*text-indent:-9999px;}.ir:before{content:"";display:block;width:0;height:150%;}.hidden{display:none !important;visibility:hidden;}.visuallyhidden{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;}.visuallyhidden.focusable:active,.visuallyhidden.focusable:focus{clip:auto;height:auto;margin:0;overflow:visible;position:static;width:auto;}.invisible{visibility:hidden;}.cf:before,.cf:after{content:" ";display:table;}.cf:after{clear:both;}.cf{*zoom:1;}
 
 
-
-/* ==========================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-========================================================================== */
-
-
-
 /* =========================================================================
   Media Queries / min-width: 500px
   ========================================================================== */
-  @media only screen and (min-width: 500px) {
+  @media only screen and (min-width: 31.25em) {
 
     html {
-      font-size: 12px;
+      font-size: 0.75em;
     }
 
   }
@@ -300,10 +379,10 @@ html,button,input,select,textarea{color:#222;}html{font-size:1em;line-height:1.4
 /* =========================================================================
   Media Queries / min-width: 768px
   ========================================================================== */
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 48em) {
 
     html {
-      font-size: 14px;
+      font-size: 0.875em;
     }
 
   }
@@ -330,10 +409,10 @@ html,button,input,select,textarea{color:#222;}html{font-size:1em;line-height:1.4
 /* =========================================================================
   Media Queries / min-width: 850px
   ========================================================================== */
-  @media only screen and (min-width: 850px) {
+  @media only screen and (min-width: 53.125em) {
 
     html {
-      font-size: 16px;
+      font-size: 1em;
     }
 
   }
@@ -360,7 +439,7 @@ html,button,input,select,textarea{color:#222;}html{font-size:1em;line-height:1.4
 /* =========================================================================
   Media Queries / min-width: 1180px
   ========================================================================== */
-  @media only screen and (min-width: 1180px) {}
+  @media only screen and (min-width: 73.75em) {}
 
 
 
