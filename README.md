@@ -49,6 +49,10 @@ H6 - fs:16px; + lh:24px;
 
 The baseline is set 24px, so this value is divided into the context.
 
+Line-height: 18px for Small Devices
+Line-height: 21px for Medium Devices
+Line-height: 24px for Large Devices
+
 ```
   h1, h2, h3, p, header, footer, section, article, ul, aside, div { margin: 0 0 1.5em 0; }
   h1 { margin: 0 0 0.5em 0; }
@@ -61,13 +65,18 @@ The baseline is set 24px, so this value is divided into the context.
   li { margin: 0 0 1.5em 0; }
 ```
 
+## Grid
+
+2 column grid for Small Devices
+3 column grid for Medium Devices
+4 column grid for X-Medium Devices
+6 column grid for Large Devices
+
+You can update to your own grid size. Make sure you edit the CSS and JS File. To turn off grid, just comment out ```<div class="grid"></div>```
+
 ## The Wrapper:
 
-```
-<main>
-	<section class="wrapper"></section>
-</main>
-```
+```<main><section class="wrapper"></section></main>```
 
 ### Fluid
 

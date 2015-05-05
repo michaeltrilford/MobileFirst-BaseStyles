@@ -1,2 +1,7 @@
-/* 3 Column */
-$("body").append('<div class="grid"><div class="wrapper"><div class="columnWrap"><div class="column"></div><div class="column"></div><div class="column"></div></div></div></div>')
+/* Column setup */
+$(".grid").append('<div class="wrapper"><div class="columnWrap"></div></div>');
+var str = '';
+for(var cnt=0; cnt < 6; cnt++){
+    str += '<div class="column"></div>';
+}
+$(".columnWrap").append(str);
