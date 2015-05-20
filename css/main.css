@@ -243,6 +243,11 @@ html,button,input,select,textarea{color:#222;}html{font-size:1em;line-height:1.4
   ========================================================================== */
   /* General List Styles */
   ul, ol { padding: 0; list-style-position: inside; }
+  li {
+    padding-left: 1em;
+    text-indent: -1em;
+    margin-bottom: 0.75em;
+  }
 
 /* =========================================================================
   Fancy - Unordered List
@@ -254,7 +259,7 @@ html,button,input,select,textarea{color:#222;}html{font-size:1em;line-height:1.4
   </ul>
   ========================================================================== */
   ul.fancyList { list-style: none; }
-  .fancyList li { position: relative; padding-left: 1em; }
+  .fancyList li { position: relative; padding-left: 1em; text-indent: 0; }
   .fancyList li:after { 
     content: "";
     position: absolute;
