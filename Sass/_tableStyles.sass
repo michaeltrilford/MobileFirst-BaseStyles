@@ -29,9 +29,8 @@ table
 
 thead
   display: none
-  th
-    background: #333
-    color: white
+  tr
+    background: #EAEAEA
     font-weight: bold
 
 td, th
@@ -61,6 +60,8 @@ tr
     text-align: right
 
 @media only screen and (min-width: 53.125em)
+  table
+    box-shadow: 0 0 0 1px #ccc
   thead
     display: table-header-group
   td
@@ -70,19 +71,20 @@ tr
     text-align: left
     box-shadow: inset -1px 0 0 0 #ddd
   th
-    box-shadow: inset -1px 0 0 0 black
+    box-shadow: inset -1px 0 0 0 #ccc
   td:last-child, th:last-child
     box-shadow: none
   tr
-    &:nth-of-type(odd)
-      td
-        box-shadow: none
-        box-shadow: inset -1px 0 0 0 #ddd
-        &:last-child
-          box-shadow: none
-      background: #f5f5f5
+    &:nth-of-type(odd) td
+      box-shadow: none
     display: table-row
     vertical-align: top
     text-align: left
     margin-bottom: 0
     background: #f9f9f9
+  tbody tr:nth-of-type(odd)
+    background: #f5f5f5
+    td
+      box-shadow: inset -1px 0 0 0 #ddd
+      &:last-child
+        box-shadow: none
