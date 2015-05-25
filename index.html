@@ -33,8 +33,8 @@
               <h2>Heading Two</h2>
             </div>
             <hr>
-            <h6>3. Paragraph Example</h6>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <h6>3. Paragraph &amp; Link Example</h6>
+            <p>Aenean <a href="#">eu leo quam</a>. Pellentesque ornare sem lacinia quam venenatis vestibulum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
             <p>Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
             <hr>
             <h6>4. Ordered List</h6>
@@ -51,14 +51,38 @@
               <li>Milk</li>
             </ul>
             <hr>
-            <h6>6. Fancy Unordered List</h6>
+            <h6>6. Nested Unordered List</h6>
+            <ul>
+              <li>Coffee</li>
+              <li>Tea
+                <ul>
+                  <li>Black tea</li>
+                  <li>Green tea</li>
+                </ul>
+              </li>
+              <li>Milk</li>
+            </ul>
+            <hr>
+            <h6>7. Fancy List</h6>
             <ul class="fancyList">
               <li>Coffee</li>
               <li>Tea</li>
               <li>Milk</li>
             </ul>
             <hr>
-            <h6>7. Description List</h6>
+            <h6>8. Nested Fancy List</h6>
+            <ul class="fancyList nested">
+              <li>Coffee</li>
+              <li>Tea
+                <ul>
+                  <li>Black tea</li>
+                  <li>Green tea</li>
+                </ul>
+              </li>
+              <li>Milk</li>
+            </ul>
+            <hr>
+            <h6>9. Description List</h6>
             <dl>
               <dt>Coffee</dt>
               <dd>Black hot drink</dd>
@@ -70,27 +94,31 @@
             <table>
               <thead>
                 <tr>
-                  <th>Item 1</th>
-                  <th>Item 2</th>
-                  <th>Item 3</th>
-                  <th>Item 4</th>
-                  <th>Item 5</th>
+                  <th>Office</th>
+                  <th>Revenue</th>
+                  <th>Cost</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td data-label="Item 1">Nullam id dolor id nibh ultricies vehicula ut id elit.</td>
-                  <td data-label="Item 2">Nulla vitae elit libero, a pharetra augue.</td>
-                  <td data-label="Item 3">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</td>
-                  <td data-label="Item 4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-                  <td data-label="Item 5">Maecenas faucibus mollis interdum.</td>
+                  <td data-label="Office:">Whalen</td>
+                  <td data-label="Revenue:">$4,400.00</td>
+                  <td data-label="Cost:">$1,100.00</td>
                 </tr>
                 <tr>
-                  <td data-label="Item 1">Nullam id dolor id nibh ultricies vehicula ut id elit.</td>
-                  <td data-label="Item 2">Nulla vitae elit libero, a pharetra augue.</td>
-                  <td data-label="Item 3">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</td>
-                  <td data-label="Item 4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-                  <td data-label="Item 5">Maecenas faucibus mollis interdum.</td>
+                  <td data-label="Office:">Hartstein</td>
+                  <td data-label="Revenue:">$13,000.00</td>
+                  <td data-label="Cost:">$3,250.00
+                </tr>
+                <tr>
+                  <td data-label="Office:">Whalen</td>
+                  <td data-label="Revenue:">$4,400.00</td>
+                  <td data-label="Cost:">$1,100.00</td>
+                </tr>
+                <tr>
+                  <td data-label="Office:">Hartstein</td>
+                  <td data-label="Revenue:">$13,000.00</td>
+                  <td data-label="Cost:">$3,250.00
                 </tr>
               </tbody>
             </table>
@@ -101,13 +129,23 @@
             <hr>
             <h6>10. Figure</h6>
             <figure>
-              <img src="http://placehold.it/350x150">
+              <img src="http://placehold.it/350x96">
               <figcaption>Fig1. - Example image.</figcaption>
             </figure>
+            <hr>
+            <h6>Details &amp; Summary</h6>
+            <details>
+              <summary>Is this supported in all browsers?</summary>
+              <p>No, maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+            </details>
+            <details>
+              <summary>Is this supported in all browsers?</summary>
+              <p>No, maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+            </details>
         </main>
 
         <!-- Grid Overlay -->
-        <div class="grid"></div>
+        <!-- <div class="grid"></div> -->
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>

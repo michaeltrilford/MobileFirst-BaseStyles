@@ -169,7 +169,7 @@ html,button,input,select,textarea{color:#222;}html{font-size:1em;line-height:1.4
 
   ========================================================================== */
 
-  h1, h2, h3, p, header, table, figure, footer, section, article, dl, menu, ul, ol, aside, div, hr, fieldset, textarea, keygen, select, input { 
+  h1, h2, h3, p, header, table, figure, summary, footer, section, article, dl, menu, ul, ol, aside, div, hr, fieldset, textarea, keygen, select, input { 
     margin: 0 0 1.5em 0; 
     width: 100%;
     -webkit-font-smoothing: antialiased;
@@ -186,6 +186,10 @@ html,button,input,select,textarea{color:#222;}html{font-size:1em;line-height:1.4
   figure img { margin-bottom: 1.5em; }
 
   label { margin-bottom: 0.5em; }
+  summary { margin-bottom: 0; }
+  details p { margin-bottom: 0; }
+  
+
 
 /* =========================================================================
   Horizontal Rule
@@ -243,6 +247,7 @@ html,button,input,select,textarea{color:#222;}html{font-size:1em;line-height:1.4
   List Styles
   ========================================================================== */
   /* General List Styles */
+  ul li ul { margin-top: 0.75em; color: #777; font-size: 0.875em; }
   ul, ol { padding: 0; list-style-position: inside; }
   li {
     padding-left: 1em;
@@ -272,12 +277,33 @@ html,button,input,select,textarea{color:#222;}html{font-size:1em;line-height:1.4
     border-top: 0.1875em solid transparent;
     border-bottom: 0.1875em solid transparent;
     }
+  .nested li ul li { padding: 0; }
+  .nested li ul li:after { display: none; }
 
 /* =========================================================================
   Description List Styles
   ========================================================================== */
   dd { margin: 0 0 1.5em 0; }
   dt { font-weight: bold; }
+
+/* =========================================================================
+  Details Styles - Webkit Only
+  ========================================================================== */
+summary { background: #F9F9F9; padding: 0.75em; }
+summary:focus { outline: none; }
+details { box-shadow: 0 0 0 1px #ccc; }
+details[open] summary { box-shadow: inset 0 -1px 0 0 #ccc; }
+summary::-webkit-details-marker { display: none }
+summary:before { 
+  content: "+";
+  padding-right: 0.75em;
+  display: block;
+  float: left;
+  width: 1.5em;
+}
+details[open] summary:before { content: "-"; }
+details p { padding: 1.5em; background: white; }
+
 
 /* =========================================================================
   Generic Table Styles
@@ -304,40 +330,35 @@ html,button,input,select,textarea{color:#222;}html{font-size:1em;line-height:1.4
   </table>
   ========================================================================== */
   table { width: 100%; border-collapse: collapse; }
-  /* Table Head */
   thead { display: none; }
   thead tr { background: #EAEAEA; font-weight: bold; }
-  /* Head & Body */
-  td, th { padding: 1.5em; }
-  /* Left Label */
-  td:before { content: attr(data-label); float: left; width: 100%; font-weight: bold; }
-  /* Table Data - Full Width */
-  td { display: block; box-shadow: inset 0 -1px 0 0 #eee; }
-  td:last-child { box-shadow: none; }
-  /* Section Items */
-  tr { display: block; margin-bottom: 1.5em; box-shadow: inset 0 0 0 1px #eee; }
+  td, th { padding: 0.75em; }
+  td:before { content: attr(data-label); float: left; font-weight: bold; width: auto; padding-right: 3em; }
+  
+  /* Table Border */
+  td { display: block; box-shadow: inset 0 -1px 0 0 #ccc; text-align: right; }
+  tr { display: block; margin-bottom: 1.5em; box-shadow: inset 0 0 0 1px #ccc; background: #f9f9f9; }
+
   @media only screen and (min-width: 31.25em) {
-    /* Left Label */
-    td:before { width: auto; padding-right: 3em; }
-    /* Table Data - Full Width */
-    td { text-align: right; }
-  }  
-  @media only screen and (min-width: 53.125em) {
-    table { box-shadow: 0 0 0 1px #ccc; }
-    /* Table Head */
+
     thead { display: table-header-group; }
-    /* Left Label - Hide */
+    td, th { padding: 0.75em 1.5em; }
     td:before { display: none; }
-    /* Table Head & Table Data - Revert back to table */
-    td { display: table-cell; text-align: left; box-shadow: inset -1px 0 0 0 #ddd; }
-    th { box-shadow: inset -1px 0 0 0 #ccc; }
-    td:last-child, th:last-child, tr:nth-of-type(odd) td { box-shadow: none; }
-    /* Section Items */
-    tr { display: table-row; vertical-align: top; text-align: left; margin-bottom: 0; background: #f9f9f9; }
-    /* Body Zebra striping */
-    tbody tr:nth-of-type(odd) { background: #f5f5f5; }
-    tbody tr:nth-of-type(odd) td { box-shadow: inset -1px 0 0 0 #ddd; }
-    tbody tr:nth-of-type(odd) td:last-child { box-shadow: none; }
+    td { display: table-cell; text-align: left; }
+    tr { display: table-row; vertical-align: top; text-align: left; margin-bottom: 0; }
+
+    /* Table Border */
+    table { box-shadow: 0 0 0 1px #ccc; }
+
+    /* Header Border */
+    thead th { box-shadow: inset 0 -1px 0 0 #ccc, inset -1px 0 0 0 #ccc; }
+    thead th:last-child { box-shadow: inset 0 -1px 0 0 #ccc, inset 0 0 0 0 #ccc; }
+
+    /* Body Border */
+    tbody tr td { box-shadow: inset -1px 0 0 0 #ccc, inset 0 -1px 0 0 #ccc; }
+    tbody tr td:last-child { box-shadow: inset 0 0 0 0 #ccc, inset 0 -1px 0 0 #ccc; }
+    tbody tr:last-child td { box-shadow: inset -1px 0 0 0 #ccc, inset 0 0 0 0 #ccc; }
+    tbody tr:last-child td:last-child { box-shadow: inset 0 0 0 0 #ccc; }
   }
 
 /* ==========================================================================
