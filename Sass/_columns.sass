@@ -1,0 +1,23 @@
+[class*="col-"] > * > img
+  width: 100%
+  margin-bottom: 1.5em
+
+@media only screen and (min-width: 31.25em)
+  [class*="col-"]
+    > *
+      float: left
+      margin: 0 1.5em
+    -webkit-transform: translate(-1.5em, 0)
+    -ms-transform: translate(-1.5em, 0)
+    transform: translate(-1.5em, 0)
+    width: calc( 100% + 3em )
+    display: -webkit-box
+    display: -webkit-flex
+    display: -ms-flexbox
+    display: flex
+  .col-2 > *
+    width: calc( (100% / 2) - 3em )
+  .col-3 > *
+    width: calc( (100% / 3) - 3em )
+  .col-4 > *
+    width: calc( (100% / 4) - 3em )

@@ -113,10 +113,71 @@ html,button,input,select,textarea{color:#222;}html{font-size:1em;line-height:1.4
     color: #aaa;
   }
 
-/* =========================================================================
-  Add Formalize-css here if needed 
+/* ==========================================================================
+  Formalize.sass styles
   ========================================================================== */
-  /* www.formalize-css.com */
+
+  /* Label */
+  label { display: block; }
+
+  /* Input */
+  input, textarea { -webkit-appearance: none; border-radius: 0; }
+  input[type="radio"] { -webkit-appearance: radio; }
+  input[type="checkbox"] { -webkit-appearance: checkbox; }
+
+  /* Basic field height */
+  input[type="text"], input[type="email"], input[type="number"], 
+  input[type="password"], input[type="search"], input[type="range"] { height: 2.25em; padding: 0 0.5em; }
+
+  /* Border */
+  input[type="text"], input[type="email"], input[type="number"], input[type="password"], 
+  input[type="file"], input[type="search"], input[type="range"], textarea, fieldset { border: none; box-shadow: inset 0 0 0 1px #D5D5D5; }
+
+  /* Buttons */
+  input[type="button"], input[type="submit"], input[type="reset"], button {
+    border: none;
+    display: inline-block;
+    padding: 0 1em;
+    cursor: pointer;
+    line-height: 2.25;
+    background: #333;
+    color: white;
+    width: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    }
+
+  /* HoverButton */
+  input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover, button:hover { background: #444; }
+
+  /* ActiveButton */
+  input[type="button"]:active, 
+  input[type="submit"]:active, 
+  input[type="reset"]:active,
+  button:active { background: #555; }
+
+  /* Textarea styles */
+  textarea { padding: 1em; height: 6em; }
+
+  /* Legend */
+  legend { font-weight: bold; padding: 0 0.5em; margin-left: -0.5em; background: white; }
+
+  /* Fieldset styles & File Upload style */
+  fieldset { border-radius: 0.3125em; padding: 0.75em 1.5em; padding-bottom: 0; }
+
+  /* Radio & Checklist Styles */
+  fieldset ul { list-style: none; }
+  fieldset ul,
+  fieldset ul label { margin-bottom: 0; }
+  fieldset li { margin-bottom: 1em; }
+  input[type="checkbox"], 
+  input[type="radio"] { width: auto; margin: 0 0.5em 0 0; }
+
+  /* Upload File Text */
+  input[type="file"] { font-size: 0.75em; padding: 1.75em 2em; margin-bottom: 2em; }
+
+  /* Removed focus highlight */
+  input:focus, textarea:focus { outline: none; }
   
 
 /* =========================================================================
@@ -141,18 +202,12 @@ html,button,input,select,textarea{color:#222;}html{font-size:1em;line-height:1.4
     right: 0;
     bottom: 0;
     left: 0;
-    background: url("../img/basehold-18.png") repeat top left;
+    background: none;
 
   }
 
   body:active:after {
     display: none;
-  }
-
-  @media only screen and (min-width: 48em) { 
-    body:after {
-      background-image: url("../img/basehold-21.png");
-    } 
   }
 
   @media only screen and (min-width: 53.125em) { 
@@ -169,7 +224,7 @@ html,button,input,select,textarea{color:#222;}html{font-size:1em;line-height:1.4
 
   ========================================================================== */
 
-  h1, h2, h3, p, header, table, figure, summary, footer, section, article, dl, menu, ul, ol, aside, div, hr, fieldset, textarea, keygen, select, input { 
+  h1, h2, h3, p, header, table, figure, summary, footer, details, section, article, dl, menu, ul, ol, aside, div, hr, fieldset, textarea, keygen, select, input { 
     margin: 0 0 1.5em 0; 
     width: 100%;
     -webkit-font-smoothing: antialiased;
@@ -185,11 +240,65 @@ html,button,input,select,textarea{color:#222;}html{font-size:1em;line-height:1.4
   li { margin: 0 0 1.5em 0; }
   figure img { margin-bottom: 1.5em; }
 
-  label { margin-bottom: 0.5em; }
+  label { margin-bottom: 0.75em; }
   summary { margin-bottom: 0; }
   details p { margin-bottom: 0; }
   
 
+/* =========================================================================
+  Automatic Inline-Block Column
+  ========================================================================== */
+  .autoColumn > * {
+    display: inline-block !important;
+    float: left;
+    margin-right: 0.75em;
+  }
+
+/* =========================================================================
+  Columns
+  ========================================================================== */
+
+  [class*="col-"] > * > img {
+    width: 100%;
+    margin-bottom: 1.5em;
+  }
+
+  @media only screen and (min-width: 31.25em) {
+
+    [class*="col-"] > * {
+      float: left;
+      /* Margin total = 3em */
+      margin: 0 1.5em;
+    }
+
+    [class*="col-"] {
+      /* Offset left margin */
+      -webkit-transform: translate(-1.5em, 0);
+          -ms-transform: translate(-1.5em, 0);
+              transform: translate(-1.5em, 0);
+      /* Left & right edge margin added */
+      width: calc( 100% + 3em );
+      /* Flex */
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+    }
+
+    .col-2 > * {
+      /* Individual width & Margin total removed */
+      width: calc( (100% / 2) - 3em );
+    }
+    .col-3 > * {
+      /* Individual width & Margin total removed */
+      width: calc( (100% / 3) - 3em );
+    }
+    .col-4 > * {
+      /* Individual width & Margin total removed */
+      width: calc( (100% / 4) - 3em );
+    }
+
+  }
 
 /* =========================================================================
   Horizontal Rule
@@ -289,20 +398,20 @@ html,button,input,select,textarea{color:#222;}html{font-size:1em;line-height:1.4
 /* =========================================================================
   Details Styles - Webkit Only
   ========================================================================== */
-summary { background: #F9F9F9; padding: 0.75em; }
-summary:focus { outline: none; }
-details { box-shadow: 0 0 0 1px #ccc; }
-details[open] summary { box-shadow: inset 0 -1px 0 0 #ccc; }
-summary::-webkit-details-marker { display: none }
-summary:before { 
-  content: "+";
-  padding-right: 0.75em;
-  display: block;
-  float: left;
-  width: 1.5em;
-}
-details[open] summary:before { content: "-"; }
-details p { padding: 1.5em; background: white; }
+  summary { background: #F9F9F9; padding: 0.75em; }
+  summary:focus { outline: none; }
+  details { box-shadow: 0 0 0 1px #ccc; }
+  details[open] summary { box-shadow: inset 0 -1px 0 0 #ccc; }
+  summary::-webkit-details-marker { display: none }
+  summary:before { 
+    content: "+";
+    padding-right: 0.75em;
+    display: block;
+    float: left;
+    width: 1.5em;
+  }
+  details[open] summary:before { content: "-"; }
+  details p { padding: 1.5em; background: white; }
 
 
 /* =========================================================================
@@ -361,26 +470,10 @@ details p { padding: 1.5em; background: white; }
     tbody tr:last-child td:last-child { box-shadow: inset 0 0 0 0 #ccc; }
   }
 
-/* ==========================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-========================================================================== */
-
-
 /* =========================================================================
-  Grid Overlay 
+  Grid Overlay ( Not used for layout )
 
-  Include code from the main.js file - "Column setup"
+  Note: Include code from the main.js file - "Overlay Overlay"
   =========================================================================*/
 
 .grid,
@@ -468,6 +561,93 @@ details p { padding: 1.5em; background: white; }
   .grid .column:nth-of-type(6) {
     display: block;
   }
+}
+
+/* =========================================================================
+  Transformicons Simplified: From my codepen - http://codepen.io/trilm/pen/LEejop
+
+  Note: Include code from the main.js file - "Transformicons Simplified"
+
+  Example: 
+
+  <a class="tIcons" href="#">
+    <!-- Menu Icon -->
+    <svg viewBox="0 0 36 30">
+      <rect width="36" height="6"/>
+      <rect y="24" width="36" height="6"/>
+      <rect y="12" width="36" height="6"/>
+    </svg>
+    <!-- Close Icon -->
+    <svg viewBox="0 0 36 30">
+      <polygon points="32.8,4.4 28.6,0.2 18,10.8 7.4,0.2 3.2,4.4 13.8,15 3.2,25.6 7.4,29.8 18,19.2 28.6,29.8 32.8,25.6 22.2,15 "/>
+    </svg>
+  </a>
+  ========================================================================== */
+
+  a.tIcons {
+    display: block;
+    width: 1.75em;
+    height: 1.5em;
+    position: relative;
+    border-bottom: none;
+  }
+  a.tIcons svg {
+    width: 100%;
+    display: block;
+    position: absolute;
+  }
+  a.tIcons svg:first-child {
+    -webkit-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-transition: 0.2s ease-in-out;
+            transition: 0.2s ease-in-out;
+  }
+  a.tIcons svg:last-child {
+    -webkit-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-transition: 0.2s ease-in-out;
+            transition: 0.2s ease-in-out;
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
+  }
+  a.tIcons.toggle svg:first-child {
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
+  }
+  a.tIcons.toggle svg:last-child {
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+  }
+  a.tIcons.tRotate svg:last-child {
+    -webkit-transform: scale(0) rotate(0deg);
+        -ms-transform: scale(0) rotate(0deg);
+            transform: scale(0) rotate(0deg);
+  }
+  a.tIcons.tRotate.toggle svg:last-child {
+    -webkit-transform: scale(1) rotate(-360deg);
+        -ms-transform: scale(1) rotate(-360deg);
+            transform: scale(1) rotate(-360deg);
+  }
+
+/* =========================================================================
+  Mobile First: Progressively Enhance - http://bradfrost.com/blog/mobile/support-vs-optimization/
+
+  Note: Include code from the main.js file - "Column setup"
+  =========================================================================*/
+
+.desktop { display: none; }
+
+/* Even though the JS loads the elements in
+at Greater than 500px, your breakpoints will determine where to show and hide elements. */
+
+@media only screen and (min-width: 768px) {
+  .mobile { display: none; }
+  .desktop { display: block; }
 }
 
 /* =========================================================================
@@ -634,4 +814,4 @@ details p { padding: 1.5em; background: white; }
 =============================================================================
 =============================================================================
 =============================================================================
-========================================================================== 
+========================================================================== */
