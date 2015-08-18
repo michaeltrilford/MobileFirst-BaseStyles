@@ -439,7 +439,20 @@ body:before {
    <section class="wrapper"></section>
   </main>
   ========================================================================== */
-  .wrapper { width: 90%; width: calc( 100% - 3em ); max-width:73.75em; margin: 0 auto; padding: 1.5em 0; }
+  [class^="wrapper"] { width: 90%; width: calc( 100% - 3em ); max-width:73.75em; margin: 0 auto; padding: 1.5em 0; }
+
+  .wrapper--fluid {
+    max-width: 100%;
+  }
+  .wrapper--small {
+    max-width: 33.75em;
+  }
+  .wrapper--medium {
+    max-width: 43.75em;
+  }
+  .wrapper--large {
+    max-width: 73.75em;
+  }
 
 /* =========================================================================
   Selection Styles
@@ -468,6 +481,18 @@ body:before {
     padding-left: 1em;
     text-indent: -1em;
     margin-bottom: 0.75em;
+  }
+
+  ul.cancel-list-style,
+  ol.cancel-list-style {
+    list-style: none;
+  }
+
+  ul.cancel-list-style li,
+  ol.cancel-list-style li {
+      padding-left: 0;
+      text-indent: 0;
+      margin-bottom: 0;
   }
 
 /* =========================================================================
