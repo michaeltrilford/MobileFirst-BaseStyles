@@ -178,12 +178,12 @@
 
 // Page Wrapper
 @mixin wrapper
-  width: 90%
+  width: 95%
   width: calc( 100% - 3em )
   max-width: 73.75em
   margin: 0 auto
   padding: 1.5em 0
-
+  min-width: 18.75em
 
 /* Making a link two lines */
 @mixin breakWord
@@ -194,36 +194,41 @@
   word-break: break-word
   hyphens: auto
 
-
 @mixin truncate
   white-space: nowrap
   overflow: hidden
   text-overflow: ellipsis
 
+@mixin button
+  background-color: $dark-grey
+  color: white
+  border-color: $dark-grey
+  &:hover
+    background: white
+    color: white
 
-/* External link icon */
-@mixin targetBlank
-  .backgroundsize #section-content &
-    &[target="_blank"]
-      display: inline
-      margin-right: 0
-    &[target="_blank"]:after
-      content: ""
-      position: absolute
-      bottom: 0
-      right: 0
-      width: 1px
-      height: 1px
-      background-repeat: no-repeat
-      background-size: 14px
-      background-position: center
-      background-image: url(../images/example.png)
-      background-image: url(../images/example.svg)
+@mixin insideWrapper
+  padding: 0 1.5em
+
+@mixin triangle
+  content: ""
+  position: absolute
+  width: 0
+  height: 0
+  border: 15px solid transparent
+  border-left-color: white
+  border-left-width: 27px
+  border-right: 0
+
 
 
 @mixin translate3d
   // FORCE GPU - Try "will-change: width" in future
   -webkit-transform: translate3d(0, 0, 0)
+
+@mixin transition-transform-05s-Ease-Out
+  @include translate3d
+  transition: transform 0.05s ease-out
 
 @mixin transition-transform-25s-Ease-Out
   @include translate3d
@@ -298,47 +303,6 @@
   transition: opacity 0.5s ease-out
   transition-delay: 2s
 
-@mixin buttonHover
-  color: white
-  &:hover
-    background-color: #333
-    color: white
-
-  &:focus
-    outline: none
-    background-color: #333
-    color: white
-
-@mixin buttonColor
-  color: white
-  
-@mixin altButtonColor
-  background-color: black
-  background-color: rgba(0, 0, 0, 0.5)
-  color: white
-  &:hover
-    background-color: white
-    color: #333
-
-  &:focus
-    outline: none
-    background-color: #fcfcfc
-    color: #333
-
-@mixin insideWrapper
-  padding: 0 2em
-
-@mixin triangle
-  content: ""
-  position: absolute
-  width: 0
-  height: 0
-  border: 15px solid transparent
-  border-left-color: white
-  border-left-width: 27px
-  border-right: 0
-
-
 // Error Keyframes
 @mixin errorKeyframes
   @keyframes errorSlideIn
@@ -355,7 +319,6 @@
   // Fill Mode
   animation-fill-mode: both
 
-
 // Error Fields
 @mixin errorFadeInKeyframes
   @keyframes errorFadeIn
@@ -369,47 +332,5 @@
   animation: errorFadeIn 0.7s ease-in-out
   // Fill Mode
   animation-fill-mode: both
-
-@mixin landingPageAesthetic
-  background-image: url('backgroundImage.jpg')
-  background-repeat: no-repeat
-  background-size: cover
-  background-position: 50%
-  background-attachment: fixed
-  .mainWrapper
-    background: url('landingPageGradient.png') repeat-x 0 0 rgba(255, 255, 255, 0.90)
-
-
-@mixin socialMediaIcons
-  text-indent: -999999px
-  background-repeat: no-repeat
-  background-position: 50%
-  background-size: 60% 60%
-  border-radius: 5px
-
-
-@mixin dashboardHover
-  &:nth-of-type(1)
-    left: 0
-    background: rgba(0,0,0,0.09)
-
-  &:nth-of-type(2)
-    left: 20%
-    background: rgba(0,0,0,0.11)
-
-  &:nth-of-type(3)
-    right: 40%
-    background: rgba(0,0,0,0.13)
-
-  &:nth-of-type(4)
-    right: 20%
-    background: rgba(0,0,0,0.15)
-
-  &:nth-of-type(5)
-    right: 0
-    background: rgba(0,0,0,0.17)
-
-
-
 
 

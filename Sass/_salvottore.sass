@@ -1,0 +1,51 @@
+#grid[data-columns]::before
+  @media (min-width: 0em) and (max-width: 31.25em)
+    content: '1 .column.size-1of1'
+  @media (min-width: 31.26em) and (max-width: 38em)
+    content: '2 .column.size-1of2'
+  @media (min-width: 38.1em) and (max-width: 55em)
+    content: '4 .column.size-1of3'
+  @media (min-width: 55.1em) and (max-width: 60em)
+    content: '4 .column.size-1of4'
+  @media (min-width: 60.1em) and (max-width: 74em)
+    content: '5 .column.size-1of5'
+  @media (min-width: 74.1em) and (max-width: 80em)
+    content: '6 .column.size-1of6'
+  @media (min-width: 80.1em) and (max-width: 90em)
+    content: '7 .column.size-1of7'
+  @media (min-width: 90.1em)
+    content: '8 .column.size-1of8'
+
+
+.column
+  float: left
+  padding: 0.75em
+  margin-bottom: 0
+  div:last-child
+    margin-bottom: 0
+  img
+    width: 100%
+
+.size-1of1
+  width: 100%
+
+.size-1of2
+  width: 50%
+
+.size-1of3
+  width: 33.333%
+
+.size-1of4
+  width: 25%
+
+.size-1of5
+  width: 20%
+
+.size-1of6
+  width: 16.66666666666667%
+
+.size-1of7
+  width: 14.28571428571429%
+
+.size-1of8
+  width: 12.5%

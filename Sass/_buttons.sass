@@ -1,0 +1,16 @@
+// Button Setup - Or use the mixin @include button
+[class^="button"]
+  background-color: $dark-grey
+  color: white
+  padding: 0 1.5em
+  border: none
+  line-height: 2.25
+  height: 2.25em
+  display: inline-block
+  &:hover,
+  &:focus
+    opacity: 0.8
+    color: white
+
+.button--rounded
+  border-radius: 1.5em

@@ -1,0 +1,17 @@
+// These values will not show up in content, but can be 
+// queried by JavaScript to know which breakpoint is active.
+// Add or remove as many breakpoints as you like.
+
+body:before
+  content: "smartphone"
+  display: none
+  @media (min-width: 31.25em)
+    content: "smartphone-m"
+  @media (min-width: 43.75em)
+    content: "tablet"
+  @media (min-width: 53.125em)
+    content: "desktop"
+  @media (min-width: 59.9375em)
+    content: "menuBreakpoint"
+  @media (min-width: 60em)
+    content: "desktop-l"

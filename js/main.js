@@ -1,14 +1,5 @@
 // Remember to delete comments / minify this document. Remove what you don't want.
 
-/* A. OVERLAY GRID
-------------------------------------------------------------------- */
-$(".grid").append('<div class="wrapper"><div class="columnWrap"></div></div>');
-var str = '';
-for(var cnt=0; cnt < 6; cnt++){
-    str += '<div class="column"></div>';
-}
-$(".columnWrap").append(str);
-
 
 /* B. TRANSFORMICONS SIMPLIFIED
 ------------------------------------------------------------------- */

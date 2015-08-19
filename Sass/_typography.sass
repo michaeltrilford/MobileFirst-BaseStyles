@@ -14,12 +14,12 @@
  *  H1 - fs:48px; / lh:60px;
  *  H2 - fs:36px; / lh:48px;
  *  H3 - fs:24px; / lh:36px;
- *  H4 - fs:21px; / lh:24px;
+ *  H4 - fs:21px; / lh:30px;
  *  H5 - fs:18px; / lh:24px;
  *  H6 - fs:16px; / lh:24px;
  *
  *  medium - fs:18px; / lh:24px;
- *  x-medium - fs:21px; / lh:24px;
+ *  x-medium - fs:21px; / lh:30px;
  *
  *  large - fs:60px; / lh:72px;
  *  x-large - fs:72px; / lh:84px; / mb:48px;
@@ -49,6 +49,13 @@ html
 button, input, select, textarea
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
 
+blockquote
+  @include fontSize24
+  margin: 1.5em 0 2.25em
+  font-style: italic
+  font-weight: 500
+  color: $dark-grey
+
 strong
   font-weight: bold
 
@@ -69,7 +76,7 @@ h3
 
 h4
   font-size: 1.3125em
-  line-height: 1.14285714285714
+  line-height: 1.42857142857143
 
 h5
   font-size: 1.125em
@@ -106,7 +113,7 @@ a
 
 .x-medium
   font-size: 1.3125em
-  line-height: 1.14285714285714
+  line-height: 1.42857142857143
   margin: 0 0 1.14285714285714em 0
 
 /* Large */

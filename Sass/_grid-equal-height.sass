@@ -1,0 +1,16 @@
+// IE8 & 9 will have a defective layout. JS could detect the true height of the highest item, then inject on all elements?
+.grid--equal-height
+  .no-flexbox &
+    .contentWrapper
+      width: calc(100% - 1.5em)
+      .imageWrapperOverlay
+        text-align: center
+        background-color: $dark-grey
+        &:before
+          max-width: 30em
+        img
+          max-width: 30em
+  .flexbox &
+    display: flex
+    flex-flow: row wrap
+    justify-content: center
