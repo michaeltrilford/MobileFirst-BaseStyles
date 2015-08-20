@@ -57,7 +57,14 @@ html,button,input,select,textarea{color:#222;}html{font-size:1em;line-height:1.4
 
   html, button, input, select, textarea { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
-/*  h1, h2, h3, h4, h5, h6 { font-weight: normal; }*/
+  blockquote {
+    font-size: 1.5em;
+    margin: 1.5em 0 2em;
+    font-style: italic;
+    font-weight: 500;
+    color: #333;
+  }
+
   strong { font-weight: bold; }
   em { font-style: italic; }
 
@@ -68,8 +75,8 @@ html,button,input,select,textarea{color:#222;}html{font-size:1em;line-height:1.4
   h5 { font-size: 1.125em; line-height: 1.33333333333333; font-weight: bold; }                     
   h6 { font-size: 1em; line-height: 1.5; font-weight: bold; }  
   p { font-size: 1em; }
-  a { font-size: 1em; text-decoration: none; color: #333; border-bottom: 1px solid #333; }
-  a:hover { text-decoration: none; color: #333; border-bottom: none; }
+  a { font-size: 1em; color: #333; }
+  a:hover { text-decoration: none; color: #333; }
   a:focus { color: #333; outline: none; }
 
   /* Medium */
@@ -227,16 +234,6 @@ html,button,input,select,textarea{color:#222;}html{font-size:1em;line-height:1.4
     } 
   }
 
-/* =========================================================================
-  Horizontal Rule
-  ========================================================================== */
-
-  hr {
-    box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1), 0 1px 0px 0 rgba(255, 255, 255, 0.1);
-    border-top: none;
-    margin-top: -1px;
-    height: 1px;
-    }
 
 /* =========================================================================
 
@@ -260,12 +257,21 @@ html,button,input,select,textarea{color:#222;}html{font-size:1em;line-height:1.4
   h5 { margin: 0 0 1.33333333333333em 0;  }
   h6 { margin: 0 0 1.5em 0; }
   li { margin: 0 0 1.5em 0; }
-  figure img { margin-bottom: 1.5em; }
 
   label { margin-bottom: 0.75em; }
   summary { margin-bottom: 0; }
   details p { margin-bottom: 0; }
   
+/* =========================================================================
+  Horizontal Rule
+  ========================================================================== */
+
+  hr {
+    box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1), 0 1px 0px 0 rgba(255, 255, 255, 0.1);
+    border-top: none;
+    margin-top: -1px;
+    height: 1px;
+    }
 
 /* =========================================================================
   Simple Navigation
@@ -471,7 +477,8 @@ body:before {
   List Styles
   ========================================================================== */
   /* General List Styles */
-  ul li ul { margin-top: 0.75em; color: #777; font-size: 0.875em; }
+  ul li ul { margin-top: 0.85714285714286em; margin-bottom: 1.71428571428571em; color: #777; font-size: 0.875em; }
+  ul li ul li { line-height: 1.71428571428571; }
   ul, ol { padding: 0; list-style-position: inside; }
   li {
     padding-left: 1em;
@@ -667,6 +674,327 @@ body:before {
         -ms-transform: scale(1) rotate(-360deg);
             transform: scale(1) rotate(-360deg);
   }
+
+/* =========================================================================
+  Two Up Label
+  ========================================================================== */
+
+.two-up-label { margin-bottom: 0.75em; }
+.two-up-label span:last-child,
+.two-up-label strong { float: right; }
+.two-up-label.stacked span { display: block; }
+.two-up-label.stacked strong { float: none; }
+
+/* =========================================================================
+  Heading with side button
+  ========================================================================== */
+
+.flexbox .heading-with-side-button {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.heading-with-side-button h1, 
+.heading-with-side-button h2, 
+.heading-with-side-button h3, 
+.heading-with-side-button h4, 
+.heading-with-side-button h5, 
+.heading-with-side-button h6 {
+  width: 50%;
+  float: left;
+  margin: 0;
+}
+
+.flexbox .heading-with-side-button h1, 
+.flexbox .heading-with-side-button h2, 
+.flexbox .heading-with-side-button h3, 
+.flexbox .heading-with-side-button h4, 
+.flexbox .heading-with-side-button h5, 
+.flexbox .heading-with-side-button h6 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+      
+.heading-with-side-button [class^="button"] {
+  float: right;
+  margin-top: 0.44em;
+}
+
+.flexbox .heading-with-side-button [class^="button"] {
+  margin-top: 0;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+
+/* =========================================================================
+  Button example
+  ========================================================================== */
+ 
+[class^="button"] {
+  background-color: #333;
+  color: white;
+  padding: 0 1.5em;
+  text-decoration: none;
+  line-height: 2.25;
+  height: 2.25em;
+  display: inline-block;
+}
+
+[class^="button"]:hover,
+[class^="button"]:focus {
+  opacity: 0.8;
+  color: white;
+}
+
+.button--rounded {
+  border-radius: 1.5em;
+}
+
+/* =========================================================================
+  Figure styles
+  ========================================================================== */
+      
+figure {
+  background: #eee;
+}
+figure.right {
+    width: 50%;
+    margin-left: 1.5em;
+    float: right;
+}
+figure.left {
+    width: 50%;
+    margin-right: 1.5em;
+    float: left;
+}
+figure img {
+    width: 100%;
+    height: auto;
+}
+figure figcaption {
+    padding: 0.85714285714286em;
+    line-height: 1.71428571428571;
+    text-align: center;
+    font-size: 0.875em;
+}
+
+/* =========================================================================
+  Grid
+  ========================================================================== */
+@media (min-width: 31.25em) {
+  .csscalc [class^="grid"] {
+    width: calc(100% + 1.5em);
+    transform: translate(-0.75em, 0);
+  }
+}
+@media (min-width: 77.5em) {
+  .csscalc [class^="grid"] {
+    width: calc(100% + 3em);
+    transform: translate(-1.5em, 0);
+  }
+}
+[class^="grid"] img {
+  width: 100%;
+  height: auto;
+  background: white;
+  margin: 0;
+}
+[class^="grid"] .contentWrapper {
+  list-style: none;
+  text-indent: 0;
+  padding: 0;
+  margin: 0;
+  border-bottom: 1.5em solid #333;
+  background: white;
+  background: linear-gradient(to right, #F5F5F5 0%, #FFF 50%, #FFF 100%);
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.17);
+  margin-bottom: 1.5em;
+  width: 100%;
+}
+@media (min-width: 53.125em) {
+  [class^="grid"] .contentWrapper {
+    -webkit-transition: -webkit-transform 0.05s ease-out;
+    transition: transform 0.05s ease-out;
+  }
+  [class^="grid"] .contentWrapper:hover {
+    box-shadow: 0 0 2em 0 rgba(0, 0, 0, 0.4);
+    transform: scale(1.01);
+    z-index: 200;
+    position: relative;
+  }
+}
+[class^="grid"] .contentWrapper > a {
+  display: block;
+  border-bottom: none;
+}
+@media (min-width: 31.25em) {
+  [class^="grid"] .contentWrapper {
+    width: 50%;
+    float: left;
+  }
+  .csscalc [class^="grid"] .contentWrapper {
+    margin: 0 0.75em;
+    width: calc( (100% / 2) - 1.5em );
+    margin-bottom: 1.5em;
+  }
+}
+@media (min-width: 41em) {
+  [class^="grid"] .contentWrapper {
+    width: 33.33333%;
+  }
+  .csscalc [class^="grid"] .contentWrapper {
+    width: calc( (100% / 3) - 1.5em );
+  }
+}
+@media (min-width: 73.75em) {
+  [class^="grid"] .contentWrapper {
+    width: 25%;
+  }
+  .csscalc [class^="grid"] .contentWrapper {
+    width: calc( (100% / 4) - 1.5em );
+  }
+}
+[class^="grid"] .contentWrapper .imageWrapperOverlay {
+  position: relative;
+}
+@media (min-width: 31.25em) {
+  [class^="grid"] .contentWrapper .imageWrapperOverlay:hover img {
+    filter: saturate(0);
+  }
+  [class^="grid"] .contentWrapper .imageWrapperOverlay:hover:before {
+    background-color: rgba(51, 51, 51, 0.8);
+  }
+  .flexbox [class^="grid"] .contentWrapper .imageWrapperOverlay:hover:before {
+    content: "⇢";
+    text-align: center;
+    color: white;
+    font-size: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+  }
+}
+[class^="grid"] .contentWrapper .imageWrapperOverlay:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 100;
+}
+[class^="grid"] .contentWrapper h3 {
+  line-height: 1.14285714285714;
+  margin-bottom: 1.14285714285714em;
+}
+[class^="grid"] .contentWrapper h3 .titleLink {
+  display: inline;
+}
+[class^="grid"] .contentWrapper h3 .titleLink:hover {
+  color: #333;
+}
+[class^="grid"] .contentWrapper h3 span {
+  display: none;
+  float: right;
+  color: #ccc;
+}
+@media (min-width: 31.25em) {
+  [class^="grid"] .contentWrapper h3 span {
+    display: block;
+  }
+  [class^="grid"] .contentWrapper h3 span:hover {
+    color: inherit;
+  }
+  [class^="grid"] .contentWrapper h3 .titleLink {
+    width: 95%;
+    float: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    border: none;
+  }
+  .csscalc [class^="grid"] .contentWrapper h3 .titleLink {
+    width: calc(100% - 1.5em);
+  }
+  [class^="grid"] .contentWrapper h3 .titleLink:hover + a span {
+    color: inherit;
+  }
+}
+[class^="grid"] .contentWrapper .childWrapper {
+  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+  margin: 0;
+  font-size: 0.875em;
+  position: relative;
+}
+[class^="grid"] .contentWrapper .childWrapper p {
+  margin: 0;
+  line-height: 1.71428571428571em;
+}
+
+
+
+/* =========================================================================
+  Grid Equal Height
+  ========================================================================== */
+.no-flexbox .grid--equal-height .contentWrapper {
+  width: calc(100% - 1.5em);
+}
+.no-flexbox .grid--equal-height .contentWrapper .imageWrapperOverlay {
+  text-align: center;
+  background-color: #333;
+}
+.no-flexbox .grid--equal-height .contentWrapper .imageWrapperOverlay:before {
+  max-width: 30em;
+}
+.no-flexbox .grid--equal-height .contentWrapper .imageWrapperOverlay img {
+  max-width: 30em;
+}
+.flexbox .grid--equal-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* =========================================================================
+  Landing Page
+  ========================================================================== */
+
+@media (min-width: 60em) {
+  .landing-wrapper {
+    float: left;
+    width: calc(70% - 3em);
+  }
+  .landing-wrapper .x-medium {
+    margin-top: 1.71428571428571em;
+    padding-right: 3em;
+  }
+}
+
+@media (min-width: 60em) {
+  .landing-aside {
+    float: right;
+    width: 30%;
+  }
+}
+
+
 
 /* =========================================================================
   Author's custom styles

@@ -1,0 +1,23 @@
+.heading-with-side-button
+  @include cf
+  .flexbox &
+    display: flex
+    align-items: center
+
+  h1, 
+  h2, 
+  h3, 
+  h4, 
+  h5, 
+  h6
+    width: 50%
+    float: left
+    @include noMargin
+    .flexbox &
+      flex: 1
+  [class^="button"]
+    float: right
+    margin-top: 0.44em
+    .flexbox &
+      margin-top: 0
+      flex: 0 0 auto
