@@ -1,515 +1,712 @@
-/* 2015 Combined Structure */
+@charset "UTF-8";
+/* html5 boilerplate */
+html, button, input, select, textarea {
+  color: #222; }
+
+html {
+  font-size: 1em;
+  line-height: 1.4; }
+
+::-moz-selection, ::selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+audio, canvas, img, video {
+  vertical-align: middle; }
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+textarea {
+  resize: vertical; }
 
 /* normalize */
-article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;*display:inline;*zoom:1;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-size:100%;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}html,button,input,select,textarea{font-family:sans-serif;}body{margin:0;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;margin:0.67em 0;}h2{font-size:1.5em;margin:0.83em 0;}h3{font-size:1.17em;margin:1em 0;}h4{font-size:1em;margin:1.33em 0;}h5{font-size:0.83em;margin:1.67em 0;}h6{font-size:0.67em;margin:2.33em 0;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:bold;}blockquote{margin:1em 40px;}dfn{font-style:italic;}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0;}mark{background:#ff0;color:#000;}p,pre{margin:1em 0;}code,kbd,pre,samp{font-family:monospace,serif;_font-family:'courier new',monospace;font-size:1em;}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word;}q{quotes:none;}q:before,q:after{content:'';content:none;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-0.5em;}sub{bottom:-0.25em;}dl,menu,ol,ul{margin:1em 0;}dd{margin:0 0 0 40px;}menu,ol,ul{padding:0 0 0 40px;}nav ul,nav ol{list-style:none;list-style-image:none;}img{border:0;-ms-interpolation-mode:bicubic;}svg:not(:root){overflow:hidden;}figure{margin:0;}form{margin:0;}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em;}legend{border:0;padding:0;white-space:normal;*margin-left:-7px;}button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle;}button,input{line-height:normal;}button,select{text-transform:none;}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer;*overflow:visible;}button[disabled],html input[disabled]{cursor:default;}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;*height:13px;*width:13px;}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none;}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block; }
 
-/* html5 boilerplate */
-html,button,input,select,textarea{color:#222;}html{font-size:1em;line-height:1.4;}::-moz-selection{background:#b3d4fc;text-shadow:none;}::selection{background:#b3d4fc;text-shadow:none;}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0;}audio,canvas,img,video{vertical-align:middle;}fieldset{border:0;margin:0;padding:0;}textarea{resize:vertical;}
+audio, canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden] {
+  display: none; }
+
+html {
+  font-size: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-family: sans-serif; }
+
+button, input, select, textarea {
+  font-family: sans-serif; }
+
+body {
+  margin: 0; }
+
+a:focus {
+  outline: thin dotted; }
+a:active, a:hover {
+  outline: 0; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b, strong {
+  font-weight: bold; }
+
+blockquote {
+  margin: 1em 40px; }
+
+dfn {
+  font-style: italic; }
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+mark {
+  background: #ff0;
+  color: #000;
+  display: inline-block; }
+
+p, pre {
+  margin: 1em 0; }
+
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  _font-family: "courier new", monospace;
+  font-size: 1em; }
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+q {
+  quotes: none; }
+  q:before, q:after {
+    content: "";
+    content: none; }
+
+small {
+  font-size: 80%; }
+
+sub {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+dl, menu, ol, ul {
+  margin: 1em 0; }
+
+dd {
+  margin: 0 0 0 40px; }
+
+menu, ol, ul {
+  padding: 0 0 0 40px; }
+
+nav ul, nav ol {
+  list-style: none;
+  list-style-image: none; }
+
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+figure, form {
+  margin: 0; }
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+  *margin-left: -7px; }
+
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle; }
+
+button, input {
+  line-height: normal; }
+
+button, select {
+  text-transform: none; }
+
+button, html input[type="button"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+  *overflow: visible; }
+
+input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+  *overflow: visible; }
+
+button[disabled], html input[disabled] {
+  cursor: default; }
+
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+  *height: 13px;
+  *width: 13px; }
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+  input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none; }
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+textarea {
+  overflow: auto;
+  vertical-align: top; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.browsehappy {
+  text-align: center;
+  padding: 0.75em;
+  color: #ccc;
+  background: #333; }
+  .browsehappy a {
+    color: skyBlue;
+    text-decoration: none;
+    border-bottom: 0.0625em solid; }
+    .browsehappy a:hover {
+      color: skyBlue;
+      text-decoration: none;
+      border-bottom: 0.0625em solid rgba(255, 255, 255, 0.15); }
 
 /* =========================================================================
-  Browsehappy
-  ========================================================================== */
-  .browsehappy { text-align: center; padding: 0.75em; color: #ccc; background: #333; }
-  .browsehappy a { color: skyBlue; text-decoration: none; border-bottom: 0.0625em solid; }
-  .browsehappy a:hover { color: skyBlue; text-decoration: none; border-bottom: 0.0625em solid rgba(255,255,255,0.15); }
+ *  Typography
+ *  ==========================================================================
+ *
+ *  Typographic Scale Used:
+ *
+ *  6px, 7px, 8px, 9px, 10px, 11px, 12px, 14px, 16px, 18px, 21px, 24px, 36px, 48px, 60px, 72px, 84px, 96px, 108, 120
+ *  |-------------- +1 --------------|------- +2 -------|--- +3 ---|--------------------- +12 --------------------|
+ *
+ *  Important information: 
+ *  ----------------------
+ *  » Even though the CSS is structured in a Mobile First approach, the Desktop base font-size: 16px; is used to calulate the em units.
+ *
+ *  H1 - fs:48px; / lh:60px;
+ *  H2 - fs:36px; / lh:48px;
+ *  H3 - fs:24px; / lh:36px;
+ *  H4 - fs:21px; / lh:30px;
+ *  H5 - fs:18px; / lh:24px;
+ *  H6 - fs:16px; / lh:24px;
+ *
+ *  medium - fs:18px; / lh:24px;
+ *  x-medium - fs:21px; / lh:30px;
+ *
+ *  large - fs:60px; / lh:72px;
+ *  x-large - fs:72px; / lh:84px; / mb:48px;
+ *  xx-large - fs:84px; / lh:96px; / mb:48px;
+ *
+ *  ========================================================================== */
+html {
+  font-size: 0.75em;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-feature-settings: "kern" 1, "liga" 1;
+  -moz-font-feature-settings: "kern=1", "liga=1";
+  -moz-font-feature-settings: "kern" on, "liga" on;
+  -ms-font-feature-settings: "kern" 1, "liga" 1;
+  -o-font-feature-settings: "kern", "liga";
+  font-feature-settings: "kern", "liga";
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  @media only screen and (min-width: 31.25em) {
+    html {
+      font-size: 0.75em; } }
+  @media only screen and (min-width: 48em) {
+    html {
+      font-size: 0.875em; } }
+  @media only screen and (min-width: 53.125em) {
+    html {
+      font-size: 1em; } }
 
-/* =========================================================================
-  Typography
-  ==========================================================================
+button, input, select, textarea {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
-  Typographic Scale Used:
+blockquote {
+  font-size: calc(24 / 16 * 1em);
+  line-height: calc(36 / 24);
+  margin: 0;
+  margin-bottom: calc(24 / 24 * 1em);
+  margin: 1.5em 0 2em;
+  font-style: italic;
+  font-weight: 500;
+  color: #333333; }
 
-  6px, 7px, 8px, 9px, 10px, 11px, 12px, 14px, 16px, 18px, 21px, 24px, 36px, 48px, 60px, 72px, 84px, 96px, 108, 120
-  |-------------- +1 --------------|------- +2 -------|--- +3 ---|--------------------- +12 --------------------|
+strong {
+  font-weight: bold; }
 
-  Important information: 
-  ----------------------
-  » Even though the CSS is structured in a Mobile First approach, the Desktop base font-size: 16px; is used to calulate the em units.
+em {
+  font-style: italic; }
 
-  H1 - fs:48px; / lh:60px;
-  H2 - fs:36px; / lh:48px;
-  H3 - fs:24px; / lh:36px;
-  H4 - fs:21px; / lh:24px;
-  H5 - fs:18px; / lh:24px;
-  H6 - fs:16px; / lh:24px;
+h1 {
+  font-size: 3em;
+  line-height: 1.25; }
 
-  medium - fs:18px; / lh:24px;
-  x-medium - fs:21px; / lh:24px;
+h2 {
+  font-size: 2.25em;
+  line-height: 1.33333; }
 
-  large - fs:60px; / lh:72px;
-  x-large - fs:72px; / lh:84px; / mb:48px;
-  xx-large - fs:84px; / lh:96px; / mb:48px;
+h3 {
+  font-size: 1.5em;
+  line-height: 1.5; }
 
-  ========================================================================== */
+h4 {
+  font-size: 1.3125em;
+  line-height: 1.14286; }
 
-  html { 
-    font-size: 0.75em;
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-feature-settings: "kern" 1, "liga" 1;
-     -moz-font-feature-settings: "kern=1", "liga=1";
-     -moz-font-feature-settings: "kern" on, "liga" on;
-      -ms-font-feature-settings: "kern" 1, "liga" 1;
-       -o-font-feature-settings: "kern", "liga";
-          font-feature-settings: "kern", "liga";
-  }
+h5 {
+  font-size: 1.125em;
+  line-height: 1.33333;
+  font-weight: bold; }
 
-  html, button, input, select, textarea { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+h6 {
+  font-size: 1em;
+  line-height: 1.5;
+  font-weight: bold; }
 
-  blockquote {
-    font-size: 1.5em;
-    margin: 1.5em 0 2em;
-    font-style: italic;
-    font-weight: 500;
+p {
+  font-size: 1em; }
+
+a {
+  font-size: 1em;
+  color: #333; }
+  a:hover {
+    color: #333; }
+  a:focus {
     color: #333;
-  }
+    outline: none; }
 
-  strong { font-weight: bold; }
-  em { font-style: italic; }
+/* Medium */
+.medium {
+  font-size: 1.125em;
+  line-height: 1.33333;
+  margin: 0 0 1.33333em 0; }
 
-  h1 { font-size: 3em; line-height: 1.25; }
-  h2 { font-size: 2.25em; line-height: 1.33333333333333; }                                       
-  h3 { font-size: 1.5em; line-height: 1.5; }                                                      
-  h4 { font-size: 1.3125em; line-height: 1.14285714285714; }                                   
-  h5 { font-size: 1.125em; line-height: 1.33333333333333; font-weight: bold; }                     
-  h6 { font-size: 1em; line-height: 1.5; font-weight: bold; }  
-  p { font-size: 1em; }
-  a { font-size: 1em; color: #333; }
-  a:hover { text-decoration: none; color: #333; }
-  a:focus { color: #333; outline: none; }
+.x-medium {
+  font-size: 1.3125em;
+  line-height: 1.42857;
+  margin: 0 0 1.14286em 0; }
 
-  /* Medium */
-  .medium { font-size: 1.125em; line-height: 1.33333333333333; margin: 0 0 1.33333333333333em 0; }
-  .x-medium { font-size: 1.3125em; line-height: 1.14285714285714; margin: 0 0 1.14285714285714em 0; }
+/* Large */
+.large {
+  font-size: 3.75em;
+  line-height: 1.2;
+  margin-bottom: 0.4em; }
 
-  /* Large */
-  .large { font-size: 3.75em; line-height: 1.2; margin-bottom: 0.4em; }                           
-  .x-large { font-size: 4.5em; line-height: 1.16666666666667; margin-bottom: 0.66666666666667em; }
-  .xx-large { font-size: 5.25em; line-height: 1.14285714285714; margin-bottom: 0.57142857142857em; }
+.x-large {
+  font-size: 4.5em;
+  line-height: 1.16667;
+  margin-bottom: 0.66667em; }
 
-  .small-caps {
-      -ms-font-feature-settings: "smcp";
-      -moz-font-feature-settings: "smcp";
-      -webkit-font-feature-settings: "smcp";
-      font-feature-settings: "smcp";
-  }
+.xx-large {
+  font-size: 5.25em;
+  line-height: 1.14286;
+  margin-bottom: 0.57143em; }
 
-  .text-figures { 
-      -moz-font-feature-settings: 'onum';
-      -ms-font-feature-settings: 'onum';
-      -webkit-font-feature-settings: 'onum';
-      font-feature-settings: 'onum';
-  }
+.small-caps {
+  -ms-font-feature-settings: "smcp";
+  -moz-font-feature-settings: "smcp";
+  -webkit-font-feature-settings: "smcp";
+  font-feature-settings: "smcp"; }
 
-  .textDG { color: #333; }
-  .textLG { color: #aaa; }
+.text-figures {
+  -moz-font-feature-settings: "onum";
+  -ms-font-feature-settings: "onum";
+  -webkit-font-feature-settings: "onum";
+  font-feature-settings: "onum"; }
 
-/* =========================================================================
-  Fancy - Headings
-  ==========================================================================
-  <div class="headingGroup">
-   <h1>Justo Egestas</h1>
-   <h2>Quam Parturient Inceptos</h2>
-  </div>
-  ========================================================================== */
-  .headingGroup > *:first-child {
-    margin-bottom: 0;
-  }
-  .headingGroup > *:last-child {
-    color: #aaa;
-  }
+.textDG {
+  color: #333; }
 
-/* ==========================================================================
-  Formalize.sass styles
-  ========================================================================== */
-
-  /* Label */
-  label { display: block; }
-
-  /* Input */
-  input, textarea { -webkit-appearance: none; border-radius: 0; }
-  input[type="radio"] { -webkit-appearance: radio; }
-  input[type="checkbox"] { -webkit-appearance: checkbox; }
-
-  /* Basic field height */
-  input[type="text"], input[type="email"], input[type="number"], 
-  input[type="password"], input[type="search"], input[type="range"] { height: 2.25em; padding: 0 0.5em; }
-
-  input[type="search"] { box-sizing: border-box; }
-
-  /* Border */
-  input[type="text"], input[type="email"], input[type="number"], input[type="password"], 
-  input[type="file"], input[type="search"], input[type="range"], textarea, fieldset { border: none; box-shadow: inset 0 0 0 1px #D5D5D5; }
-
-  /* Buttons */
-  input[type="button"], input[type="submit"], input[type="reset"], button {
-    border: none;
-    display: inline-block;
-    padding: 0 1em;
-    cursor: pointer;
-    line-height: 2.25;
-    background: #333;
-    color: white;
-    width: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    }
-
-  /* HoverButton */
-  input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover, button:hover { background: #444; }
-
-  /* ActiveButton */
-  input[type="button"]:active, 
-  input[type="submit"]:active, 
-  input[type="reset"]:active,
-  button:active { background: #555; }
-
-  /* Textarea styles */
-  textarea { padding: 1em; height: 6em; }
-
-  /* Legend */
-  legend { font-weight: bold; padding: 0 0.5em; margin-left: -0.5em; background: white; }
-
-  /* Fieldset styles & File Upload style */
-  fieldset { border-radius: 0.3125em; padding: 0.75em 1.5em; padding-bottom: 0; }
-
-  /* Radio & Checklist Styles */
-  fieldset ul { list-style: none; }
-  fieldset ul,
-  fieldset ul label { margin-bottom: 0; }
-  fieldset li { margin-bottom: 1em; }
-  input[type="checkbox"], 
-  input[type="radio"] { width: auto; margin: 0 0.5em 0 0; }
-
-  /* Upload File Text */
-  input[type="file"] { font-size: 0.75em; padding: 1.75em 2em; margin-bottom: 2em; }
-
-  /* Removed focus highlight */
-  input:focus, textarea:focus { outline: none; }
-  
-
-/* ==========================================================================
-  Search styles
-  ========================================================================== */
-  .search input[type="search"],
-  .search input[type="submit"] { float: left; }
-
-  .search input[type="search"] { width: calc(100% - 15em); }
-  .search input[type="submit"] { width: 15em; }
+.textLG {
+  color: #aaa; }
 
 /* =========================================================================
-  Baseline Grid - 24px w/ 12px subdivision ( http://basehold.it )
+ *  Fancy - Headings
+ *  ==========================================================================
+ *  <div class="headingGroup">
+ *   <h1>Justo Egestas</h1>
+ *   <h2>Quam Parturient Inceptos</h2>
+ *  </div>
+ *  ========================================================================== */
+.headingGroup > *:first-child {
+  margin-bottom: 0; }
 
-  Comment this out when finished designing.
-  ========================================================================== */
+.headingGroup > *:last-child {
+  color: #aaa; }
 
-  body {
-    position: relative;
-  }
-
-  body:after {
+/* =========================================================================
+ *Baseline Grid - 24px w/ 12px subdivision ( Inspired by http://basehold.it )
+ *========================================================================== */
+.baselineGridSetup,
+.baselineGridSetup > body {
+  height: 100vh; }
+  .baselineGridSetup > .baselineGrid,
+  .baselineGridSetup > body > .baselineGrid {
+    z-index: 10000000;
     position: absolute;
-    width: auto;
-    height: auto;
-    z-index: 9999;
-    content: '';
-    display: block;
     pointer-events: none;
     top: 0;
-    right: 0;
-    bottom: 0;
     left: 0;
-    background: none;
-
-  }
-
-  body:active:after {
-    display: none;
-  }
-
-  @media only screen and (min-width: 53.125em) { 
-    body:after {
-      background-image: url("../img/basehold-24.png");
-    } 
-  }
-
-
-/* =========================================================================
-
-  Baseline Scale Values:
-
-  0.75em (12px), 1.5em (24px), 2.25em (36px), 3em (48px), 3.75em (60px), 4.5em (72px), 5.25em (84px), 6em (96px), 6.75em (108px), 7.5em (120px)
-
-  ========================================================================== */
-
-  h1, h2, h3, p, header, table, figure, summary, footer, details, section, article, dl, menu, ul, ol, aside, div, hr, fieldset, textarea, keygen, select, input { 
-    margin: 0 0 1.5em 0; 
-    width: 100%;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    }
-  h1 { margin: 0 0 0.5em 0; }
-  h2 { margin: 0 0 0.66666666666667em 0; }
-  h3 { margin: 0 0 1em 0; }
-  p { margin: 0 0 1.5em 0; }
-  h4 { margin: 0 0 1.14285714285714em 0; }
-  h5 { margin: 0 0 1.33333333333333em 0;  }
-  h6 { margin: 0 0 1.5em 0; }
-  li { margin: 0 0 1.5em 0; }
-
-  label { margin-bottom: 0.75em; }
-  summary { margin-bottom: 0; }
-  details p { margin-bottom: 0; }
-  
-/* =========================================================================
-  Horizontal Rule
-  ========================================================================== */
-
-  hr {
-    box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1), 0 1px 0px 0 rgba(255, 255, 255, 0.1);
-    border-top: none;
-    margin-top: -1px;
-    height: 1px;
-    }
+    outline: none !important;
+    margin-bottom: 0;
+    height: auto;
+    overflow-y: hidden; }
+    @media (min-height: 828px) {
+      .baselineGridSetup > .baselineGrid,
+      .baselineGridSetup > body > .baselineGrid {
+        height: 100vh; } }
+    .baselineGridSetup > .baselineGrid div,
+    .baselineGridSetup > body > .baselineGrid div {
+      width: calc(100% + 2px);
+      transform: translate(-1px, 0);
+      height: 0.75em;
+      outline: 2px solid skyBlue;
+      opacity: 0.3;
+      outline-offset: -1px;
+      margin-bottom: 0.75em; }
+      .baselineGridSetup > .baselineGrid div:nth-last-of-type(9),
+      .baselineGridSetup > body > .baselineGrid div:nth-last-of-type(9) {
+        opacity: 0.28; }
+      .baselineGridSetup > .baselineGrid div:nth-last-of-type(8),
+      .baselineGridSetup > body > .baselineGrid div:nth-last-of-type(8) {
+        opacity: 0.24; }
+      .baselineGridSetup > .baselineGrid div:nth-last-of-type(7),
+      .baselineGridSetup > body > .baselineGrid div:nth-last-of-type(7) {
+        opacity: 0.2; }
+      .baselineGridSetup > .baselineGrid div:nth-last-of-type(6),
+      .baselineGridSetup > body > .baselineGrid div:nth-last-of-type(6) {
+        opacity: 0.18; }
+      .baselineGridSetup > .baselineGrid div:nth-last-of-type(5),
+      .baselineGridSetup > body > .baselineGrid div:nth-last-of-type(5) {
+        opacity: 0.14; }
+      .baselineGridSetup > .baselineGrid div:nth-last-of-type(4),
+      .baselineGridSetup > body > .baselineGrid div:nth-last-of-type(4) {
+        opacity: 0.1; }
+      .baselineGridSetup > .baselineGrid div:nth-last-of-type(3),
+      .baselineGridSetup > body > .baselineGrid div:nth-last-of-type(3) {
+        opacity: 0.08; }
+      .baselineGridSetup > .baselineGrid div:nth-last-of-type(2),
+      .baselineGridSetup > body > .baselineGrid div:nth-last-of-type(2) {
+        opacity: 0.04; }
+      .baselineGridSetup > .baselineGrid div:nth-last-of-type(1),
+      .baselineGridSetup > body > .baselineGrid div:nth-last-of-type(1) {
+        opacity: 0; }
+  .baselineGridSetup:active .baselineGrid,
+  .baselineGridSetup > body:active .baselineGrid {
+    display: none; }
 
 /* =========================================================================
-  Simple Navigation
-  ========================================================================== */
-  nav { background: #EAEAEA; }
-  nav a {
-    padding: 0.75em 1.5em;
-    border-bottom: none;
-    display: inline-block;
-    width: 100%;
+ *
+ *  Baseline Scale Values:
+ *
+ *  0.75em (12px), 1.5em (24px), 2.25em (36px), 3em (48px), 3.75em (60px), 4.5em (72px), 5.25em (84px), 6em (96px), 6.75em (108px), 7.5em (120px)
+ *
+ *  ========================================================================== */
+h1, h2, h3, p, header, table, figure, footer, details, section, article, dl, menu, ul, ol, aside, div, hr, fieldset, textarea, keygen, select, input {
+  margin: 0 0 1.5em 0;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+h1 {
+  margin: 0 0 0.5em 0; }
+
+h2 {
+  margin: 0 0 0.66667em 0; }
+
+h3 {
+  margin: 0 0 1em 0; }
+
+p {
+  margin: 0 0 1.5em 0; }
+
+h4 {
+  margin: 0 0 1.14286em 0; }
+
+h5 {
+  margin: 0 0 1.33333em 0; }
+
+h6, li {
+  margin: 0 0 1.5em 0; }
+
+label {
+  margin-bottom: 0.375em; }
+
+summary {
+  margin-bottom: 0; }
+
+details p {
+  margin-bottom: 0; }
+
+/* ==========================================================================
+ *  Formalize.sass styles - http://formalize-css.com/
+ *========================================================================== */
+/* Label */
+label {
+  display: block; }
+
+/* Input */
+input, textarea {
+  -webkit-appearance: none;
+  border-radius: 0; }
+
+input[type="radio"] {
+  -webkit-appearance: radio; }
+input[type="checkbox"] {
+  -webkit-appearance: checkbox; }
+input[type="text"], input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="range"] {
+  height: 2.625em;
+  padding: 0 0.5em; }
+input[type="text"], input[type="email"], input[type="number"], input[type="password"], input[type="file"], input[type="search"], input[type="range"] {
+  border: none;
+  box-shadow: inset 0 0 0 1px #e5e5e5; }
+  .ie8 input[type="text"], .ie8 input[type="email"], .ie8 input[type="number"], .ie8 input[type="password"], .ie8 input[type="file"], .ie8 input[type="search"], .ie8 input[type="range"] {
+    border: 1px solid #e5e5e5; }
+
+input[type="search"] {
+  box-sizing: border-box; }
+
+/* Basic field height */
+/* Border */
+textarea, fieldset {
+  border: none;
+  box-shadow: inset 0 0 0 1px #e5e5e5; }
+  .ie8 textarea, .ie8 fieldset {
+    border: 1px solid #e5e5e5; }
+
+/* Buttons */
+input[type="button"], input[type="submit"], input[type="reset"] {
+  border: none;
+  display: inline-block;
+  padding: 0 1em;
+  cursor: pointer;
+  line-height: 2.25;
+  background: #333;
+  color: white;
+  width: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #333333;
+  color: white;
+  border-color: #333333; }
+  input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover {
     background: white;
-  }
-  @media only screen and (min-width: 31.25em) {
-    nav a {
-      padding: 0.375em 0.75em;
-      margin: 0.375em 0.75em 0.375em 0;
-      width: auto;
-    }
-  }
+    color: white; }
 
+button {
+  border: none;
+  display: inline-block;
+  padding: 0 1em;
+  cursor: pointer;
+  line-height: 2.25;
+  background: #333;
+  color: white;
+  width: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #333333;
+  color: white;
+  border-color: #333333; }
+  button:hover {
+    background: white;
+    color: white; }
+  button:focus {
+    outline: none; }
+
+/* HoverButton */
+input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover {
+  background: #444; }
+
+button:hover {
+  background: #444; }
+
+/* ActiveButton */
+input[type="button"]:active, input[type="submit"]:active, input[type="reset"]:active {
+  background: #555; }
+
+button:active {
+  background: #555; }
+
+/* Textarea styles */
+textarea {
+  padding: 1em;
+  height: 6em; }
+
+/* Legend */
+legend {
+  font-weight: bold;
+  padding: 0 0.5em;
+  margin-left: -0.5em;
+  background: white; }
+
+/* Fieldset styles & File Upload style */
+fieldset {
+  border-radius: 0.3125em;
+  padding: 0.75em 1.5em;
+  padding-bottom: 0; }
+  fieldset ul {
+    list-style: none;
+    margin-bottom: 0; }
+    fieldset ul label {
+      margin-bottom: 0; }
+  fieldset li {
+    margin-bottom: 1em; }
+
+/* Radio & Checklist Styles */
+input[type="checkbox"], input[type="radio"] {
+  width: auto;
+  margin: 0 0.5em 0 0; }
+input[type="file"] {
+  font-size: 0.75em;
+  padding: 1.75em 2em;
+  margin-bottom: 2em; }
+input:focus {
+  outline: none; }
+
+/* Upload File Text */
+/* Removed focus highlight */
+textarea:focus {
+  outline: none; }
 
 /* =========================================================================
-  Automatic Inline-Block Column
-  ========================================================================== */
-  .autoColumn > * {
-    display: inline-block !important;
-    float: left;
-    margin-right: 0.75em;
-  }
-
-/* =========================================================================
-  Columns
-  ========================================================================== */
-
-  [class*="col-"] > * > img {
+ * Horizontal Rule
+ * ========================================================================== */
+hr {
+  border: none;
+  position: relative;
+  height: 1px;
+  margin-top: -1px; }
+  hr:before {
+    content: "";
+    box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1), 0 1px 0px 0 rgba(255, 255, 255, 0.1);
+    height: 1px;
     width: 100%;
-    margin-bottom: 1.5em;
-  }
-
-  @media only screen and (min-width: 31.25em) {
-
-    [class*="col-"] > * {
-      float: left;
-      /* Margin total = 3em */
-      margin: 0 1.5em;
-    }
-
-    [class*="col-"] {
-      /* Offset left margin */
-      -webkit-transform: translate(-1.5em, 0);
-          -ms-transform: translate(-1.5em, 0);
-              transform: translate(-1.5em, 0);
-      /* Left & right edge margin added */
-      width: calc( 100% + 3em );
-      /* Flex */
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-    }
-
-    .col-2 > * {
-      /* Individual width & Margin total removed */
-      width: calc( (100% / 2) - 3em );
-    }
-    .col-3 > * {
-      /* Individual width & Margin total removed */
-      width: calc( (100% / 3) - 3em );
-    }
-    .col-4 > * {
-      /* Individual width & Margin total removed */
-      width: calc( (100% / 4) - 3em );
-    }
-
-  }
-
+    position: absolute;
+    top: 1px; }
 
 /* =========================================================================
-  NAV SCROLL
-  ========================================================================== */
-  .navScroll {
-    transition: 1s linear ease-in-out;
-    }
-  .navScroll.scrollEnabled {
-    transform: translate(0,-100%);
-    }
+ *Selection Styles
+ *========================================================================== */
+::-moz-selection, ::selection {
+  background: #333;
+  color: white;
+  text-shadow: none; }
 
-/* =========================================================================
-  INJECT UI
-  ========================================================================== */
-
-/**
-* These values will not show up in content, but can be 
-* queried by JavaScript to know which breakpoint is active.
-* Add or remove as many breakpoints as you like.
-*/
-body:before {
-  content: "smartphone";
-  display: none;
-}
-
-@media (min-width: 700px) {
-  body:before {
-    content: "tablet";
-  }
-}
-
-@media (min-width: 850px) {
-  body:before {
-    content: "desktop";
-  }
-}
-
-@media (min-width: 1180px) {
-  body:before {
-    content: "desktop-l";
-  }
-}
-
-@media (min-width: 1500px) {
-  body:before {
-    content: "desktop-xl";
-  }
-}
-
-/* =========================================================================
-  Sticky Footer
-
-  <body class="Site">
-    <header>…</header>
-    <main class="Site-content">…</main>
-    <footer>…</footer>
-  </body>
-
-  ========================================================================== */
-
-  .Site {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
-
-  .Site-content {
-    flex: 1;
-  }
-
-/* =========================================================================
-  Clear styles
-  ==========================================================================
-  <header class="nmb">
-   <section class="wrapper">
-      <h1 class="nmb">Header</h1>
-   </section>
-  </header>
-  ========================================================================== */
-  /* No Margin top or bottom */
-  .nmb { margin-bottom: 0px; } .nmt { margin-top: 0px; } .nmr { margin-right: 0px; }
-  /* No Padding top or bottom */
-  .npb { padding-bottom: 0px; } .npt { padding-top: 0px; }
-  /* No border bottom */
-  .nbb, .nbb:hover { border-bottom: none; }
-
-/* =========================================================================
-  Wrapper Styles
-  ==========================================================================
-  <main>
-   <section class="wrapper"></section>
-  </main>
-  ========================================================================== */
-  [class^="wrapper"] { width: 90%; width: calc( 100% - 3em ); max-width:73.75em; margin: 0 auto; padding: 1.5em 0; }
-
-  .wrapper--fluid {
-    max-width: 100%;
-  }
-  .wrapper--small {
-    max-width: 33.75em;
-  }
-  .wrapper--medium {
-    max-width: 43.75em;
-  }
-  .wrapper--large {
-    max-width: 73.75em;
-  }
-
-/* =========================================================================
-  Selection Styles
-  ========================================================================== */
-  ::-moz-selection { background: #333; color: white; text-shadow: none; }
-  ::selection { background: #333; color: white; text-shadow: none; }
-
-/* =========================================================================
-  Box sizing
-  ========================================================================== */
-  *,
-  *:before,
-  *:after {
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  *:before, *:after {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    }
+    box-sizing: border-box; }
 
 /* =========================================================================
-  List Styles
-  ========================================================================== */
-  /* General List Styles */
-  ul li ul { margin-top: 0.85714285714286em; margin-bottom: 1.71428571428571em; color: #777; font-size: 0.875em; }
-  ul li ul li { line-height: 1.71428571428571; }
-  ul, ol { padding: 0; list-style-position: inside; }
-  li {
-    padding-left: 1em;
-    text-indent: -1em;
-    margin-bottom: 0.75em;
-  }
+ *
+ *  List Styles
+ *
+ *  General List Styles
+ *
+ *  ========================================================================== */
+ul, ol {
+  padding: 0;
+  list-style-position: inside; }
 
-  ul.cancel-list-style,
-  ol.cancel-list-style {
-    list-style: none;
-  }
+ul li ul {
+  margin-top: 0.85714em;
+  margin-bottom: 1.71429em;
+  color: #777;
+  font-size: 0.875em; }
 
+ul li ul li {
+  line-height: 1.71429;
+  margin-bottom: 0.85714em; }
+
+li {
+  padding-left: 1em;
+  text-indent: -1em;
+  margin-bottom: 0.75em; }
+
+ul.cancel-list-style,
+ol.cancel-list-style {
+  list-style: none; }
   ul.cancel-list-style li,
   ol.cancel-list-style li {
-      padding-left: 0;
-      text-indent: 0;
-      margin-bottom: 0;
-  }
+    padding-left: 0;
+    text-indent: 0; }
 
 /* =========================================================================
-  Fancy - Unordered List
-  ==========================================================================
-  <ul class="fancyList">
-   <li>Coffee</li>
-   <li>Tea</li>
-   <li>Milk</li>
-  </ul>
-  ========================================================================== */
-  ul.fancyList { list-style: none; }
-  .fancyList li { position: relative; padding-left: 1em; text-indent: 0; }
-  .fancyList li:after { 
+ *
+ *  Fancy - Unordered List
+ *
+ * <ul class="fancyList">
+ *  <li>Coffee</li>
+ *  <li>Tea</li>
+ *  <li>Milk</li>
+ * </ul>
+ *
+ *  ========================================================================== */
+ul.fancyList {
+  list-style: none; }
+
+.fancyList li {
+  position: relative;
+  padding-left: 1em;
+  text-indent: 0; }
+  .fancyList li:after {
     content: "";
     position: absolute;
     top: 0.5em;
@@ -518,646 +715,523 @@ body:before {
     height: 0;
     border-left: 0.375em solid #ccc;
     border-top: 0.1875em solid transparent;
-    border-bottom: 0.1875em solid transparent;
-    }
-  .nested li ul li { padding: 0; }
-  .nested li ul li:after { display: none; }
+    border-bottom: 0.1875em solid transparent; }
+
+.nested li ul li {
+  padding: 0; }
+  .nested li ul li:after {
+    display: none; }
+
+dd {
+  margin-left: 1.5em; }
+
+summary {
+  background: #F9F9F9;
+  padding: 0.75em; }
+  summary:focus {
+    outline: none; }
+
+details {
+  box-shadow: 0 0 0 1px #ccc; }
+  details[open] summary {
+    box-shadow: inset 0 -1px 0 0 #ccc; }
+
+summary::-webkit-details-marker {
+  display: none; }
+summary:before {
+  content: "+";
+  padding-right: 0.75em;
+  display: block;
+  float: left;
+  width: 1.5em; }
+
+details[open] summary:before {
+  content: "-"; }
+details p {
+  padding: 1.5em;
+  background: white; }
 
 /* =========================================================================
-  Description List Styles
-  ========================================================================== */
-  dd { margin: 0 0 1.5em 0; }
-  dt { font-weight: bold; }
+ *Generic Table Styles
+ *============================================================================
+ * <table>
+ *   <thead>
+ *     <tr>
+ *      <th>Section 1</th>
+ *      <th>Section 2</th>
+ *      <th>Section 3</th>
+ *      <th>Section 4</th>
+ *      <th>Section 5</th>
+ *    </tr>
+ *  </thead>
+ *  <tbody>
+ *    <tr>
+ *      <td data-label="Section 1">Nullam id dolor id nibh ultricies vehicula ut id elit.</td>
+ *      <td data-label="Section 2">Nulla vitae elit libero, a pharetra augue.</td>
+ *      <td data-label="Section 3">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</td>
+ *       <td data-label="Section 4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+ *       <td data-label="Section 5">Maecenas faucibus mollis interdum.</td>
+ *     </tr>
+ *   </tbody>
+ * </table>
+ *========================================================================== */
+table {
+  width: 100%;
+  border-collapse: collapse; }
+  @media only screen and (min-width: 53.125em) {
+    table {
+      box-shadow: 0 0 0 1px #cccccc; } }
 
-/* =========================================================================
-  Details Styles - Webkit Only
-  ========================================================================== */
-  summary { background: #F9F9F9; padding: 0.75em; }
-  summary:focus { outline: none; }
-  details { box-shadow: 0 0 0 1px #ccc; }
-  details[open] summary { box-shadow: inset 0 -1px 0 0 #ccc; }
-  summary::-webkit-details-marker { display: none }
-  summary:before { 
-    content: "+";
-    padding-right: 0.75em;
-    display: block;
-    float: left;
-    width: 1.5em;
-  }
-  details[open] summary:before { content: "-"; }
-  details p { padding: 1.5em; background: white; }
+thead {
+  display: none; }
+  @media only screen and (min-width: 53.125em) {
+    thead {
+      display: table-header-group; } }
+  thead tr {
+    font-weight: bold; }
 
-
-/* =========================================================================
-  Generic Table Styles
-  ============================================================================
-  <table>
-    <thead>
-      <tr>
-        <th>Section 1</th>
-        <th>Section 2</th>
-        <th>Section 3</th>
-        <th>Section 4</th>
-        <th>Section 5</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td data-label="Section 1">Nullam id dolor id nibh ultricies vehicula ut id elit.</td>
-        <td data-label="Section 2">Nulla vitae elit libero, a pharetra augue.</td>
-        <td data-label="Section 3">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</td>
-        <td data-label="Section 4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-        <td data-label="Section 5">Maecenas faucibus mollis interdum.</td>
-      </tr>
-    </tbody>
-  </table>
-  ========================================================================== */
-  table { width: 100%; border-collapse: collapse; }
-  thead { display: none; }
-  thead tr { background: #EAEAEA; font-weight: bold; }
-  td, th { padding: 0.75em; }
-  td:before { content: attr(data-label); float: left; font-weight: bold; width: auto; padding-right: 3em; }
-  
-  /* Table Border */
-  td { display: block; box-shadow: inset 0 -1px 0 0 #ccc; text-align: right; }
-  tr { display: block; margin-bottom: 1.5em; box-shadow: inset 0 0 0 1px #ccc; background: #f9f9f9; }
-
+td, th {
+  padding: 1.5em; }
   @media only screen and (min-width: 31.25em) {
+    td, th {
+      padding: 0.75em 1.5em; } }
 
-    thead { display: table-header-group; }
-    td, th { padding: 0.75em 1.5em; }
-    td:before { display: none; }
-    td { display: table-cell; text-align: left; }
-    tr { display: table-row; vertical-align: top; text-align: left; margin-bottom: 0; }
+td {
+  display: block;
+  box-shadow: inset 0 -1px 0 0 #e6e6e6; }
+  td:before {
+    content: attr(data-label);
+    float: left;
+    width: 100%;
+    font-weight: bold; }
+  @media only screen and (min-width: 31.25em) {
+    td {
+      text-align: right; }
+      td:before {
+        width: auto;
+        padding-right: 3em; } }
+  @media only screen and (min-width: 53.125em) {
+    td {
+      box-shadow: 0 -1px 0 0 #e6e6e6;
+      display: table-cell;
+      text-align: left; }
+      td:before {
+        display: none; } }
 
-    /* Table Border */
-    table { box-shadow: 0 0 0 1px #ccc; }
+tr {
+  display: block;
+  margin-bottom: 1.5em;
+  box-shadow: inset 0 0 0 1px #e6e6e6; }
+  @media only screen and (min-width: 53.125em) {
+    tr {
+      display: table-row;
+      vertical-align: top;
+      text-align: left;
+      margin-bottom: 0; } }
 
-    /* Header Border */
-    thead th { box-shadow: inset 0 -1px 0 0 #ccc, inset -1px 0 0 0 #ccc; }
-    thead th:last-child { box-shadow: inset 0 -1px 0 0 #ccc, inset 0 0 0 0 #ccc; }
-
-    /* Body Border */
-    tbody tr td { box-shadow: inset -1px 0 0 0 #ccc, inset 0 -1px 0 0 #ccc; }
-    tbody tr td:last-child { box-shadow: inset 0 0 0 0 #ccc, inset 0 -1px 0 0 #ccc; }
-    tbody tr:last-child td { box-shadow: inset -1px 0 0 0 #ccc, inset 0 0 0 0 #ccc; }
-    tbody tr:last-child td:last-child { box-shadow: inset 0 0 0 0 #ccc; }
-  }
-
-/* =========================================================================
-  Transformicons Simplified: From my codepen - http://codepen.io/trilm/pen/LEejop
-
-  Note: Include code from the main.js file - "Transformicons Simplified"
-
-  Example: 
-
-  <a class="tIcons" href="#">
-    <!-- Menu Icon -->
-    <svg viewBox="0 0 36 30">
-      <rect width="36" height="6"/>
-      <rect y="24" width="36" height="6"/>
-      <rect y="12" width="36" height="6"/>
-    </svg>
-    <!-- Close Icon -->
-    <svg viewBox="0 0 36 30">
-      <polygon points="32.8,4.4 28.6,0.2 18,10.8 7.4,0.2 3.2,4.4 13.8,15 3.2,25.6 7.4,29.8 18,19.2 28.6,29.8 32.8,25.6 22.2,15 "/>
-    </svg>
-  </a>
-  ========================================================================== */
-
-  a.tIcons {
-    display: block;
-    width: 1.75em;
-    height: 1.5em;
-    position: relative;
-    border-bottom: none;
-  }
+a.tIcons {
+  display: block;
+  width: 1.75em;
+  height: 1.5em;
+  position: relative;
+  border-bottom: none; }
   a.tIcons svg {
     width: 100%;
     display: block;
-    position: absolute;
-  }
-  a.tIcons svg:first-child {
-    -webkit-transform-origin: 50% 50%;
-        -ms-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-    -webkit-transition: 0.2s ease-in-out;
-            transition: 0.2s ease-in-out;
-  }
-  a.tIcons svg:last-child {
-    -webkit-transform-origin: 50% 50%;
-        -ms-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-    -webkit-transition: 0.2s ease-in-out;
-            transition: 0.2s ease-in-out;
-    -webkit-transform: scale(0);
-        -ms-transform: scale(0);
-            transform: scale(0);
-  }
+    position: absolute; }
+    a.tIcons svg:first-child {
+      transform-origin: 50% 50%;
+      transition: 0.2s ease-in-out; }
+    a.tIcons svg:last-child {
+      transform-origin: 50% 50%;
+      transition: 0.2s ease-in-out;
+      transform: scale(0); }
   a.tIcons.toggle svg:first-child {
-    -webkit-transform: scale(0);
-        -ms-transform: scale(0);
-            transform: scale(0);
-  }
+    transform: scale(0); }
   a.tIcons.toggle svg:last-child {
-    -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-            transform: scale(1);
-  }
+    transform: scale(1); }
   a.tIcons.tRotate svg:last-child {
-    -webkit-transform: scale(0) rotate(0deg);
-        -ms-transform: scale(0) rotate(0deg);
-            transform: scale(0) rotate(0deg);
-  }
+    transform: scale(0) rotate(0deg); }
   a.tIcons.tRotate.toggle svg:last-child {
-    -webkit-transform: scale(1) rotate(-360deg);
-        -ms-transform: scale(1) rotate(-360deg);
-            transform: scale(1) rotate(-360deg);
-  }
+    transform: scale(1) rotate(-360deg); }
 
-/* =========================================================================
-  Two Up Label
-  ========================================================================== */
+body:before {
+  content: "smartphone";
+  display: none; }
+  @media (min-width: 31.25em) {
+    body:before {
+      content: "smartphone-m"; } }
+  @media (min-width: 43.75em) {
+    body:before {
+      content: "tablet"; } }
+  @media (min-width: 53.125em) {
+    body:before {
+      content: "desktop"; } }
+  @media (min-width: 59.9375em) {
+    body:before {
+      content: "menuBreakpoint"; } }
+  @media (min-width: 60em) {
+    body:before {
+      content: "desktop-l"; } }
 
-.two-up-label { margin-bottom: 0.75em; }
-.two-up-label span:last-child,
-.two-up-label strong { float: right; }
-.two-up-label.stacked span { display: block; }
-.two-up-label.stacked strong { float: none; }
+figure {
+  background: #eee; }
+  figure.right {
+    width: 50%;
+    margin-left: 1.5em;
+    float: right; }
+  figure.left {
+    width: 50%;
+    margin-right: 1.5em;
+    float: left; }
+  figure img {
+    width: 100%;
+    height: auto; }
+  figure figcaption {
+    padding: 1.5em;
+    text-align: center; }
 
-/* =========================================================================
-  Heading with side button
-  ========================================================================== */
-
-.flexbox .heading-with-side-button {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.heading-with-side-button h1, 
-.heading-with-side-button h2, 
-.heading-with-side-button h3, 
-.heading-with-side-button h4, 
-.heading-with-side-button h5, 
-.heading-with-side-button h6 {
-  width: 50%;
-  float: left;
-  margin: 0;
-}
-
-.flexbox .heading-with-side-button h1, 
-.flexbox .heading-with-side-button h2, 
-.flexbox .heading-with-side-button h3, 
-.flexbox .heading-with-side-button h4, 
-.flexbox .heading-with-side-button h5, 
-.flexbox .heading-with-side-button h6 {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-      
-.heading-with-side-button [class^="button"] {
-  float: right;
-  margin-top: 0.44em;
-}
-
-.flexbox .heading-with-side-button [class^="button"] {
-  margin-top: 0;
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 auto;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
-}
-
-/* =========================================================================
-  Button example
-  ========================================================================== */
- 
 [class^="button"] {
-  background-color: #333;
+  background-color: #333333;
   color: white;
   padding: 0 1.5em;
   text-decoration: none;
   line-height: 2.25;
   height: 2.25em;
-  display: inline-block;
-}
-
-[class^="button"]:hover,
-[class^="button"]:focus {
-  opacity: 0.8;
-  color: white;
-}
+  display: inline-block; }
+  [class^="button"]:hover, [class^="button"]:focus {
+    opacity: 0.8;
+    color: white; }
 
 .button--rounded {
-  border-radius: 1.5em;
-}
+  border-radius: 1.5em; }
 
 /* =========================================================================
-  Figure styles
-  ========================================================================== */
-      
-figure {
-  background: #eee;
-}
-figure.right {
-    width: 50%;
-    margin-left: 1.5em;
-    float: right;
-}
-figure.left {
-    width: 50%;
-    margin-right: 1.5em;
-    float: left;
-}
-figure img {
-    width: 100%;
-    height: auto;
-}
-figure figcaption {
-    padding: 0.85714285714286em;
-    line-height: 1.71428571428571;
-    text-align: center;
-    font-size: 0.875em;
-}
+ *Wrapper Styles
+ *==========================================================================
+ *<main>
+ * <section class="wrapper"></section>
+ *</main>
+ *========================================================================== */
+[class^="wrapper"] {
+  width: 95%;
+  width: calc( 100% - 3em );
+  max-width: 73.75em;
+  margin: 0 auto;
+  padding: 1.5em 0;
+  min-width: 18.75em; }
+
+.wrapper--fluid {
+  max-width: 100%; }
+
+.wrapper--small {
+  max-width: 33.75em; }
+
+.wrapper--medium {
+  max-width: 43.75em; }
+
+.wrapper--large {
+  max-width: 73.75em; }
 
 /* =========================================================================
-  Grid
-  ========================================================================== */
-@media (min-width: 31.25em) {
-  .csscalc [class^="grid"] {
-    width: calc(100% + 1.5em);
-    transform: translate(-0.75em, 0);
-  }
-}
-@media (min-width: 77.5em) {
-  .csscalc [class^="grid"] {
-    width: calc(100% + 3em);
+ * Sticky Footer
+ *
+ * <body class="site">
+ *   <header>…</header>
+ *   <main class="site-content">…</main>
+ *   <footer>…</footer>
+ * </body>
+ *
+ * ========================================================================== */
+ *
+ * .site
+ *   display: flex
+ *   min-height: 100vh
+ *   flex-direction: column
+ *   .ieBugFix &
+ *     display: block
+ *
+ * .site-content
+ *   flex: 1 */
+.scrollHeader {
+  transition: opacity 0.35s ease-in-out; }
+  .scrollHeader.headerScrolled {
+    opacity: 0; }
+
+.stickyNav.navScrolled {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100; }
+
+.site-content.navScrolledToContent {
+  margin-top: 5.25em; }
+
+/* Install autoprefixer */
+[class*="col-"] > * > img {
+  width: 100%;
+  margin-bottom: 1.5em; }
+
+@media only screen and (min-width: 31.25em) {
+  [class*="col-"] {
     transform: translate(-1.5em, 0);
-  }
-}
-[class^="grid"] img {
-  width: 100%;
-  height: auto;
-  background: white;
-  margin: 0;
-}
-[class^="grid"] .contentWrapper {
-  list-style: none;
-  text-indent: 0;
-  padding: 0;
-  margin: 0;
-  border-bottom: 1.5em solid #333;
-  background: white;
-  background: linear-gradient(to right, #F5F5F5 0%, #FFF 50%, #FFF 100%);
-  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.17);
-  margin-bottom: 1.5em;
-  width: 100%;
-}
-@media (min-width: 53.125em) {
-  [class^="grid"] .contentWrapper {
-    -webkit-transition: -webkit-transform 0.05s ease-out;
-    transition: transform 0.05s ease-out;
-  }
-  [class^="grid"] .contentWrapper:hover {
-    box-shadow: 0 0 2em 0 rgba(0, 0, 0, 0.4);
-    transform: scale(1.01);
-    z-index: 200;
-    position: relative;
-  }
-}
-[class^="grid"] .contentWrapper > a {
-  display: block;
+    display: flex; }
+    [class*="col-"] > * {
+      float: left;
+      margin: 0 1.5em; }
+    .csscalc [class*="col-"] {
+      width: calc( 100% + 3em ); }
+
+  .col-2 > * {
+    width: calc( (100% / 2) - 3em ); }
+
+  .col-3 > * {
+    width: calc( (100% / 3) - 3em ); }
+
+  .col-4 > * {
+    width: calc( (100% / 4) - 3em ); } }
+.autoColumn > * {
+  display: inline-block !important;
+  float: left;
+  width: auto;
+  margin-right: 0.75em; }
+
+nav {
+  background: #EAEAEA; }
+
+nav a {
+  padding: 0.75em 1.5em;
   border-bottom: none;
-}
-@media (min-width: 31.25em) {
-  [class^="grid"] .contentWrapper {
-    width: 50%;
-    float: left;
-  }
-  .csscalc [class^="grid"] .contentWrapper {
-    margin: 0 0.75em;
-    width: calc( (100% / 2) - 1.5em );
-    margin-bottom: 1.5em;
-  }
-}
-@media (min-width: 41em) {
-  [class^="grid"] .contentWrapper {
-    width: 33.33333%;
-  }
-  .csscalc [class^="grid"] .contentWrapper {
-    width: calc( (100% / 3) - 1.5em );
-  }
-}
-@media (min-width: 73.75em) {
-  [class^="grid"] .contentWrapper {
-    width: 25%;
-  }
-  .csscalc [class^="grid"] .contentWrapper {
-    width: calc( (100% / 4) - 1.5em );
-  }
-}
-[class^="grid"] .contentWrapper .imageWrapperOverlay {
-  position: relative;
-}
-@media (min-width: 31.25em) {
-  [class^="grid"] .contentWrapper .imageWrapperOverlay:hover img {
-    filter: saturate(0);
-  }
-  [class^="grid"] .contentWrapper .imageWrapperOverlay:hover:before {
-    background-color: rgba(51, 51, 51, 0.8);
-  }
-  .flexbox [class^="grid"] .contentWrapper .imageWrapperOverlay:hover:before {
-    content: "⇢";
-    text-align: center;
-    color: white;
-    font-size: 4em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
-  }
-}
-[class^="grid"] .contentWrapper .imageWrapperOverlay:before {
-  content: "";
+  display: inline-block;
   width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 100;
-}
-[class^="grid"] .contentWrapper h3 {
-  line-height: 1.14285714285714;
-  margin-bottom: 1.14285714285714em;
-}
-[class^="grid"] .contentWrapper h3 .titleLink {
-  display: inline;
-}
-[class^="grid"] .contentWrapper h3 .titleLink:hover {
-  color: #333;
-}
-[class^="grid"] .contentWrapper h3 span {
-  display: none;
-  float: right;
-  color: #ccc;
-}
-@media (min-width: 31.25em) {
-  [class^="grid"] .contentWrapper h3 span {
-    display: block;
-  }
-  [class^="grid"] .contentWrapper h3 span:hover {
-    color: inherit;
-  }
-  [class^="grid"] .contentWrapper h3 .titleLink {
-    width: 95%;
-    float: left;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    display: block;
-    border: none;
-  }
-  .csscalc [class^="grid"] .contentWrapper h3 .titleLink {
-    width: calc(100% - 1.5em);
-  }
-  [class^="grid"] .contentWrapper h3 .titleLink:hover + a span {
-    color: inherit;
-  }
-}
-[class^="grid"] .contentWrapper .childWrapper {
-  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
-  margin: 0;
-  font-size: 0.875em;
-  position: relative;
-}
-[class^="grid"] .contentWrapper .childWrapper p {
-  margin: 0;
-  line-height: 1.71428571428571em;
-}
+  background: white;
+  text-decoration: none; }
+  nav a.active {
+    background: black;
+    color: white; }
 
-
-
-/* =========================================================================
-  Grid Equal Height
-  ========================================================================== */
-.no-flexbox .grid--equal-height .contentWrapper {
-  width: calc(100% - 1.5em);
-}
-.no-flexbox .grid--equal-height .contentWrapper .imageWrapperOverlay {
-  text-align: center;
-  background-color: #333;
-}
-.no-flexbox .grid--equal-height .contentWrapper .imageWrapperOverlay:before {
-  max-width: 30em;
-}
-.no-flexbox .grid--equal-height .contentWrapper .imageWrapperOverlay img {
-  max-width: 30em;
-}
-.flexbox .grid--equal-height {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-/* =========================================================================
-  Landing Page
-  ========================================================================== */
-
+@media only screen and (min-width: 31.25em) {
+  nav a {
+    padding: 0.375em 0.75em;
+    margin: 0.375em 0.75em 0.375em 0;
+    width: auto; } }
 @media (min-width: 60em) {
   .landing-wrapper {
     float: left;
-    width: calc(70% - 3em);
-  }
-  .landing-wrapper .x-medium {
-    margin-top: 1.71428571428571em;
-    padding-right: 3em;
-  }
-}
+    width: calc(70% - 3em); }
+    .landing-wrapper .x-medium {
+      margin-top: 1.71429em;
+      padding-right: 3em; } }
 
 @media (min-width: 60em) {
   .landing-aside {
     float: right;
-    width: 30%;
-  }
-}
+    width: 30%; } }
 
+@media (min-width: 0em) and (max-width: 31.25em) {
+  #grid[data-columns]::before {
+    content: "1 .column.size-1of1"; } }
+@media (min-width: 31.26em) and (max-width: 38em) {
+  #grid[data-columns]::before {
+    content: "2 .column.size-1of2"; } }
+@media (min-width: 38.1em) and (max-width: 55em) {
+  #grid[data-columns]::before {
+    content: "4 .column.size-1of3"; } }
+@media (min-width: 55.1em) and (max-width: 60em) {
+  #grid[data-columns]::before {
+    content: "4 .column.size-1of4"; } }
+@media (min-width: 60.1em) and (max-width: 74em) {
+  #grid[data-columns]::before {
+    content: "5 .column.size-1of5"; } }
+@media (min-width: 74.1em) and (max-width: 80em) {
+  #grid[data-columns]::before {
+    content: "6 .column.size-1of6"; } }
+@media (min-width: 80.1em) and (max-width: 90em) {
+  #grid[data-columns]::before {
+    content: "7 .column.size-1of7"; } }
+@media (min-width: 90.1em) {
+  #grid[data-columns]::before {
+    content: "8 .column.size-1of8"; } }
 
+.column {
+  float: left;
+  padding: 0.75em;
+  margin-bottom: 0; }
+  .column div:last-child {
+    margin-bottom: 0; }
+  .column img {
+    width: 100%; }
 
-/* =========================================================================
-  Author's custom styles
-  ========================================================================== */
+.size-1of1 {
+  width: 100%; }
 
+.size-1of2 {
+  width: 50%; }
 
+.size-1of3 {
+  width: 33.333%; }
 
+.size-1of4 {
+  width: 25%; }
 
+.size-1of5 {
+  width: 20%; }
 
+.size-1of6 {
+  width: 16.66667%; }
 
+.size-1of7 {
+  width: 14.28571%; }
 
+.size-1of8 {
+  width: 12.5%; }
 
+/* No Margin top or bottom */
+.nmb {
+  margin-bottom: 0px; }
 
+.nmt {
+  margin-top: 0px; }
 
+.nmr {
+  margin-right: 0px; }
 
+/* No Padding top or bottom */
+.npb {
+  padding-bottom: 0px; }
 
+.npt {
+  padding-top: 0px; }
 
-/* =========================================================================
-  Helper classes
-  ========================================================================== */
-.ir{background-color:transparent;border:0;overflow:hidden;*text-indent:-9999px;}.ir:before{content:"";display:block;width:0;height:150%;}.hidden{display:none !important;visibility:hidden;}.visuallyhidden{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;}.visuallyhidden.focusable:active,.visuallyhidden.focusable:focus{clip:auto;height:auto;margin:0;overflow:visible;position:static;width:auto;}.invisible{visibility:hidden;}.cf:before,.cf:after{content:" ";display:table;}.cf:after{clear:both;}.cf{*zoom:1;}
+/* No border bottom */
+.nbb {
+  border-bottom: none; }
+  .nbb:hover {
+    border-bottom: none; }
 
-
-/* =========================================================================
-  Media Queries / min-width: 500px
-  ========================================================================== */
-  @media only screen and (min-width: 31.25em) {
-
-    html {
-      font-size: 0.75em;
-    }
-
-  }
-
-
-
-/* ==========================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-========================================================================== */
-
-
-
-/* =========================================================================
-  Media Queries / min-width: 768px
-  ========================================================================== */
-  @media only screen and (min-width: 48em) {
-
-    html {
-      font-size: 0.875em;
-    }
-
-  }
-
-
-
-/* ==========================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-========================================================================== */
-
-
-
-/* =========================================================================
-  Media Queries / min-width: 850px
-  ========================================================================== */
-  @media only screen and (min-width: 53.125em) {
-
-    html {
-      font-size: 1em;
-    }
-
-  }
-
-
-
-/* ==========================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-========================================================================== */
-
-
+.ie8 #header, .ie8 #main, .ie8 #footer {
+  display: block; }
+.ie8 .logo a {
+  border: none; }
 
 /* =========================================================================
-  Media Queries / min-width: 1180px
-  ========================================================================== */
-  @media only screen and (min-width: 73.75em) {}
+ * Helper classes
+ * ========================================================================== */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  *text-indent: -9999px; }
+  .ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%; }
 
+.hidden {
+  display: none; }
 
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+  .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto; }
+
+.invisible {
+  visibility: hidden; }
+
+.cf {
+  *zoom: 1; }
+  .cf:before {
+    content: " ";
+    display: table; }
+  .cf:after {
+    content: " ";
+    display: table;
+    clear: both; }
+
+.addBlock {
+  display: block !important; }
+
+.show {
+  opacity: 1 !important; }
+
+.pull-right {
+  float: right; }
+
+.pull-left {
+  float: left; }
+
+.mt-12 {
+  margin-top: 0.75rem; }
+
+.mt-24 {
+  margin-top: 1.5rem; }
+
+.mb-12 {
+  margin-bottom: 0.75rem; }
+
+.mb-24 {
+  margin-bottom: 1.5rem; }
 
 /* ==========================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-========================================================================== */
+ * Media Queries / Print
+ * ========================================================================== */
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important; }
 
+  a {
+    text-decoration: underline; }
+    a:visited {
+      text-decoration: underline; }
+    a[href]:after {
+      content: " (" attr(href) ")"; }
 
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
 
-/* ==========================================================================
-   Media Queries / Print
-   ========================================================================== */
+  .ir a:after {
+    content: ""; }
 
-@media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
-}
+  a[href^="javascript:"]:after, a[href^="#"]:after {
+    content: ""; }
 
-@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important;}a,a:visited{text-decoration:underline;}a[href]:after{content:" (" attr(href) ")";}abbr[title]:after{content:" (" attr(title) ")";}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:"";}pre,blockquote{border:1px solid #999;page-break-inside:avoid;}thead{display:table-header-group;}tr,img{page-break-inside:avoid;}img{max-width:100% !important;}@page{margin:0.5cm;}p,h2,h3{orphans:3;widows:3;}h2,h3{page-break-after:avoid;}}
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
 
+  thead {
+    display: table-header-group; }
 
+  tr {
+    page-break-inside: avoid; }
 
-/* ==========================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-=============================================================================
-========================================================================== 
+  img {
+    page-break-inside: avoid;
+    max-width: 100% !important; }
+
+  @page {
+    margin: 0.5cm; }
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3; }
+
+  h2, h3 {
+    page-break-after: avoid; } }
+
+/*# sourceMappingURL=main.css.map */

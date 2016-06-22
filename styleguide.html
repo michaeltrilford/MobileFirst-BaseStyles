@@ -1,4 +1,4 @@
-<html>
+<html class="baselineGridSetup">
 
   <head>
     <meta charset="utf-8">
@@ -26,7 +26,7 @@
         background-color: #FFFFC1; 
         width: 100%; 
         padding: 0 1.84615384615385em; 
-        box-shadow: 0 0 1px 0 black;
+        box-shadow: inset 0 0 1px 0 black;
         overflow: hidden;overflow-x:scroll;
         margin: 1.84615384615385em 0;
         line-height: 1.84615384615385
@@ -40,6 +40,7 @@
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fitvids/1.1.0/jquery.fitvids.min.js"></script>
+    <script src="js/modernizr.js"></script>
   </head>
 
   <body>
@@ -61,13 +62,6 @@
 
       <section class="wrapper--medium">
         <h1>Page Wrapper Variations</h1>
-        <hr>
-        <div class="autoColumn cf">
-          <a href="#" id="toggleWrapperSize1">Toggle Default</a>
-          <a href="#" id="toggleWrapperSize2">Toggle Small</a>
-          <a href="#" id="toggleWrapperSize3">Toggle Medium</a>
-          <a href="#" id="toggleWrapperSize4">Toggle Large</a>
-        </div>
         <xmp class="prettyprint">
           <div class="autoColumn cf">
             <a href="#">Toggle Default</a>
@@ -76,7 +70,6 @@
             <a href="#">Toggle Large</a>
           </div>
         </xmp>
-        <hr>
         <xmp class="prettyprint">
           <section class="wrapper"></section>
         </xmp>
@@ -127,53 +120,6 @@
           <div class="headingGroup">
             <h1>Justo Egestas</h1>
             <h2>Quam Parturient Inceptos</h2>
-          </div>
-        </xmp>
-      </section>
-
-
-      <hr class="largeRule">
-
-
-      <section class="wrapper--medium">
-        <!-- Heading Group -->
-        <h1>Two Up Label</h1>
-        <hr>
-        <p class="two-up-label cf">
-          <span class="label">Label</span>
-          <span class="info">Info</span>
-        </p>
-        <p class="two-up-label cf">
-          <span class="label">Label</span>
-          <span class="info">Info</span>
-        </p>
-        <p class="two-up-label cf">
-          <span class="label">Label</span>
-          <span class="info">Info</span>
-        </p>
-        <xmp class="prettyprint">
-          <p class="two-up-label">
-            <span class="label">Label</span>
-            <span class="info">Info</span>
-          </p>
-        </xmp>
-      </section>
-
-
-      <hr class="largeRule">
-
-
-      <section class="wrapper--medium">
-        <h1>Mobile Heading + Button</h1>
-        <hr>
-        <div class="heading-with-side-button cf">
-          <h3>Heading</h3>
-          <a class="button" href="#">Button</a> 
-        </div>
-        <xmp class="prettyprint">
-          <div class="heading-with-side-button">
-            <h1>Heading</h1>
-            <a class="button" href="#">Button</a> 
           </div>
         </xmp>
       </section>
@@ -332,367 +278,11 @@
       </section>
 
 
-      <hr class="largeRule">
-
-
-      <section class="wrapper--large">
-        <h1>Grid: Small Content Types</h1>
-        <hr>
-        <ul class="grid--equal-height">
-          <li class="contentWrapper">
-            <a href="#">
-              <div class="nmb imageWrapperOverlay">
-                <img src="http://placehold.it/350x156">
-              </div>
-            </a>
-            <div class="childWrapper">
-              <h3 class="cf"> 
-                <a class="titleLink" href="#">Title</a>
-                <a href="#"><span>&#8674;</span></a>
-              </h3>
-              <p class="two-up-label cf">
-                <span>label</span>
-                <strong>Info</strong>
-              </p>
-              <p class="two-up-label cf">
-                <span>label</span>
-                <strong>Info</strong>
-              </p>
-              <p class="two-up-label cf">
-                <span>label</span>
-                <strong>Info</strong>
-              </p>
-            </div>
-          </li>
-          <li class="contentWrapper">
-            <a href="#">
-              <div class="nmb imageWrapperOverlay">
-                <img src="http://placehold.it/350x156">
-              </div>
-            </a>
-            <div class="childWrapper">
-              <h3 class="cf"> 
-                <a class="titleLink" href="#">Title</a>
-                <a href="#"><span>&#8674;</span></a>
-              </h3>
-              <p class="two-up-label cf">
-                <span>label</span>
-                <strong>Info</strong>
-              </p>
-              <p class="two-up-label cf">
-                <span>label</span>
-                <strong>Info</strong>
-              </p>
-              <p class="two-up-label cf">
-                <span>label</span>
-                <strong>Info</strong>
-              </p>
-            </div>
-          </li>
-          <li class="contentWrapper">
-            <a href="#">
-              <div class="nmb imageWrapperOverlay">
-                <img src="http://placehold.it/350x156">
-              </div>
-            </a>
-            <div class="childWrapper">
-              <h3 class="cf"> 
-                <a class="titleLink" href="#">Title</a>
-                <a href="#"><span>&#8674;</span></a>
-              </h3>
-              <p class="two-up-label cf">
-                <span>label</span>
-                <strong>Info</strong>
-              </p>
-              <p class="two-up-label cf">
-                <span>label</span>
-                <strong>Info</strong>
-              </p>
-              <p class="two-up-label cf">
-                <span>label</span>
-                <strong>Info</strong>
-              </p>
-            </div>
-          </li>
-          <li class="contentWrapper">
-            <a href="#">
-              <div class="nmb imageWrapperOverlay">
-                <img src="http://placehold.it/350x156">
-              </div>
-            </a>
-            <div class="childWrapper">
-              <h3 class="cf"> 
-                <a class="titleLink" href="#">Title</a>
-                <a href="#"><span>&#8674;</span></a>
-              </h3>
-              <p class="two-up-label cf">
-                <span>label</span>
-                <strong>Info</strong>
-              </p>
-              <p class="two-up-label cf">
-                <span>label</span>
-                <strong>Info</strong>
-              </p>
-              <p class="two-up-label cf">
-                <span>label</span>
-                <strong>Info</strong>
-              </p>
-            </div>
-          </li>
-        </ul>
-        <xmp class="prettyprint">
-          <section class="wrapper--large">
-
-            <ul class="grid--equal-height">
-
-              <li class="contentWrapper">
-                <a href="#">
-                  <div class="nmb imageWrapperOverlay">
-                    <img src="http://placehold.it/350x156">
-                  </div>
-                </a>
-                <div class="childWrapper">
-                  <h3 class="cf"> 
-                    <a class="titleLink" href="#">Title</a>
-                    <a href="#"><span>&#8674;</span></a>
-                  </h3>
-                  <p class="two-up-label">
-                    <span>label</span>
-                    <strong>Info</strong>
-                  </p>
-                  <p class="two-up-label">
-                    <span>label</span>
-                    <strong>Info</strong>
-                  </p>
-                  <p class="two-up-label">
-                    <span>label</span>
-                    <strong>Info</strong>
-                  </p>
-                </div>
-              </li>
-
-            </ul>
-
-          </section>
-        </xmp>
-      </section>
-
-
-      <hr class="largeRule">
-
-
-      <section class="wrapper--large">
-        <!-- Flex expands the content box -->
-        <!-- IE8 & 9 falls back to 100% wide -->
-        <h1>Grid: Large Content Types</h1>
-        <hr>
-        <ul class="grid--equal-height">
-          <li class="contentWrapper">
-            <a href="#">
-              <div class="nmb imageWrapperOverlay">
-                <img src="http://placehold.it/350x156">
-              </div>
-            </a>
-            <div class="childWrapper">
-              <h3 class="cf"><a href="#">Title</a></h3>
-              <p>Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Sed posuere consectetur est at lobortis.</p>
-            </div>
-          </li>
-          <li class="contentWrapper">
-            <a href="#">
-              <div class="nmb imageWrapperOverlay">
-                <img src="http://placehold.it/350x156">
-              </div>
-            </a>
-            <div class="childWrapper">
-              <h3 class="cf"><a href="#">Title</a></h3>
-              <p>Etiam porta sem malesuada magna mollis euismod. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-            </div>
-          </li>
-          <li class="contentWrapper">
-            <a href="#">
-              <div class="nmb imageWrapperOverlay">
-                <img src="http://placehold.it/350x156">
-              </div>
-            </a>
-            <div class="childWrapper">
-              <h3 class="cf"><a href="#">Title</a></h3>
-              <p>Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus.</p>
-            </div>
-          </li>
-          <li class="contentWrapper">
-            <a href="#">
-              <div class="nmb imageWrapperOverlay">
-                <img src="http://placehold.it/350x156">
-              </div>
-            </a>
-            <div class="childWrapper">
-              <h3 class="cf"><a href="#">Title</a></h3>
-              <p>Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-            </div>
-          </li>
-        </ul>
-        <xmp class="prettyprint">
-          <section class="wrapper--large">
-
-            <ul class="grid--equal-height">
-
-              <li class="contentWrapper">
-                <a href="#">
-                  <div class="nmb imageWrapperOverlay">
-                    <img src="http://placehold.it/350x156">
-                  </div>
-                </a>
-                <div class="childWrapper">
-                  <h3 class="cf"><a href="#">Title</a></h3>
-                  <p>Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-                </div>
-              </li>
-
-            </ul>
-
-          </section>
-        </xmp>
-      </section>
-
-
-      <hr class="largeRule">
-
-
-      <section class="wrapper--large">
-        <h1>Landing Page #1</h1>
-        <hr>
-        <h2>Title of this item</h2>
-        <div class="landing-wrapper">
-          <iframe src="https://player.vimeo.com/video/134398465" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-          <p class="x-medium">Nullam id dolor id nibh ultricies vehicula ut id elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Etiam porta sem malesuada magna mollis euismod. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-        </div>
-        <div class="landing-aside">
-          <p class="two-up-label stacked cf">
-            <span>Year</span>
-            <strong>XXXX</strong>
-          </p>
-          <p class="two-up-label stacked cf">
-            <span>Reference number</span>
-            <strong>XXXXXX</strong>
-          </p>
-          <p class="two-up-label stacked cf">
-            <span>Media type</span>
-            <strong>Ipsum</strong>
-          </p>
-          <p class="two-up-label stacked cf">
-            <span>Form</span>
-            <strong>Dolor</strong>
-          </p>
-          <p class="two-up-label stacked cf">
-            <span>Duration</span>
-            <strong>1:00:00</strong>
-          </p>
-          <p class="two-up-label stacked cf">
-            <span>Production company</span>
-            <strong>Fermentum</strong>
-          </p>
-          <p class="two-up-label stacked cf">
-            <span>Viewing locations</span>
-            <strong>Malesuada Fringilla</strong>
-          </p>
-          <p class="two-up-label stacked cf">
-            <span>Credits</span>
-            <strong>Euismod Fusce, Porta</strong>
-          </p>
-          <p class="two-up-label stacked cf">
-            <span>Rights</span>
-            <strong>Maecenas faucibus mollis interdum. Aenean eu leo quam.</strong>
-          </p>
-        </div>
-        <xmp class="prettyprint">
-          <section class="wrapper--large">
-
-            <h1>Title of this item</h1>
-
-            <div class="landing-wrapper">
-              <iframe src="vimeoLink-iframe"></iframe>
-              <p class="x-medium">Description text is here</p>
-            </div>
-
-            <div class="landing-aside">
-              <p class="two-up-label stacked">
-                <span>Year</span>
-                <strong>1999</strong>
-              </p>
-            </div>
-
-          </section>
-        </xmp>
-      </section>
-
-
-      <hr class="largeRule">
-
-
-      <section class="wrapper--large">
-        <h1>Landing Page #2</h1>
-        <hr>
-        <div class="landing-wrapper">
-          <h2>Dapibus Purus</h2>
-          <p>Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor. Maecenas faucibus mollis interdum.</p>
-          <h5>Fusce Mattis</h5>
-          <p>Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor. Maecenas faucibus mollis interdum.</p>
-          <h5>Sem Pharetra</h5>
-          <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Sed posuere consectetur est at lobortis. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-          <h5>Sollicitudin Commodo</h5>
-          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Etiam porta sem malesuada magna mollis euismod.</p>
-        </div>
-        <aside class="landing-aside">
-          <h2>Parent title</h2>
-          <ul class="cancel-list-style secondary-nav">
-            <li>
-              <a href="#">Vehicula Sit</a>
-              <ul>
-                <li><a href="#">Vehicula Sit</a></li>
-                <li><a href="#">Sit Ultricies</a></li>
-                <li><a href="#">Ullamcorper Purus</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Sit Ultricies</a></li>
-            <li><a href="#">Ullamcorper Purus</a></li>
-          </ul>
-        </aside>
-
-        <xmp class="prettyprint">
-          <section class="wrapper--large">
-
-            <div class="landing-wrapper">
-              <h1>Dapibus Purus</h1>
-              <p>Donec id elit non mi porta gravida at eget metus.</p>
-              <h3>Fusce Mattis</h3>
-              <p>Donec ullamcorper nulla non metus auctor fringilla.</p>
-            </div>
-
-            <aside class="landing-aside">
-              <h2>Parent title</h2>
-              <ul class="cancel-list-style secondary-nav">
-                <li>
-                  <a href="#">Vehicula Sit</a>
-                  <ul>
-                    <li><a href="#">Vehicula Sit</a></li>
-                    <li><a href="#">Sit Ultricies</a></li>
-                    <li><a href="#">Ullamcorper Purus</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Sit Ultricies</a></li>
-                <li><a href="#">Ullamcorper Purus</a></li>
-              </ul>
-            </aside>
-
-          </section>
-        </xmp>
-      </section>
-
-
-      
-
   </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+  <script src="js/main.js"></script>
 
   <script type="text/javascript">
     $(".viewGrid").click(function(){

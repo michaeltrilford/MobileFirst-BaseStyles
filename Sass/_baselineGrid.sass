@@ -1,28 +1,52 @@
 /* =========================================================================
- *Baseline Grid - 24px w/ 12px subdivision ( http://basehold.it )
+ *Baseline Grid - 24px w/ 12px subdivision ( Inspired by http://basehold.it )
  *========================================================================== */
 
-body
-  position: relative
-  &:after
+.baselineGridSetup, 
+.baselineGridSetup > body
+  height: 100vh
+  > .baselineGrid
+    z-index: 10000000
     position: absolute
-    width: auto
-    height: auto
-    z-index: 9999
-    content: ''
-    display: block
     pointer-events: none
     top: 0
-    right: 0
-    bottom: 0
     left: 0
-    background: none
-  &:active:after
-    display: none
+    outline: none !important
+    margin-bottom: 0
+    height: auto
+    overflow-y: hidden
+    @media (min-height: 828px)
+      height: 100vh
+    div
+      width: calc(100% + 2px)
+      transform: translate(-1px,0)
+      height: 0.75em
+      outline: 2px solid skyBlue
+      opacity: 0.3
+      outline-offset: -1px
+      margin-bottom: 0.75em
+      &:nth-last-of-type(9)
+        opacity: 0.28
+      &:nth-last-of-type(8)
+        opacity: 0.24
+      &:nth-last-of-type(7)
+        opacity: 0.2
+      &:nth-last-of-type(6)
+        opacity: 0.18
+      &:nth-last-of-type(5)
+        opacity: 0.14
+      &:nth-last-of-type(4)
+        opacity: 0.1
+      &:nth-last-of-type(3)
+        opacity: 0.08
+      &:nth-last-of-type(2)
+        opacity: 0.04
+      &:nth-last-of-type(1)
+        opacity: 0
+  &:active
+    .baselineGrid
+      display: none
 
-@media only screen and (min-width: 53.125em)
-  body:after
-    background-image: url("../img/basehold-24.png")
 
 /* =========================================================================
  *
@@ -60,13 +84,12 @@ h6, li
   margin: 0 0 1.5em 0
 
 label
-  margin-bottom: 0.5em
+  margin-bottom: 0.375em
 
 summary
   margin-bottom: 0
 
 details p
   margin-bottom: 0
-
 
 

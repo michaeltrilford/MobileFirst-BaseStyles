@@ -141,3 +141,19 @@ function injectQuery () {
 
 // 7. RUN FUNCTION
 injectQuery();
+
+
+
+
+// E. Baseline Grid
+$('.baselineGridSetup').append('<div class="baselineGrid"></div>');
+var baselineGrid = $(".baselineGrid");
+var count = 24;
+for (var i=0; i<count; i++) {
+   baselineGrid.append("<div>");
+}
+
+
+
+
+

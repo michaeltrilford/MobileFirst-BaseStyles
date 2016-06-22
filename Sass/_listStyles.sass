@@ -18,6 +18,7 @@ ul li ul
 
 ul li ul li
   line-height: 1.71428571428571
+  margin-bottom: 0.85714285714286em
 
 
 li
@@ -61,3 +62,10 @@ ul.fancyList
     border-left: 0.375em solid #ccc
     border-top: 0.1875em solid transparent
     border-bottom: 0.1875em solid transparent
+
+
+
+.nested li ul li
+  padding: 0
+  &:after
+    display: none
