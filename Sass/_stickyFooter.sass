@@ -1,20 +1,9 @@
-/* =========================================================================
-  Sticky Footer
-  
-  <body class="site">
-    <header>…</header>
-    <main class="site-content">…</main>
-    <footer>…</footer>
-  </body>
+.site
+  display: flex
+  min-height: 100vh
+  flex-direction: column
+  .ieBugFix &
+    display: block
 
-  ========================================================================== */
-
-  .site
-    display: flex
-    min-height: 100vh
-    flex-direction: column
-    .ieBugFix &
-      display: block
-
-  .site-content
-    flex: 1
+.site-content
+  flex: 1

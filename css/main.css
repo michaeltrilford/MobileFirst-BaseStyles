@@ -325,8 +325,7 @@ a {
   a:hover {
     color: #333; }
   a:focus {
-    color: #333;
-    outline: none; }
+    color: #333; }
 
 /* Medium */
 .medium {
@@ -395,7 +394,7 @@ a {
   height: 100vh; }
   .baselineGridSetup > .baselineGrid,
   .baselineGridSetup > body > .baselineGrid {
-    z-index: 10000000;
+    z-index: -1;
     position: absolute;
     pointer-events: none;
     top: 0;
@@ -563,8 +562,6 @@ button {
   button:hover {
     background: white;
     color: white; }
-  button:focus {
-    outline: none; }
 
 /* HoverButton */
 input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover {
@@ -613,13 +610,15 @@ input[type="file"] {
   font-size: 0.75em;
   padding: 1.75em 2em;
   margin-bottom: 2em; }
-input:focus {
-  outline: none; }
 
 /* Upload File Text */
-/* Removed focus highlight */
-textarea:focus {
-  outline: none; }
+button:focus, input:focus, textarea:focus, select:focus, a:focus, summary:focus {
+  outline-style: ridge;
+  outline-width: thick;
+  outline-color: #333; }
+
+button:focus, input[type="submit"]:focus {
+  box-shadow: inset 0 0 0 1px white; }
 
 /* =========================================================================
  * Horizontal Rule
@@ -635,7 +634,8 @@ hr {
     height: 1px;
     width: 100%;
     position: absolute;
-    top: 1px; }
+    top: 1px;
+    left: 0; }
 
 /* =========================================================================
  *Selection Styles
@@ -728,8 +728,6 @@ dd {
 summary {
   background: #F9F9F9;
   padding: 0.75em; }
-  summary:focus {
-    outline: none; }
 
 details {
   box-shadow: 0 0 0 1px #ccc; }
