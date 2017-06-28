@@ -11,6 +11,9 @@
         <!-- Place favicon.ico in the root directory -->
         <link rel="stylesheet" href="css/main.css">
         <script src="js/modernizr.js"></script>
+        <link rel="stylesheet" href="css/monokai-sublime.css">
+        <script src="js/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -18,71 +21,123 @@
         <![endif]-->
         <nav>
           <div class="wrapper">
-            <a href="index.html">Home</a>
-            <a href="headings.html">Headings</a>
-            <a href="headingGroup.html">Heading Group</a>
-            <a href="paragraphLink.html">Paragraph &amp; Link</a>
-            <a href="listStyles.html">List styles</a>
-            <a href="descriptionList.html">Description List</a>
-            <a href="table.html">Table</a>
+            <a href="index.html">🐮</a>
+            <a href="typography.html">Typography</a>
+            <a href="lists.html">Lists</a>
             <a href="mark.html">Mark</a>
-            <a href="figure.html">Figure</a>
+            <a href="images.html">Images</a>
             <a href="detailsSummary.html">Details &amp; Summary</a>
             <a href="transformicons.html">Transformicons</a>
-            <a href="autoColumn.html">Auto Column</a>
-            <a href="columns.html" class="active">Columns</a>
             <a href="formalize.html">Formalize</a>
+            <a href="columns.html" class="active">Columns</a>
+            <a href="table.html">Table</a>
           </div>
         </nav>
 
         <main class="wrapper">
+
           <section>
             <h1>Columns</h1>
             <hr>
+            <h3>Auto Column</h3>
+            <hr>
+            <div class="autoColumn cf">
+              <svg style="margin-right: 1.5rem;" width="72" height="72" viewBox="0 0 72 72">
+                <rect fill="#b9b9b9" width="72" height="72"/>
+              </svg>
+              <svg style="margin-right: 1.5rem;" width="72" height="72" viewBox="0 0 72 72">
+                <rect fill="#b9b9b9" width="72" height="72"/>
+              </svg>
+              <svg style="margin-right: 1.5rem;" width="72" height="72" viewBox="0 0 72 72">
+                <rect fill="#b9b9b9" width="72" height="72"/>
+              </svg>
+              <svg style="margin-right: 1.5rem;" width="72" height="72" viewBox="0 0 72 72">
+                <rect fill="#b9b9b9" width="72" height="72"/>
+              </svg>
+              <svg style="margin-right: 1.5rem;" width="72" height="72" viewBox="0 0 72 72">
+                <rect fill="#b9b9b9" width="72" height="72"/>
+              </svg>
+              <svg style="margin-right: 1.5rem;" width="72" height="72" viewBox="0 0 72 72">
+                <rect fill="#b9b9b9" width="72" height="72"/>
+              </svg>
+            </div>
+            <pre class="highlight-code">
+              <code class="html">
+  &lt;div class="autoColumn cf"&gt;
+    &lt;div&gt;...&lt;/div&gt;
+    &lt;div&gt;...&lt;/div&gt;
+  &lt;/div&gt;
+              </code>
+            </pre>
+            <hr>
+            <h3>Col-2</h3>
+            <hr>
             <section class="col-2 nmb cf">
               <div>
-                <h4>Column 2</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
               </div>
               <div>
-                <h4>Column 2</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
               </div>
             </section>
+            <pre class="highlight-code">
+              <code class="html">
+  &lt;section class="col-2 nmb cf"&gt;
+    &lt;div&gt;...&lt;/div&gt;
+    &lt;div&gt;...&lt;/div&gt;
+  &lt;/section&gt;
+              </code>
+            </pre>
+            <hr>
+            <h3>Col-3</h3>
             <hr>
             <section class="col-3 nmb cf">
               <div>
-                <h4>Column 3</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
               </div>
               <div>
-                <h4>Column 3</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
               </div>
               <div>
-                <h4>Column 3</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
               </div>
             </section>
+            <pre class="highlight-code">
+              <code class="html">
+  &lt;section class="col-3 nmb cf"&gt;
+    &lt;div&gt;...&lt;/div&gt;
+    &lt;div&gt;...&lt;/div&gt;
+    &lt;div&gt;...&lt;/div&gt;
+  &lt;/section&gt;
+              </code>
+            </pre>
+            <hr>
+            <h3>Col-4</h3>
             <hr>
             <section class="col-4 nmb cf">
               <div>
-                <h4>Column 4</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
               </div>
               <div>
-                <h4>Column 4</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
               </div>
               <div>
-                <h4>Column 4</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
               </div>
               <div>
-                <h4>Column 4</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
               </div>
             </section>
+            <pre class="highlight-code">
+              <code class="html">
+  &lt;section class="col-4 nmb cf"&gt;
+    &lt;div&gt;...&lt;/div&gt;
+    &lt;div&gt;...&lt;/div&gt;
+    &lt;div&gt;...&lt;/div&gt;
+    &lt;div&gt;...&lt;/div&gt;
+  &lt;/section&gt;
+              </code>
+            </pre>
           </section>
 
 

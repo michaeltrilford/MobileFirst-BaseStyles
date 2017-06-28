@@ -1,5 +1,18 @@
 // Remember to delete comments / minify this document. Remove what you don't want.
+$(".preSecond").hide();
 
+$(".menu button.first").click(function(){
+  $(".preSecond").hide();
+  $(".preFirst").show();
+  $("button.second").removeClass("active");
+  $("button.first").addClass("active");
+});
+$(".menu button.second").click(function(){
+  $(".preFirst").hide();
+  $(".preSecond").show();
+  $("button.first").removeClass("active");
+  $("button.second").addClass("active");
+});
 
 /* B. TRANSFORMICONS SIMPLIFIED
 ------------------------------------------------------------------- */

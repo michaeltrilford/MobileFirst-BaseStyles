@@ -412,7 +412,7 @@ a {
       width: calc(100% + 2px);
       transform: translate(-1px, 0);
       height: 0.75em;
-      outline: 2px solid skyBlue;
+      outline: 2px solid #eaeaea;
       opacity: 0.3;
       outline-offset: -1px;
       margin-bottom: 0.75em; }
@@ -454,7 +454,7 @@ a {
  *  0.75em (12px), 1.5em (24px), 2.25em (36px), 3em (48px), 3.75em (60px), 4.5em (72px), 5.25em (84px), 6em (96px), 6.75em (108px), 7.5em (120px)
  *
  *  ========================================================================== */
-h1, h2, h3, p, header, table, figure, footer, details, section, article, dl, menu, ul, ol, aside, div, hr, fieldset, textarea, keygen, select, input {
+h1, h2, h3, p, header, table, figure, footer, details, section, article, dl, menu, ul, ol, pre, aside, div, hr, dd, fieldset, textarea, keygen, select, input {
   margin: 0 0 1.5em 0;
   width: 100%;
   -webkit-font-smoothing: antialiased;
@@ -713,11 +713,11 @@ ul.fancyList {
   .nested li ul li:after {
     display: none; }
 
-dd {
-  margin-left: 1.5em; }
+dt {
+  font-weight: bold; }
 
 summary {
-  background: #F9F9F9;
+  background: #ffffff;
   padding: 0.75em; }
 
 details {
@@ -766,7 +766,8 @@ details p {
  *========================================================================== */
 table {
   width: 100%;
-  border-collapse: collapse; }
+  border-collapse: collapse;
+  background: white; }
   @media only screen and (min-width: 53.125em) {
     table {
       box-shadow: 0 0 0 1px #cccccc; } }
@@ -824,6 +825,8 @@ a.tIcons {
   height: 1.5em;
   position: relative;
   border-bottom: none; }
+  a.tIcons:focus {
+    outline-offset: 6px; }
   a.tIcons svg {
     width: 100%;
     display: block;
@@ -969,11 +972,10 @@ figure {
 
   .col-4 > * {
     width: calc( (100% / 4) - 3em ); } }
-.autoColumn > * {
-  display: inline-block !important;
-  float: left;
-  width: auto;
-  margin-right: 0.75em; }
+.autoColumn {
+  display: flex; }
+  .autoColumn > * {
+    margin-right: 0.75em; }
 
 nav {
   background: #EAEAEA; }
@@ -1064,6 +1066,106 @@ nav a {
 
 .size-1of8 {
   width: 12.5%; }
+
+/* @import must be at top of file, otherwise CSS will not work */
+@font-face {
+  font-family: "UniversLTPro-65Bold";
+  src: url("../fonts/mikes-website.eot");
+  src: url("../fonts/mikes-website.eot?#iefix") format("embedded-opentype"), url("../fonts/mikes-website.woff2") format("woff2"), url("../fonts/mikes-website.woff") format("woff"), url("../fonts/mikes-website.ttf") format("truetype"); }
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-family: "UniversLTPro-65Bold", Verdana, sans-serif; }
+
+main.wrapper--small,
+main.wrapper {
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem; }
+
+.highlight-wrapper .autoColumn {
+  background: #333333; }
+  .highlight-wrapper .autoColumn button {
+    margin: 0; }
+    .highlight-wrapper .autoColumn button.active {
+      background: #23241f; }
+    .highlight-wrapper .autoColumn button:focus {
+      position: relative; }
+.highlight-wrapper pre {
+  margin-top: 0; }
+
+.highlight-code {
+  white-space: pre;
+  word-wrap: normal;
+  display: flex;
+  margin-bottom: 4.5rem; }
+  .highlight-code code {
+    font-size: 0.75rem;
+    width: 100%;
+    padding: 0 0.75rem; }
+
+hr {
+  border-top: 2px solid #eaeaea;
+  margin-bottom: calc(1.5rem - 1px);
+  margin-top: -1px; }
+
+/* Dark */
+.dark-mui body {
+  background: #2b2b2b;
+  color: white; }
+.dark-mui .baselineGridSetup > .baselineGrid div,
+.dark-mui .baselineGridSetup > body > .baselineGrid div {
+  outline: 2px solid rgba(0, 0, 0, 0.5); }
+.dark-mui nav {
+  background: #353535;
+  box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2); }
+  .dark-mui nav a {
+    background: #212121;
+    color: white; }
+    .dark-mui nav a:hover {
+      color: white; }
+    .dark-mui nav a.active {
+      background: white;
+      color: #2b2b2b; }
+.dark-mui hr {
+  border-top: 2px solid #585858;
+  margin-bottom: calc(1.5rem - 1px);
+  margin-top: -1px; }
+.dark-mui textarea,
+.dark-mui fieldset,
+.dark-mui input[type="text"],
+.dark-mui input[type="email"],
+.dark-mui input[type="number"],
+.dark-mui input[type="password"],
+.dark-mui input[type="file"],
+.dark-mui input[type="search"],
+.dark-mui input[type="range"],
+.dark-mui details {
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25); }
+.dark-mui details {
+  color: black; }
+.dark-mui a {
+  color: #fffc00;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 252, 0, 0.5); }
+  .dark-mui a:hover {
+    color: #fffc00;
+    border-bottom: 1px solid rgba(255, 252, 0, 0); }
+  .dark-mui a:focus {
+    color: #fffc00;
+    border-bottom: 1px solid rgba(255, 252, 0, 0); }
+.dark-mui nav a, .dark-mui nav a:hover, .dark-mui nav a:focus {
+  border-bottom: none; }
+.dark-mui legend {
+  background: #2b2b2b; }
+.dark-mui table {
+  color: black; }
+@media only screen and (min-width: 53.125em) {
+  .dark-mui table {
+    box-shadow: 0 0 0 1px #000000; } }
+.dark-mui button:focus, .dark-mui input:focus, .dark-mui textarea:focus, .dark-mui select:focus, .dark-mui a:focus, .dark-mui summary:focus {
+  outline-style: solid;
+  outline-color: white; }
+.dark-mui .tIcons svg {
+  fill: white; }
 
 /* No Margin top or bottom */
 .nmb {
@@ -1163,6 +1265,9 @@ nav a {
 
 .mb-24 {
   margin-bottom: 1.5rem; }
+
+.center {
+  text-align: center; }
 
 /* ==========================================================================
  * Media Queries / Print

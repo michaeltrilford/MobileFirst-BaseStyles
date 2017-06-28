@@ -6,11 +6,13 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
         <link rel="stylesheet" href="css/main.css">
         <script src="js/modernizr.js"></script>
+        <link rel="stylesheet" href="css/monokai-sublime.css">
+        <script src="js/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -18,31 +20,71 @@
         <![endif]-->
         <nav>
           <div class="wrapper">
-            <a href="index.html">Home</a>
-            <a href="headings.html">Headings</a>
-            <a href="headingGroup.html" class="active">Heading Group</a>
-            <a href="paragraphLink.html">Paragraph &amp; Link</a>
-            <a href="listStyles.html">List styles</a>
-            <a href="descriptionList.html">Description List</a>
-            <a href="table.html">Table</a>
+            <a href="index.html">🐮</a>
+            <a href="typography.html" class="active">Typography</a>
+            <a href="lists.html">Lists</a>
             <a href="mark.html">Mark</a>
-            <a href="figure.html">Figure</a>
+            <a href="images.html">Images</a>
             <a href="detailsSummary.html">Details &amp; Summary</a>
             <a href="transformicons.html">Transformicons</a>
-            <a href="autoColumn.html">Auto Column</a>
-            <a href="columns.html">Columns</a>
             <a href="formalize.html">Formalize</a>
+            <a href="columns.html">Columns</a>
+            <a href="table.html">Table</a>
           </div>
         </nav>
 
-        <main class="wrapper">
-          <h1>Heading Group</h1>
+        <main class="wrapper--small">
+          <h1>Typography</h1>
+          <hr>
+          <h3>Headings</h3>
           <hr>
           <section class="nmb cf">
+            <h1 class="nmb">Title one</h1>
+            <h2 class="nmb">Title two</h2>
+            <h3 class="nmb">Title three</h3>
+            <h4 class="nmb">Title four</h4>
+            <h5 class="nmb">Title five</h5>
+            <h6>Title six</h6>
+            <pre class="highlight-code">
+              <code class="html">
+  &lt;h1&gt;Title one&lt;/h1&gt;
+  &lt;h2&gt;Title two&lt;/h1&gt;
+  &lt;h3&gt;Title three&lt;/h1&gt;
+  &lt;h4&gt;Title four&lt;/h1&gt;
+  &lt;h5&gt;Title five&lt;/h1&gt;
+  &lt;h6&gt;Title six&lt;/h1&gt;
+              </code>
+            </pre>
+
+            <hr>
+
+            <h3>Heading Group</h3>
+            <hr>
             <div class="headingGroup">
               <h1>The quick brown fox</h1>
               <h2>The lazy dog</h2>
             </div>
+            <pre class="highlight-code">
+              <code class="html">
+  &lt;div class="headingGroup"&gt;
+    &lt;h1&gt;The quick brown fox&lt;/h1&gt;
+    &lt;h2&gt;The lazy dog&lt;/h2&gt;
+  &lt;/div&gt;
+              </code>
+            </pre>
+
+            <hr>
+
+            <h3>Paragraph &amp; Link</h3>
+            <hr>
+            <p>Throughout the years, I have discovered talented programmers neglect such a basic skill, which is HTML. Write is semantically, and the CSS will just work how it was intended. <a href="http://www.w3schools.com/html/">Learn more about HTML here</a>.</p>
+            <p>This is just an example of a basic paragraph should be structured. Never add plain text to a HTML document</p>
+            <pre class="highlight-code">
+              <code class="html">
+  &lt;p&gt;Ipsum Sem Condimentum &lt;a href="#"&gt;Ligula&lt;/a>.&lt;/p&gt;
+              </code>
+            </pre>
+
           </section>
 
         </main>
