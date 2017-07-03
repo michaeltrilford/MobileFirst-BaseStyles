@@ -167,6 +167,17 @@ for (var i=0; i<count; i++) {
 }
 
 
+// F. MobileFirst Nav
+// Reveal Menu
+$('.mui-mfn-menu-toggle').click(function(){
+  $(this).toggleClass('toggle-on');
+  $('body').toggleClass('mui-mfn-fixed-background');
+  $('.mui-mfn-nav').toggleClass('mui-mfn-menu-open');
+  $('.mui-mfn-nav li a').toggleClass('mui-mfn-menu-fadeIn');
+  return false
+});
+
+
 
 
 

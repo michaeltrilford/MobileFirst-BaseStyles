@@ -19,13 +19,14 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        <!-- Menu -->
         <nav class="mui-mfn-nav" role='navigation'>
           <ul class="nmb">
             <li><a href="index.html">Home</a></li>
             <li><a href="typography.html">Typography</a></li>
-            <li><a href="buttons.html">Buttons</a></li>
+            <li><a href="buttons.html" class="mui-mfn-active">Buttons</a></li>
             <li><a href="lists.html">Lists</a></li>
-            <li><a href="mark.html" class="mui-mfn-active">Mark</a></li>
+            <li><a href="mark.html">Mark</a></li>
             <li><a href="images.html">Images</a></li>
             <li><a href="detailsSummary.html">Details &amp; Summary</a></li>
             <li><a href="transformicons.html">Transformicons</a></li>
@@ -52,17 +53,34 @@
           <div class="bounceIn mui-mfn-website-name nmb">michaeltrilford.mui</div>
         </aside>
 
-        <main class="wrapper mui-mfn-wrapper">          
+        <main class="wrapper mui-mfn-wrapper">
+
           <section>
-            <h1>Mark</h1>
+            <h1>Buttons</h1>
             <hr>
-            <p>Lorem <mark>ipsum dolor</mark> sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue.</p>
+            <h3>Standard Button</h3>
+            <hr>
+            <div>
+              <button class="button">Hello</button>
+            </div>
             <pre class="highlight-code">
               <code class="html">
-  &lt;p&gt;Lorem &lt;mark&gt;ipsum dolor&lt;/mark&gt; sit amet consectetur.&lt;/p&gt;
+  &lt;button class="button"&gt;Hello&lt;/button&gt;
+              </code>
+            </pre>
+            <hr>
+            <h3>Rounded Button</h3>
+            <hr>
+            <div>
+              <button class="button--rounded">Hello</button>
+            </div>
+            <pre class="highlight-code">
+              <code class="html">
+  &lt;button class="button--rounded"&gt;Hello&lt;/button&gt;
               </code>
             </pre>
           </section>
+
 
         </main>
 
