@@ -957,12 +957,11 @@ figure {
 @media only screen and (min-width: 31.25em) {
   [class*="col-"] {
     transform: translate(-1.5em, 0);
-    display: flex; }
+    display: flex;
+    width: calc( 100% + 3em ); }
     [class*="col-"] > * {
       float: left;
       margin: 0 1.5em; }
-    .csscalc [class*="col-"] {
-      width: calc( 100% + 3em ); }
 
   .col-2 > * {
     width: calc( (100% / 2) - 3em ); }
