@@ -25,9 +25,8 @@
             <li><a href="typography.html">Typography</a></li>
             <li><a href="buttons.html">Buttons</a></li>
             <li><a href="lists.html" class="mui-mfn-active">Lists</a></li>
-            <li><a href="mark.html">Mark</a></li>
             <li><a href="images.html">Images</a></li>
-            <li><a href="detailsSummary.html">Details &amp; Summary</a></li>
+            <li><a href="accordion.html">Accordion</a></li>
             <li><a href="transformicons.html">Transformicons</a></li>
             <li><a href="formalize.html">Formalize</a></li>
             <li><a href="columns.html">Columns</a></li>
@@ -51,153 +50,154 @@
           </a>
           <div class="bounceIn mui-mfn-website-name nmb">michaeltrilford.mui</div>
         </aside>
+         
+        <main class="mui-mfn-offset-wrapper">
+          <section class="wrapper--medium">
 
-        <main class="wrapper mui-mfn-wrapper">
-          
-          <section>
-            <h1>Lists</h1>
-            <hr>
-            <h3>Ordered List</h3>
-            <hr>
-            <ol>
-              <li>Coffee</li>
-              <li>Tea</li>
-              <li>Milk</li>
-            </ol>
-            <pre class="highlight-code">
-              <code class="html">
-  &lt;ol&gt;
-    &lt;li&gt;Coffee&lt;/li&gt;
-    &lt;li&gt;Tea&lt;/li&gt;
-    &lt;li&gt;Milk&lt;/li&gt;
-  &lt;/ol&gt;
-              </code>
-            </pre>
+            <h1 class="xx-large">List items</h1>
+
+            <article>
+              <hr>
+              <h3>Ordered List</h3>
+              <hr>
+              <ol>
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>Milk</li>
+              </ol>
+              <pre class="highlight-code">
+                <code class="html">
+    &lt;ol&gt;
+      &lt;li&gt;Coffee&lt;/li&gt;
+      &lt;li&gt;Tea&lt;/li&gt;
+      &lt;li&gt;Milk&lt;/li&gt;
+    &lt;/ol&gt;
+                </code>
+              </pre>
+            </article>
+
+            <article>
+              <hr>
+              <h3>Unordered List</h3>
+              <hr>
+              <ul>
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>Milk</li>
+              </ul>
+              <pre class="highlight-code">
+                <code class="html">
+    &lt;ul&gt;
+      &lt;li&gt;Coffee&lt;/li&gt;
+      &lt;li&gt;Tea&lt;/li&gt;
+      &lt;li&gt;Milk&lt;/li&gt;
+    &lt;/ul&gt;
+                </code>
+              </pre>
+            </article>
+
+
+
+            <article>
+              <hr>
+              <h3>Nested Unordered List</h3>
+              <hr>
+              <ul>
+                <li>Coffee</li>
+                <li>Tea
+                  <ul>
+                    <li>Black tea</li>
+                    <li>Green tea</li>
+                  </ul>
+                </li>
+                <li>Milk</li>
+              </ul>
+              <pre class="highlight-code">
+                <code class="html">
+    &lt;ul&gt;
+      &lt;li&gt;Tea
+        &lt;ul&gt;
+          &lt;li&gt;Black tea&lt;/li&gt;
+          &lt;li&gt;Green tea&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+                </code>
+              </pre>
+            </article>
+
+
+
+            <article>
+              <hr>
+              <h3>Fancy List</h3>
+              <hr>
+              <ul class="fancyList">
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>Milk</li>
+              </ul>
+              <pre class="highlight-code">
+                <code class="html">
+    &lt;ul class="fancyList"&gt;
+      &lt;li&gt;Coffee&lt;/li&gt;
+      &lt;li&gt;Tea&lt;/li&gt;
+      &lt;li&gt;Milk&lt;/li&gt;
+    &lt;/ul&gt;
+                </code>
+              </pre>
+            </article>
+
+            <article>
+              <hr>
+              <h3>Nested Fancy List</h3>
+              <hr>
+              <ul class="fancyList nested">
+                <li>Coffee</li>
+                <li>Tea
+                  <ul>
+                    <li>Black tea</li>
+                    <li>Green tea</li>
+                  </ul>
+                </li>
+                <li>Milk</li>
+              </ul>
+              <pre class="highlight-code">
+                <code class="html">
+    &lt;ul class="fancyList"&gt;
+      &lt;li&gt;Tea
+        &lt;ul&gt;
+          &lt;li&gt;Black tea&lt;/li&gt;
+          &lt;li&gt;Green tea&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+                </code>
+              </pre>
+            </article>
+
+            <article>
+              <hr>
+              <h3>Description List</h3>
+              <hr>
+              <dl>
+                <dt>Dolor Commodo</dt>
+                <dd>Sed posuere consectetur est at lobortis.</dd>
+
+                <dt>Adipiscing Inceptos</dt>
+                <dd>Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</dd>
+              </dl>
+              <pre class="highlight-code">
+                <code class="html">
+    &lt;dl&gt;
+      &lt;dt&gt;Dolor Commodo&lt;/dt&gt;
+      &lt;dd&gt;Sed posuere consectetur est at lobortis.&lt;/dd&gt;
+    &lt;/dl&gt;
+                </code>
+              </pre>
+            </article>
+
           </section>
-
-          <hr>
-
-          <section>
-            <h3>Unordered List</h3>
-            <hr>
-            <ul>
-              <li>Coffee</li>
-              <li>Tea</li>
-              <li>Milk</li>
-            </ul>
-            <pre class="highlight-code">
-              <code class="html">
-  &lt;ul&gt;
-    &lt;li&gt;Coffee&lt;/li&gt;
-    &lt;li&gt;Tea&lt;/li&gt;
-    &lt;li&gt;Milk&lt;/li&gt;
-  &lt;/ul&gt;
-              </code>
-            </pre>
-          </section>
-
-          <hr>
-
-          <section>
-            <h3>Nested Unordered List</h3>
-            <hr>
-            <ul>
-              <li>Coffee</li>
-              <li>Tea
-                <ul>
-                  <li>Black tea</li>
-                  <li>Green tea</li>
-                </ul>
-              </li>
-              <li>Milk</li>
-            </ul>
-            <pre class="highlight-code">
-              <code class="html">
-  &lt;ul&gt;
-    &lt;li&gt;Tea
-      &lt;ul&gt;
-        &lt;li&gt;Black tea&lt;/li&gt;
-        &lt;li&gt;Green tea&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-              </code>
-            </pre>
-          </section>
-
-          <hr>
-
-          <section>
-            <h3>Fancy List</h3>
-            <hr>
-            <ul class="fancyList">
-              <li>Coffee</li>
-              <li>Tea</li>
-              <li>Milk</li>
-            </ul>
-            <pre class="highlight-code">
-              <code class="html">
-  &lt;ul class="fancyList"&gt;
-    &lt;li&gt;Coffee&lt;/li&gt;
-    &lt;li&gt;Tea&lt;/li&gt;
-    &lt;li&gt;Milk&lt;/li&gt;
-  &lt;/ul&gt;
-              </code>
-            </pre>
-          </section>
-
-          <hr>
-
-          <section>
-            <h3>Nested Fancy List</h3>
-            <hr>
-            <ul class="fancyList nested">
-              <li>Coffee</li>
-              <li>Tea
-                <ul>
-                  <li>Black tea</li>
-                  <li>Green tea</li>
-                </ul>
-              </li>
-              <li>Milk</li>
-            </ul>
-            <pre class="highlight-code">
-              <code class="html">
-  &lt;ul class="fancyList"&gt;
-    &lt;li&gt;Tea
-      &lt;ul&gt;
-        &lt;li&gt;Black tea&lt;/li&gt;
-        &lt;li&gt;Green tea&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-              </code>
-            </pre>
-          </section>
-
-          <hr>
-
-          <section>
-            <h3>Description List</h3>
-            <hr>
-            <dl>
-              <dt>Dolor Commodo</dt>
-              <dd>Sed posuere consectetur est at lobortis.</dd>
-
-              <dt>Adipiscing Inceptos</dt>
-              <dd>Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</dd>
-            </dl>
-            <pre class="highlight-code">
-              <code class="html">
-  &lt;dl&gt;
-    &lt;dt&gt;Dolor Commodo&lt;/dt&gt;
-    &lt;dd&gt;Sed posuere consectetur est at lobortis.&lt;/dd&gt;
-  &lt;/dl&gt;
-              </code>
-            </pre>
-          </section>
-
-
         </main>
 
         <!-- Grid Overlay -->

@@ -26,9 +26,8 @@
             <li><a href="typography.html">Typography</a></li>
             <li><a href="buttons.html">Buttons</a></li>
             <li><a href="lists.html">Lists</a></li>
-            <li><a href="mark.html">Mark</a></li>
             <li><a href="images.html" class="mui-mfn-active">Images</a></li>
-            <li><a href="detailsSummary.html">Details &amp; Summary</a></li>
+            <li><a href="accordion.html">Accordion</a></li>
             <li><a href="transformicons.html">Transformicons</a></li>
             <li><a href="formalize.html">Formalize</a></li>
             <li><a href="columns.html">Columns</a></li>
@@ -53,87 +52,91 @@
           <div class="bounceIn mui-mfn-website-name nmb">michaeltrilford.mui</div>
         </aside>
 
-        <main class="wrapper mui-mfn-wrapper">
+        <main class="mui-mfn-offset-wrapper">
+          <section class="wrapper--medium">
           
-          <section>
-            <h1>Images</h1>
-            <hr>
-            <h3>Single image</h3>
-            <hr>
-            <figure>
-              <img src="http://placehold.it/1080x500" width="1080" height="500">
-            </figure>
-            <pre class="highlight-code">
-              <code class="html">
-  &lt;figure&gt;
-    &lt;img src="image.jpg"&gt;
-  &lt;/figure&gt;
-              </code>
-            </pre>
+            <h1 class="xx-large">Images</h1>
+
+            <article>
+              <hr>
+              <h3>Single image</h3>
+              <hr>
+              <figure>
+                <img src="http://placehold.it/1080x500/cccccc/ffffff" width="1080" height="500">
+              </figure>
+              <pre class="highlight-code">
+                <code class="html">
+    &lt;figure&gt;
+      &lt;img src="image.jpg"&gt;
+    &lt;/figure&gt;
+                </code>
+              </pre>
+            </article>
+
+            <article>
+              <hr>
+              <h3>Image w/ caption</h3>
+              <hr>
+              <figure>
+                <img src="http://placehold.it/1080x500/cccccc/ffffff" width="1080" height="500">
+                <figcaption>Fig1. - Example image.</figcaption>
+              </figure>
+              <pre class="highlight-code">
+                <code class="html">
+    &lt;figure&gt;
+      &lt;img src="image.jpg"&gt;
+       &lt;figcaption&gt;Fig1. - Example image.&lt;/figcaption&gt;
+    &lt;/figure&gt;
+                </code>
+              </pre>
+            </article>
+
+            
+
+            <article>
+              <hr>
+              <h3>Image left aligned</h3>
+              <hr>
+              <figure class="left">
+                <img src="http://placehold.it/350x156/cccccc/ffffff" width="350" height="156">
+                <figcaption>Fig1. - Example image.</figcaption>
+              </figure>
+              <p>Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec id elit non mi porta gravida at eget metus. Aenean lacinia bibendum nulla sed consectetur. Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit fusce dapibus, tellus ac cursus commodo.</p>
+              <pre class="highlight-code">
+                <code class="html">
+    &lt;figure class="left"&gt;
+      &lt;img src="image.jpg"&gt;
+       &lt;figcaption&gt;Fig1. - Example image.&lt;/figcaption&gt;
+    &lt;/figure&gt;
+    &lt;p&gt;...&lt;/p&gt;
+
+                </code>
+              </pre>
+            </article>
+
+            
+
+            <article>
+              <hr>
+              <h3>Image right aligned</h3>
+              <figure class="right">
+                <img src="http://placehold.it/350x156/cccccc/ffffff" width="350" height="156">
+                <figcaption>Fig1. - Example image.</figcaption>
+              </figure>
+              <p>Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec id elit non mi porta gravida at eget metus. Aenean lacinia bibendum nulla sed consectetur. Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit fusce dapibus, tellus ac cursus commodo.</p>
+              <pre class="highlight-code">
+                <code class="html">
+    &lt;figure class="right"&gt;
+      &lt;img src="image.jpg"&gt;
+       &lt;figcaption&gt;Fig1. - Example image.&lt;/figcaption&gt;
+    &lt;/figure&gt;
+    &lt;p&gt;...&lt;/p&gt;
+
+                </code>
+              </pre>
+            </article>
+
           </section>
-
-          <hr>
-
-          <section>
-            <h3>Image w/ caption</h3>
-            <hr>
-            <figure>
-              <img src="http://placehold.it/1080x500" width="1080" height="500">
-              <figcaption>Fig1. - Example image.</figcaption>
-            </figure>
-            <pre class="highlight-code">
-              <code class="html">
-  &lt;figure&gt;
-    &lt;img src="image.jpg"&gt;
-     &lt;figcaption&gt;Fig1. - Example image.&lt;/figcaption&gt;
-  &lt;/figure&gt;
-              </code>
-            </pre>
-          </section>
-
-          <hr>
-
-          <section>
-            <h3>Image left aligned</h3>
-            <hr>
-            <figure class="left">
-              <img src="http://placehold.it/350x156" width="350" height="156">
-              <figcaption>Fig1. - Example image.</figcaption>
-            </figure>
-            <p>Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec id elit non mi porta gravida at eget metus. Aenean lacinia bibendum nulla sed consectetur. Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit fusce dapibus, tellus ac cursus commodo.</p>
-            <pre class="highlight-code">
-              <code class="html">
-  &lt;figure class="left"&gt;
-    &lt;img src="image.jpg"&gt;
-     &lt;figcaption&gt;Fig1. - Example image.&lt;/figcaption&gt;
-  &lt;/figure&gt;
-  &lt;p&gt;...&lt;/p&gt;
-
-              </code>
-            </pre>
-          </section>
-
-          <hr>
-
-          <section>
-            <h3>Image right aligned</h3>
-            <figure class="right">
-              <img src="http://placehold.it/350x156" width="350" height="156">
-              <figcaption>Fig1. - Example image.</figcaption>
-            </figure>
-            <p>Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec id elit non mi porta gravida at eget metus. Aenean lacinia bibendum nulla sed consectetur. Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit fusce dapibus, tellus ac cursus commodo.</p>
-            <pre class="highlight-code">
-              <code class="html">
-  &lt;figure class="right"&gt;
-    &lt;img src="image.jpg"&gt;
-     &lt;figcaption&gt;Fig1. - Example image.&lt;/figcaption&gt;
-  &lt;/figure&gt;
-  &lt;p&gt;...&lt;/p&gt;
-
-              </code>
-            </pre>
-          </section>
-
         </main>
 
         <!-- Grid Overlay -->

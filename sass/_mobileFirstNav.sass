@@ -17,8 +17,6 @@
   opacity: 0
   transform: translate(0,100%)
   transition: transform 100ms linear, width 100ms linear, opacity 100ms linear
-  display: flex
-  align-items: flex-end
   &.mui-mfn-menu-open
     transform: translate(0,0)
     border-radius: 0
@@ -41,6 +39,10 @@
       transition: opacity 400ms ease-in, transform 100ms ease-in
       opacity: 0
       font-weight: bold
+      @include fontSize36
+      @media (min-width: 60em)
+        @include fontSize16
+        @include noMargin
       &.mui-mfn-menu-fadeIn
         opacity: 0.3
       &.mui-mfn-active,
@@ -71,25 +73,30 @@
           transform-origin: 20% 50%
 
 // 3. Main Content Wrapper
-.mui-mfn-wrapper
-  height: calc(100vh - 4.5em)
-  overflow: hidden
-  overflow-y: scroll
-  -webkit-overflow-scrolling: touch
-  padding-left: 1.5em
-  padding-right: 1.5em
-  padding-bottom: 0
-  width: 100%
+.mui-mfn-offset-wrapper
   @media (min-width: 60em)
-    height: auto
-    overflow: visible
-    padding-left: 0
-    padding-right: 0
-    padding-bottom: 1.5em
-    max-width: 100%
     width: calc(100% - 23em)
     margin: 0 1.5em 0
-    transform: translate(20em,0)
+    transform: translate(20em, 0)
+
+  //height: calc(100vh - 4.5em)
+  //overflow: hidden
+  //overflow-y: scroll
+  //-webkit-overflow-scrolling: touch
+  //padding-left: 1.5em
+  //padding-right: 1.5em
+  //padding-bottom: 0
+  //width: 100%
+  //@media (min-width: 60em)
+    //height: auto
+    //overflow: visible
+    //padding-left: 0
+    //padding-right: 0
+    //padding-bottom: 1.5em
+    //max-width: 100%
+    //width: calc(100% - 23em)
+    //margin: 0 1.5em 0
+    //transform: translate(20em,0)
       
 // 4. Navigation Bar
 .mui-mfn-navigation-bar

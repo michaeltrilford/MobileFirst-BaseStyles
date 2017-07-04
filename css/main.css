@@ -1025,9 +1025,7 @@ nav a {
   background: black;
   opacity: 0;
   transform: translate(0, 100%);
-  transition: transform 100ms linear, width 100ms linear, opacity 100ms linear;
-  display: flex;
-  align-items: flex-end; }
+  transition: transform 100ms linear, width 100ms linear, opacity 100ms linear; }
   .mui-mfn-nav.mui-mfn-menu-open {
     transform: translate(0, 0);
     border-radius: 0;
@@ -1049,7 +1047,18 @@ nav a {
       padding: 0.75em 3em;
       transition: opacity 400ms ease-in, transform 100ms ease-in;
       opacity: 0;
-      font-weight: bold; }
+      font-weight: bold;
+      font-size: calc(36 / 16 * 1em);
+      line-height: calc(48 / 36);
+      margin: 0;
+      margin-bottom: calc(24 / 36 * 1em); }
+      @media (min-width: 60em) {
+        .mui-mfn-nav li a {
+          font-size: calc(16 / 16 * 1em);
+          line-height: calc(24 / 16);
+          margin: 0;
+          margin-bottom: calc(24 / 16 * 1em);
+          margin: 0; } }
       .mui-mfn-nav li a.mui-mfn-menu-fadeIn {
         opacity: 0.3; }
       .mui-mfn-nav li a.mui-mfn-active, .mui-mfn-nav li a:hover {
@@ -1078,26 +1087,11 @@ nav a {
         opacity: 1;
         transform-origin: 20% 50%; } }
 
-.mui-mfn-wrapper {
-  height: calc(100vh - 4.5em);
-  overflow: hidden;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
-  padding-bottom: 0;
-  width: 100%; }
-  @media (min-width: 60em) {
-    .mui-mfn-wrapper {
-      height: auto;
-      overflow: visible;
-      padding-left: 0;
-      padding-right: 0;
-      padding-bottom: 1.5em;
-      max-width: 100%;
-      width: calc(100% - 23em);
-      margin: 0 1.5em 0;
-      transform: translate(20em, 0); } }
+@media (min-width: 60em) {
+  .mui-mfn-offset-wrapper {
+    width: calc(100% - 23em);
+    margin: 0 1.5em 0;
+    transform: translate(20em, 0); } }
 
 .mui-mfn-navigation-bar {
   position: fixed;
@@ -1190,6 +1184,15 @@ nav a {
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   font-family: "UniversLTPro-65Bold", Verdana, sans-serif; }
+
+.georgia {
+  font-family: georgia;
+  font-style: italic; }
+
+.wrapper--small,
+.wrapper--medium,
+.wrapper {
+  padding: 4.5rem 0; }
 
 .highlight-wrapper .autoColumn {
   background: #333333; }

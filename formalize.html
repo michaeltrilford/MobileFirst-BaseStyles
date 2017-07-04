@@ -26,9 +26,8 @@
             <li><a href="typography.html">Typography</a></li>
             <li><a href="buttons.html">Buttons</a></li>
             <li><a href="lists.html">Lists</a></li>
-            <li><a href="mark.html">Mark</a></li>
             <li><a href="images.html">Images</a></li>
-            <li><a href="detailsSummary.html">Details &amp; Summary</a></li>
+            <li><a href="accordion.html">Accordion</a></li>
             <li><a href="transformicons.html">Transformicons</a></li>
             <li><a href="formalize.html" class="mui-mfn-active">Formalize</a></li>
             <li><a href="columns.html">Columns</a></li>
@@ -53,343 +52,343 @@
           <div class="bounceIn mui-mfn-website-name nmb">michaeltrilford.mui</div>
         </aside>
 
-        <main class="wrapper mui-mfn-wrapper">
+        <main class="mui-mfn-offset-wrapper">
+          <section class="wrapper--medium">
           
-          <section>
-            <h1>Formalize</h1>
+            <h1 class="xx-large">Formalize</h1>
 
-            <hr>
+            <article>
+              <hr>
+              <!-- Form Example -->
+              <h3>Label &amp; input</h3>
+              <hr>
+              <form action="#"> <!-- You add a URL here for when you submit the action -->
+                <label for="first-name">First name:</label>
+                <input type="text" name="first-name" id="first-name" placeholder="Hank...">
+                <label for="last-name">Last name:</label>
+                <input type="text" id="last-name" name="last-name" placeholder="Jones...">
+                <input type="submit" value="Submit now">
+              </form>
+              <pre class="highlight-code">
+                <code class="html">
+    &lt;form action="#"&gt;
+      &lt;label for="first-name"&gt;First name:&lt;/label&gt;
+      &lt;input type="text" name="first-name" id="first-name" placeholder="Hank..."&gt;
+      &lt;label for="last-name">Last name:&lt;/label&gt;
+      &lt;input type="text" id="last-name" name="last-name" placeholder="Jones..."&gt;
+      &lt;input type="submit" value="Submit now"&gt;
+    &lt;/form&gt;
+                </code>
+              </pre>
 
-            <!-- Form Example -->
-            <h3>Label &amp; input</h3>
-            <hr>
-            <form action="#"> <!-- You add a URL here for when you submit the action -->
-              <label for="first-name">First name:</label>
-              <input type="text" name="first-name" id="first-name" placeholder="Hank...">
-              <label for="last-name">Last name:</label>
-              <input type="text" id="last-name" name="last-name" placeholder="Jones...">
-              <input type="submit" value="Submit now">
-            </form>
-            <pre class="highlight-code">
-              <code class="html">
-  &lt;form action="#"&gt;
-    &lt;label for="first-name"&gt;First name:&lt;/label&gt;
-    &lt;input type="text" name="first-name" id="first-name" placeholder="Hank..."&gt;
-    &lt;label for="last-name">Last name:&lt;/label&gt;
-    &lt;input type="text" id="last-name" name="last-name" placeholder="Jones..."&gt;
-    &lt;input type="submit" value="Submit now"&gt;
-  &lt;/form&gt;
-              </code>
-            </pre>
+              <hr/>
 
-            <hr/>
+              <!-- Textarea Example -->
+              <h3>Label &amp; textarea</h3>
+              <hr>
+              <form action="#">
+                <label for="text-area-example">Write something about yourself:</label>
+                <textarea rows="4" cols="50" id="text-area-example" placeholder="eg. My name is Mike, and I created this site..."></textarea>
+                <input type="submit" value="Submit now">
+              </form>
+              <pre class="highlight-code">
+                <code class="html">
+    &lt;form action="#"&gt;
+      &lt;label for="text-area-example">Write something about yourself:&lt;/label&gt;
+      &lt;textarea rows="4" cols="50" id="text-area-example" placeholder="eg. My name is Mike, and I created this site..."&gt;&lt;/textarea&gt;
+      &lt;input type="submit" value="Submit now"&gt;
+    &lt;/form&gt;
+                </code>
+              </pre>
 
-            <!-- Textarea Example -->
-            <h3>Label &amp; textarea</h3>
-            <hr>
-            <form action="#">
-              <label for="text-area-example">Write something about yourself:</label>
-              <textarea rows="4" cols="50" id="text-area-example" placeholder="eg. My name is Mike, and I created this site..."></textarea>
-              <input type="submit" value="Submit now">
-            </form>
-            <pre class="highlight-code">
-              <code class="html">
-  &lt;form action="#"&gt;
-    &lt;label for="text-area-example">Write something about yourself:&lt;/label&gt;
-    &lt;textarea rows="4" cols="50" id="text-area-example" placeholder="eg. My name is Mike, and I created this site..."&gt;&lt;/textarea&gt;
-    &lt;input type="submit" value="Submit now"&gt;
-  &lt;/form&gt;
-              </code>
-            </pre>
+              <hr/>      
 
-            <hr/>      
+              <!-- Fieldset & Legend Example -->
+              <h3>Fieldset &amp; legend</h3>
+              <hr>
+              <form action="#">
+                <fieldset>
+                  <legend>Example of a fieldset</legend>
+                  <label for="Name">Name:</label>
+                  <input type="text" id="Name">
+                  <label for="Email">Email:</label>
+                  <input type="text" id="Email">
+                  <label for="Date-of-birth">Date of birth:</label>
+                  <input type="text" id="Date-of-birth">
+                </fieldset>
+                <input type="submit" value="Submit now">
+              </form>
+              <pre class="highlight-code">
+                <code class="html">
+    &lt;form action="#"&gt;
+      &lt;fieldset>
+        &lt;legend>Example of a fieldset&lt;/legend&gt;
+        &lt;label for="Name">Name:&lt;/label&gt;
+        &lt;input type="text" id="Name"&gt;
+      &lt;/fieldset>
+      &lt;input type="submit" value="Submit now"&gt;
+    &lt;/form&gt;
+                </code>
+              </pre>
 
-            <!-- Fieldset & Legend Example -->
-            <h3>Fieldset &amp; legend</h3>
-            <hr>
-            <form action="#">
-              <fieldset>
-                <legend>Example of a fieldset</legend>
-                <label for="Name">Name:</label>
-                <input type="text" id="Name">
-                <label for="Email">Email:</label>
-                <input type="text" id="Email">
-                <label for="Date-of-birth">Date of birth:</label>
-                <input type="text" id="Date-of-birth">
-              </fieldset>
-              <input type="submit" value="Submit now">
-            </form>
-            <pre class="highlight-code">
-              <code class="html">
-  &lt;form action="#"&gt;
-    &lt;fieldset>
-      &lt;legend>Example of a fieldset&lt;/legend&gt;
-      &lt;label for="Name">Name:&lt;/label&gt;
-      &lt;input type="text" id="Name"&gt;
-    &lt;/fieldset>
-    &lt;input type="submit" value="Submit now"&gt;
-  &lt;/form&gt;
-              </code>
-            </pre>
+              <hr/>
 
-            <hr/>
+              <!-- Label Example -->
+              <h3>Radio &amp; checklist</h3>
+              <hr>
+              <form action="demo_form.asp">
+                <fieldset>
+                  <legend>Pick one of your favourite fruit</legend>
+                  <ul>
+                    <li>
+                      <label for="applesR"><input type="radio" name="fruit" id="applesR" value="applesR">Apples</label>
+                    </li>
+                    <li>
+                      <label for="orangesR"><input type="radio" name="fruit" id="orangesR" value="orangesR">Oranges</label>
+                    </li> 
+                    <li> 
+                      <label for="pearsR"><input type="radio" name="fruit" id="pearsR" value="pearsR">Pears</label>
+                    </li>
+                  </ul>
+                </fieldset>
+                <fieldset>
+                  <legend>Pick all your favourite fruit</legend>
+                  <ul>
+                    <li>
+                      <label for="applesC"><input type="checkbox" name="fruit" id="applesC" value="applesC">Apples</label>
+                    </li>
+                    <li>
+                      <label for="orangesC"><input type="checkbox" name="fruit" id="orangesC" value="orangesC">Oranges</label>
+                    </li> 
+                    <li> 
+                      <label for="pearsC"><input type="checkbox" name="fruit" id="pearsC" value="pearsC">Pears</label>
+                    </li>  
+                  </ul>
+                </fieldset>
+                <input type="submit" value="Submit now">
+              </form>
 
-            <!-- Label Example -->
-            <h3>Radio &amp; checklist</h3>
-            <hr>
-            <form action="demo_form.asp">
-              <fieldset>
-                <legend>Pick one of your favourite fruit</legend>
-                <ul>
-                  <li>
-                    <label for="applesR"><input type="radio" name="fruit" id="applesR" value="applesR">Apples</label>
-                  </li>
-                  <li>
-                    <label for="orangesR"><input type="radio" name="fruit" id="orangesR" value="orangesR">Oranges</label>
-                  </li> 
-                  <li> 
-                    <label for="pearsR"><input type="radio" name="fruit" id="pearsR" value="pearsR">Pears</label>
-                  </li>
-                </ul>
-              </fieldset>
-              <fieldset>
-                <legend>Pick all your favourite fruit</legend>
-                <ul>
-                  <li>
-                    <label for="applesC"><input type="checkbox" name="fruit" id="applesC" value="applesC">Apples</label>
-                  </li>
-                  <li>
-                    <label for="orangesC"><input type="checkbox" name="fruit" id="orangesC" value="orangesC">Oranges</label>
-                  </li> 
-                  <li> 
-                    <label for="pearsC"><input type="checkbox" name="fruit" id="pearsC" value="pearsC">Pears</label>
-                  </li>  
-                </ul>
-              </fieldset>
-              <input type="submit" value="Submit now">
-            </form>
-
-            <div class="highlight-wrapper">
-              <div class="autoColumn nmb menu">
-                <button class="first active">Radio</button>
-                <button class="second">Checklist</button>
+              <div class="highlight-wrapper">
+                <div class="autoColumn nmb menu">
+                  <button class="first active">Radio</button>
+                  <button class="second">Checklist</button>
+                </div>
+                <pre class="preFirst highlight-code">
+                  <code class="html">
+    &lt;form action="#"&gt;
+      &lt;fieldset&gt;
+        &lt;legend&gt;Pick one of your favourite fruit&lt;/legend&gt;
+        &lt;ul&gt;
+          &lt;li&gt;
+            &lt;label for="applesR"&gt;&lt;input type="radio" name="fruit" id="applesR" value="applesR">Apples&lt;/label&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            ...
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/fieldset&gt;
+    &lt;/form&gt;
+                  </code>
+                </pre>
+                <pre class="preSecond highlight-code">
+                  <code class="html">
+    &lt;form action="#"&gt;
+      &lt;fieldset&gt;
+        &lt;legend&gt;Pick all your favourite fruit&lt;/legend&gt;
+        &lt;ul&gt;
+          &lt;li&gt;
+            &lt;label for="applesC"&gt;&lt;input type="checkbox" name="fruit" id="applesC" value="applesC">Apples&lt;/label&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            ...
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/fieldset&gt;
+    &lt;/form&gt;
+                  </code>
+                </pre>
               </div>
-              <pre class="preFirst highlight-code">
-                <code class="html">
-  &lt;form action="#"&gt;
-    &lt;fieldset&gt;
-      &lt;legend&gt;Pick one of your favourite fruit&lt;/legend&gt;
-      &lt;ul&gt;
-        &lt;li&gt;
-          &lt;label for="applesR"&gt;&lt;input type="radio" name="fruit" id="applesR" value="applesR">Apples&lt;/label&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-          ...
-        &lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/fieldset&gt;
-  &lt;/form&gt;
-                </code>
-              </pre>
-              <pre class="preSecond highlight-code">
-                <code class="html">
-  &lt;form action="#"&gt;
-    &lt;fieldset&gt;
-      &lt;legend&gt;Pick all your favourite fruit&lt;/legend&gt;
-      &lt;ul&gt;
-        &lt;li&gt;
-          &lt;label for="applesC"&gt;&lt;input type="checkbox" name="fruit" id="applesC" value="applesC">Apples&lt;/label&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-          ...
-        &lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/fieldset&gt;
-  &lt;/form&gt;
-                </code>
-              </pre>
-            </div>
 
-            <hr/>
+              <hr/>
 
-            <!-- Select -->
-            <h3>Select</h3>
-            <hr>
-            <form action="#">
-              <label for="cars-select">Cars:</label>
-              <select id="cars-select">
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
-              </select>
-              <label for="bikes-select">Bikes:</label>
-              <select id="bikes-select">
-                <option value="triumph">Triumph</option>
-                <option value="Norton">Norton</option>
-                <option value="BMW">BWM</option>
-                <option value="Yamaha">Yamaha</option>
-              </select>
-              <input type="submit" value="Submit now">
-            </form>
-            <pre class="highlight-code">
-              <code class="html">
-  &lt;form action="#"&gt;
-    &lt;label for="cars-select"&gt;Cars:&lt;/label&gt;
-    &lt;select id="cars-select"&gt;
-      &lt;option value="volvo"&gt;Volvo&lt;/option&gt;
-      &lt;option value="saab"&gt;Saab&lt;/option&gt;
-      &lt;option value="mercedes"&gt;Mercedes&lt;/option&gt;
-      &lt;option value="audi"&gt;Audi&lt;/option&gt;
-    &lt;/select&gt;
-    &lt;input type="submit" value="Submit now"&gt;
-  &lt;/form&gt;
-              </code>
-            </pre>
-            
-            <hr/>
-
-            <!-- Optgroup -->
-            <h3>Optgroup</h3>
-            <hr>
-            <form action="#">
-              <label for="cars-optgroup">Cars:</label>
-              <select id="cars-optgroup">
-                <optgroup label="Swedish Cars">
+              <!-- Select -->
+              <h3>Select</h3>
+              <hr>
+              <form action="#">
+                <label for="cars-select">Cars:</label>
+                <select id="cars-select">
                   <option value="volvo">Volvo</option>
                   <option value="saab">Saab</option>
-                </optgroup>
-                <optgroup label="German Cars">
                   <option value="mercedes">Mercedes</option>
                   <option value="audi">Audi</option>
-                </optgroup>
-              </select>
-              <input type="submit" value="Submit now">
-            </form>
-            <pre class="highlight-code">
-              <code class="html">
-  &lt;form action="#"&gt;
-    &lt;label for="cars-optgroup">Cars:&lt;/label&gt;
-    &lt;select id="cars-optgroup"&gt;
-      &lt;optgroup label="Swedish Cars"&gt;
+                </select>
+                <label for="bikes-select">Bikes:</label>
+                <select id="bikes-select">
+                  <option value="triumph">Triumph</option>
+                  <option value="Norton">Norton</option>
+                  <option value="BMW">BWM</option>
+                  <option value="Yamaha">Yamaha</option>
+                </select>
+                <input type="submit" value="Submit now">
+              </form>
+              <pre class="highlight-code">
+                <code class="html">
+    &lt;form action="#"&gt;
+      &lt;label for="cars-select"&gt;Cars:&lt;/label&gt;
+      &lt;select id="cars-select"&gt;
         &lt;option value="volvo"&gt;Volvo&lt;/option&gt;
         &lt;option value="saab"&gt;Saab&lt;/option&gt;
-      &lt;/optgroup&gt;
-    &lt;/select&gt;
-    &lt;input type="submit" value="Submit now"&gt;
-  &lt;/form&gt;
-              </code>
-            </pre>
-            <hr/>
+        &lt;option value="mercedes"&gt;Mercedes&lt;/option&gt;
+        &lt;option value="audi"&gt;Audi&lt;/option&gt;
+      &lt;/select&gt;
+      &lt;input type="submit" value="Submit now"&gt;
+    &lt;/form&gt;
+                </code>
+              </pre>
+              
+              <hr/>
 
-            <!-- Option -->
-            <h3>Option</h3>
-            <hr>
-            <form action="#">
-              <label for="cars-option">Cars:</label>
-              <select id="cars-option">
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="opel">Opel</option>
-                <option value="audi">Audi</option>
-              </select>
-              <input type="submit" value="Submit now">
-            </form>
-            <pre class="highlight-code">
-              <code class="html">
-  &lt;form action="#"&gt;
-    &lt;label for="cars-option">Cars:&lt;/label&gt;
-    &lt;select id="cars-option"&gt;
-      &lt;option value="volvo"&gt;Volvo&lt;/option&gt;
-      &lt;option value="saab"&gt;Saab&lt;/option&gt;
-    &lt;/select&gt;
-    &lt;input type="submit" value="Submit now"&gt;
-  &lt;/form&gt;
-              </code>
-            </pre>  
-            <hr/>
+              <!-- Optgroup -->
+              <h3>Optgroup</h3>
+              <hr>
+              <form action="#">
+                <label for="cars-optgroup">Cars:</label>
+                <select id="cars-optgroup">
+                  <optgroup label="Swedish Cars">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                  </optgroup>
+                  <optgroup label="German Cars">
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                  </optgroup>
+                </select>
+                <input type="submit" value="Submit now">
+              </form>
+              <pre class="highlight-code">
+                <code class="html">
+    &lt;form action="#"&gt;
+      &lt;label for="cars-optgroup">Cars:&lt;/label&gt;
+      &lt;select id="cars-optgroup"&gt;
+        &lt;optgroup label="Swedish Cars"&gt;
+          &lt;option value="volvo"&gt;Volvo&lt;/option&gt;
+          &lt;option value="saab"&gt;Saab&lt;/option&gt;
+        &lt;/optgroup&gt;
+      &lt;/select&gt;
+      &lt;input type="submit" value="Submit now"&gt;
+    &lt;/form&gt;
+                </code>
+              </pre>
+              <hr/>
 
-            <!-- Datalist HTML5 -->
-            <h3>Datalist</h3>
-            <hr>
-            <form action="#">
-              <label for="homeworld">Your home planet</label>
-              <input type="text" name="homeworld" id="homeworld" list="planets">
-              <datalist id="planets">
-                <option value="Mercury">
-                <option value="Venus">
-                <option value="Earth">
-                <option value="Mars">
-                <option value="Jupiter">
-                <option value="Pluto">
-                <option value="Saturn">
-                <option value="Neptune">
-                <option value="Uranus"> 
-              </datalist>
-              <input type="submit" value="Submit now">
-            </form>
-            <pre class="highlight-code">
-              <code class="html">
-  &lt;form action="#"&gt;
-    &lt;label for="homeworld">Your home planet&lt;/label&gt;
-    &lt;input type="text" name="homeworld" id="homeworld" list="planets"&gt;
-    &lt;datalist id="planets"&gt;
-      &lt;option value="Mercury"&gt;
-      &lt;option value="Venus"&gt;
-    &lt;/datalist&gt;
-    &lt;input type="submit" value="Submit now"&gt;
-  &lt;/form&gt;
-              </code>
-            </pre> 
-            <hr/>
+              <!-- Option -->
+              <h3>Option</h3>
+              <hr>
+              <form action="#">
+                <label for="cars-option">Cars:</label>
+                <select id="cars-option">
+                  <option value="volvo">Volvo</option>
+                  <option value="saab">Saab</option>
+                  <option value="opel">Opel</option>
+                  <option value="audi">Audi</option>
+                </select>
+                <input type="submit" value="Submit now">
+              </form>
+              <pre class="highlight-code">
+                <code class="html">
+    &lt;form action="#"&gt;
+      &lt;label for="cars-option">Cars:&lt;/label&gt;
+      &lt;select id="cars-option"&gt;
+        &lt;option value="volvo"&gt;Volvo&lt;/option&gt;
+        &lt;option value="saab"&gt;Saab&lt;/option&gt;
+      &lt;/select&gt;
+      &lt;input type="submit" value="Submit now"&gt;
+    &lt;/form&gt;
+                </code>
+              </pre>  
+              <hr/>
 
-            <!-- Subscribe to my Newsletter -->
-            <h3>Newsletter signup</h3>
-            <hr>
-            <form method="post" action="/mailer.php">
-              <label for="email">Subscribe to my Newsletter</label>
-              <input name="email" id="email" type="email" 
-                        placeholder="Enter your email address here" 
-                        title="Your e-mail address is required so I can reply" 
-                        required 
-                        maxlength="50" 
-                        pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" >
-              <input type="submit" name="submit" class="submit" value="Subscribe!" />
-            </form>
-            <pre class="highlight-code">
-              <code class="html">
-  &lt;form method="post" action="/mailer.php"&gt;
-    &lt;label for="email">Subscribe to my Newsletter&lt;/label&gt;
-    &lt;input name="email" id="email" type="email" 
-      placeholder="Enter your email address here" 
-      title="Your e-mail address is required so I can reply" 
-      required 
-      maxlength="50" 
-      pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"&gt;
-    &lt;input type="submit" value="Submit now"&gt;
-  &lt;/form&gt;
-              </code>
-            </pre> 
+              <!-- Datalist HTML5 -->
+              <h3>Datalist</h3>
+              <hr>
+              <form action="#">
+                <label for="homeworld">Your home planet</label>
+                <input type="text" name="homeworld" id="homeworld" list="planets">
+                <datalist id="planets">
+                  <option value="Mercury">
+                  <option value="Venus">
+                  <option value="Earth">
+                  <option value="Mars">
+                  <option value="Jupiter">
+                  <option value="Pluto">
+                  <option value="Saturn">
+                  <option value="Neptune">
+                  <option value="Uranus"> 
+                </datalist>
+                <input type="submit" value="Submit now">
+              </form>
+              <pre class="highlight-code">
+                <code class="html">
+    &lt;form action="#"&gt;
+      &lt;label for="homeworld">Your home planet&lt;/label&gt;
+      &lt;input type="text" name="homeworld" id="homeworld" list="planets"&gt;
+      &lt;datalist id="planets"&gt;
+        &lt;option value="Mercury"&gt;
+        &lt;option value="Venus"&gt;
+      &lt;/datalist&gt;
+      &lt;input type="submit" value="Submit now"&gt;
+    &lt;/form&gt;
+                </code>
+              </pre> 
+              <hr/>
 
-            <hr/>
+              <!-- Subscribe to my Newsletter -->
+              <h3>Newsletter signup</h3>
+              <hr>
+              <form method="post" action="/mailer.php">
+                <label for="email">Subscribe to my Newsletter</label>
+                <input name="email" id="email" type="email" 
+                          placeholder="Enter your email address here" 
+                          title="Your e-mail address is required so I can reply" 
+                          required 
+                          maxlength="50" 
+                          pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" >
+                <input type="submit" name="submit" class="submit" value="Subscribe!" />
+              </form>
+              <pre class="highlight-code">
+                <code class="html">
+    &lt;form method="post" action="/mailer.php"&gt;
+      &lt;label for="email">Subscribe to my Newsletter&lt;/label&gt;
+      &lt;input name="email" id="email" type="email" 
+        placeholder="Enter your email address here" 
+        title="Your e-mail address is required so I can reply" 
+        required 
+        maxlength="50" 
+        pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"&gt;
+      &lt;input type="submit" value="Submit now"&gt;
+    &lt;/form&gt;
+                </code>
+              </pre> 
 
-            <h3>Upload a file</h3>
-            <hr>
-            <form action="#">
-              <input type="File" value="File">
-              <input type="submit" value="Submit now">
-            </form>
-            <pre class="highlight-code">
-              <code class="html">
-  &lt;form action="#"&gt;
-    &lt;input type="File" value="File"&gt;
-    &lt;input type="submit" value="Submit now"&gt;
-  &lt;/form&gt;
-              </code>
-            </pre>
-          <section>
+              <hr/>
 
+              <h3>Upload a file</h3>
+              <hr>
+              <form action="#">
+                <input type="File" value="File">
+                <input type="submit" value="Submit now">
+              </form>
+              <pre class="highlight-code">
+                <code class="html">
+    &lt;form action="#"&gt;
+      &lt;input type="File" value="File"&gt;
+      &lt;input type="submit" value="Submit now"&gt;
+    &lt;/form&gt;
+                </code>
+              </pre>
+            <article>
 
+          </section>
         </main>
 
         <!-- Grid Overlay -->
