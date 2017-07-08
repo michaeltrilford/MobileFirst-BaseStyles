@@ -62,7 +62,7 @@
               <hr>
                 <h3>Simple navigation</h3>
               <hr>
-              <nav>
+              <nav class="mui-nav">
                 <div class="wrapper">
                     <a href="#">Menu item 1</a>
                     <a href="#">Menu item 2</a>
@@ -74,12 +74,13 @@
               <pre class="highlight-code">
                 <code class="html">
     &lt;nav&gt;
+    &lt;nav class="mui-nav"&gt;
       &lt;div class="wrapper"&gt;
-        &lt;a href="#"&gt;Menu item 1&lt;/a&gt;
-        &lt;a href="#"&gt;Menu item 2&lt;/a&gt;
-        &lt;a href="#"&gt;Menu item 3&lt;/a&gt;
-        &lt;a href="#"&gt;Menu item 4&lt;/a&gt;
-        &lt;a href="#"&gt;Menu item 5&lt;/a&gt;
+          &lt;a href="#">Menu item 1&lt;/a&gt;
+          &lt;a href="#">Menu item 2&lt;/a&gt;
+          &lt;a href="#">Menu item 3&lt;/a&gt;
+          &lt;a href="#">Menu item 4&lt;/a&gt;
+          &lt;a href="#">Menu item 5&lt;/a&gt;
       &lt;/div&gt;
     &lt;/nav&gt;
                 </code>
@@ -90,7 +91,7 @@
               <hr>
                 <h3>Priority navigation</h3>
               <hr>
-              <nav class="mui-pn" data-nav-count="7">
+              <nav class="mui-nav mui-pn" data-nav-count="7">
                 <a id="mui-pn-mobile-menu" class="mui-pn-switch" href="#">
                   <span>View Menu</span>
                   <span style="display: none;">Hide Menu</span>
@@ -115,12 +116,12 @@
               </nav>
               <pre class="highlight-code">
                 <code class="html">
-    &lt;nav class="priorNav" data-nav-count="2"&gt;
-      &lt;a id="menuButton" class="mobile switch" href="#"&gt;
+    &lt;nav class="mui-nav mui-pn" data-nav-count="7"&gt;
+      &lt;a id="mui-pn-mobile-menu" class="mui-pn-switch" href="#"&gt;
         &lt;span&gt;View Menu&lt;/span&gt;
         &lt;span style="display: none;"&gt;Hide Menu&lt;/span&gt;
       &lt;/a&gt;
-      &lt;div class="wrapper priorNavInner"&gt;
+      &lt;div class="wrapper mui-pn-inner"&gt;
           &lt;a href="#"&gt;Menu item 1&lt;/a&gt;
           &lt;a href="#"&gt;Menu item 2&lt;/a&gt;
           &lt;a href="#"&gt;Menu item 3&lt;/a&gt;
@@ -136,7 +137,7 @@
           &lt;a href="#"&gt;Menu item 13&lt;/a&gt;
           &lt;a href="#"&gt;Menu item 14&lt;/a&gt;
           &lt;a href="#"&gt;Menu item 15&lt;/a&gt;
-      &lt;/div>
+      &lt;/div&gt;
     &lt;/nav&gt;
                 </code>
               </pre>
