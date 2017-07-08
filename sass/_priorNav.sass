@@ -1,0 +1,57 @@
+// Mobile First / Priority Navigation Setup: 
+.mui-pn 
+  .mui-pn-inner
+    display: none
+    padding: 0
+    margin: 0
+    width: 100%
+    @media only screen and (min-width: 31.25em)
+      display: block !important
+      width: calc( 100% - 3em )
+      max-width: 73.75em
+      margin: 0 auto
+      padding: 1.125em 0
+    a
+      color: white
+      background: black
+      @media only screen and (min-width: 31.25em)
+        color: black
+        background: white
+        .js &
+          display: none
+    &.mui-pn-reveal
+      a
+        @media only screen and (min-width: 31.25em)
+          display: inline-block
+        
+// Reveal Button
+#mui-pn-reveal
+  display: none
+  background: #333
+  color: white
+.js #mui-pn-reveal
+  display: none
+  background: #333
+  color: white
+  @media only screen and (min-width: 31.25em)
+    display: inline-block
+
+// Hide Menu Button
+#mui-pn-mobile-menu
+  background: black
+  color: white
+  transition: background 0.1s linear
+  &.mui-pn-active
+    background: white
+    color: black 
+  @media only screen and (min-width: 31.25em)
+    display: none !important
+
+
+
+
+
+
+
+ 
+  

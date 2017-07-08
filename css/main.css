@@ -1117,6 +1117,55 @@ nav a {
     display: block;
     color: white; }
 
+.mui-pn .mui-pn-inner {
+  display: none;
+  padding: 0;
+  margin: 0;
+  width: 100%; }
+  @media only screen and (min-width: 31.25em) {
+    .mui-pn .mui-pn-inner {
+      display: block !important;
+      width: calc( 100% - 3em );
+      max-width: 73.75em;
+      margin: 0 auto;
+      padding: 1.125em 0; } }
+  .mui-pn .mui-pn-inner a {
+    color: white;
+    background: black; }
+    @media only screen and (min-width: 31.25em) {
+      .mui-pn .mui-pn-inner a {
+        color: black;
+        background: white; }
+        .js .mui-pn .mui-pn-inner a {
+          display: none; } }
+  @media only screen and (min-width: 31.25em) {
+    .mui-pn .mui-pn-inner.mui-pn-reveal a {
+      display: inline-block; } }
+
+#mui-pn-reveal {
+  display: none;
+  background: #333;
+  color: white; }
+
+.js #mui-pn-reveal {
+  display: none;
+  background: #333;
+  color: white; }
+  @media only screen and (min-width: 31.25em) {
+    .js #mui-pn-reveal {
+      display: inline-block; } }
+
+#mui-pn-mobile-menu {
+  background: black;
+  color: white;
+  transition: background 0.1s linear; }
+  #mui-pn-mobile-menu.mui-pn-active {
+    background: white;
+    color: black; }
+  @media only screen and (min-width: 31.25em) {
+    #mui-pn-mobile-menu {
+      display: none !important; } }
+
 @media (min-width: 0em) and (max-width: 31.25em) {
   #grid[data-columns]::before {
     content: "1 .column.size-1of1"; } }
@@ -1187,11 +1236,6 @@ h1, h2, h3, h4, h5, h6 {
 .georgia {
   font-family: georgia;
   font-style: italic; }
-
-.wrapper--small,
-.wrapper--medium,
-.wrapper {
-  padding: 4.5rem 0; }
 
 .highlight-wrapper .autoColumn {
   background: #333333; }
