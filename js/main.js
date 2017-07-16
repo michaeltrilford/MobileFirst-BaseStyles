@@ -28,7 +28,7 @@ for (var i=0; i<count; i++) {
 
 /* D. MobileFirst Nav
 ------------------------------------------------------------------- */
-$('.mui-mfn-menu-toggle').click(function(){
+$('#mui-mfn-menu-toggle').click(function(){
   $(this).toggleClass('toggle-on');
   $('body').toggleClass('mui-mfn-fixed-background');
   $('.mui-mfn-nav').toggleClass('mui-mfn-menu-open');

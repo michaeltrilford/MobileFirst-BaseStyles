@@ -11,6 +11,9 @@
         <!-- Place favicon.ico in the root directory -->
         <link rel="stylesheet" href="css/main.css">
         <script src="js/modernizr.js"></script>
+        <link rel="stylesheet" href="css/monokai-sublime.css">
+        <script src="js/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -29,11 +32,11 @@
             <li><a href="lists.html">Lists</a></li>
             <li><a href="images.html">Images</a></li>
             <li><a href="accordion.html">Accordion</a></li>
-            <li><a href="table.html" class="mui-mfn-active">Table</a></li>
+            <li><a href="table.html">Table</a></li>
 
             <li class="mui-subHead">Layout</li>
             <li><a href="columns.html">Columns</a></li>
-            <li><a href="wrapper.html">Wrappers</a></li>
+            <li><a href="wrapper.html" class="mui-mfn-active">Wrappers</a></li>
 
             <li class="mui-subHead">Components</li>
             <li><a href="baseline-grid-overlay.html">Baseline Grid Overlay</a></li>
@@ -64,55 +67,52 @@
         </aside>
 
         <main class="mui-mfn-offset-wrapper">
-          <section class="wrapper">
-            <h1 class="xx-large">Table</h1>        
+          <section class="wrapper--medium">
+            
+            <h1 class="xx-large">Layout</h1>
+
             <article>
-              <table>
-                <thead>
-                  <tr>
-                    <th>Office</th>
-                    <th>Revenue</th>
-                    <th>Cost</th>
-                    <th>Office</th>
-                    <th>Revenue</th>
-                    <th>Cost</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td data-label="Office:">Whalen</td>
-                    <td data-label="Revenue:">$4,400.00</td>
-                    <td data-label="Cost:">$1,100.00</td>
-                    <td data-label="Office:">Whalen</td>
-                    <td data-label="Revenue:">$4,400.00</td>
-                    <td data-label="Cost:">$1,100.00</td>
-                  </tr>
-                  <tr>
-                    <td data-label="Office:">Hartstein</td>
-                    <td data-label="Revenue:">$13,000.00</td>
-                    <td data-label="Cost:">$3,250.00</td>
-                    <td data-label="Office:">Hartstein</td>
-                    <td data-label="Revenue:">$13,000.00</td>
-                    <td data-label="Cost:">$3,250.00</td>
-                  </tr>
-                  <tr>
-                    <td data-label="Office:">Whalen</td>
-                    <td data-label="Revenue:">$4,400.00</td>
-                    <td data-label="Cost:">$1,100.00</td>
-                    <td data-label="Office:">Whalen</td>
-                    <td data-label="Revenue:">$4,400.00</td>
-                    <td data-label="Cost:">$1,100.00</td>
-                  </tr>
-                  <tr>
-                    <td data-label="Office:">Hartstein</td>
-                    <td data-label="Revenue:">$13,000.00</td>
-                    <td data-label="Cost:">$3,250.00</td>
-                    <td data-label="Office:">Hartstein</td>
-                    <td data-label="Revenue:">$13,000.00</td>
-                    <td data-label="Cost:">$3,250.00</td>
-                  </tr>
-                </tbody>
-              </table>
+              <hr>
+                <h3>Wrapper</h3>
+              <hr>
+              <pre class="highlight-code">
+                <code class="html">
+    &lt;section class="wrapper"&gt;&lt;/section&gt;
+                </code>
+              </pre>
+            </article>
+
+            <article>
+              <hr>
+                <h3>Wrapper w/ small modifier</h3>
+              <hr>
+              <pre class="highlight-code">
+                <code class="html">
+    &lt;section class="wrapper--small"&gt;&lt;/section&gt;
+                </code>
+              </pre>
+            </article>
+
+            <article>
+              <hr>
+                <h3>Wrapper w/ medium modifier</h3>
+              <hr>
+              <pre class="highlight-code">
+                <code class="html">
+    &lt;section class="wrapper--medium"&gt;&lt;/section&gt;
+                </code>
+              </pre>
+            </article>
+
+            <article>
+              <hr>
+                <h3>Wrapper w/ large modifier</h3>
+              <hr>
+              <pre class="highlight-code">
+                <code class="html">
+    &lt;section class="wrapper--large"&gt;&lt;/section&gt;
+                </code>
+              </pre>
             </article>
 
           </section>

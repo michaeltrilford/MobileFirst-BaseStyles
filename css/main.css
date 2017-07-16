@@ -216,6 +216,49 @@ table {
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
 
+/* =========================================================================
+ *
+ *  Baseline Scale Values:
+ *
+ *  0.75em (12px), 1.5em (24px), 2.25em (36px), 3em (48px), 3.75em (60px), 4.5em (72px), 5.25em (84px), 6em (96px), 6.75em (108px), 7.5em (120px)
+ *
+ *  ========================================================================== */
+h1, h2, h3, p, header, table, figure, footer, details, section, article, dl, menu, ul, ol, pre, aside, div, hr, dd, fieldset, textarea, keygen, select, input {
+  margin: 0 0 1.5em 0;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+h1 {
+  margin: 0 0 0.5em 0; }
+
+h2 {
+  margin: 0 0 0.66667em 0; }
+
+h3 {
+  margin: 0 0 1em 0; }
+
+p {
+  margin: 0 0 1.5em 0; }
+
+h4 {
+  margin: 0 0 1.14286em 0; }
+
+h5 {
+  margin: 0 0 1.33333em 0; }
+
+h6, li {
+  margin: 0 0 1.5em 0; }
+
+label {
+  margin-bottom: 0.375em; }
+
+summary {
+  margin-bottom: 0; }
+
+details p {
+  margin-bottom: 0; }
+
 dt {
   font-weight: bold; }
 
@@ -747,49 +790,6 @@ a {
   .baselineGridSetup > body:active .baselineGrid {
     display: none; }
 
-/* =========================================================================
- *
- *  Baseline Scale Values:
- *
- *  0.75em (12px), 1.5em (24px), 2.25em (36px), 3em (48px), 3.75em (60px), 4.5em (72px), 5.25em (84px), 6em (96px), 6.75em (108px), 7.5em (120px)
- *
- *  ========================================================================== */
-h1, h2, h3, p, header, table, figure, footer, details, section, article, dl, menu, ul, ol, pre, aside, div, hr, dd, fieldset, textarea, keygen, select, input {
-  margin: 0 0 1.5em 0;
-  width: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-
-h1 {
-  margin: 0 0 0.5em 0; }
-
-h2 {
-  margin: 0 0 0.66667em 0; }
-
-h3 {
-  margin: 0 0 1em 0; }
-
-p {
-  margin: 0 0 1.5em 0; }
-
-h4 {
-  margin: 0 0 1.14286em 0; }
-
-h5 {
-  margin: 0 0 1.33333em 0; }
-
-h6, li {
-  margin: 0 0 1.5em 0; }
-
-label {
-  margin-bottom: 0.375em; }
-
-summary {
-  margin-bottom: 0; }
-
-details p {
-  margin-bottom: 0; }
-
 .browserupgrade {
   text-align: center;
   padding: 0.75em;
@@ -869,6 +869,9 @@ body:before {
 
 .mui-mfn-fixed-background {
   overflow: hidden; }
+  @media (min-width: 60rem) {
+    .mui-mfn-fixed-background {
+      overflow: visible; } }
 
 .mui-mfn-nav {
   height: 100vh;
@@ -877,10 +880,9 @@ body:before {
   position: fixed;
   bottom: 0;
   z-index: 1;
-  padding: 3em 0 5.375em 0;
+  padding: 3rem 0 5.375rem 0;
   width: 100%;
-  text-align: center;
-  background: black;
+  background: #191919;
   opacity: 0;
   transform: translate(0, 100%);
   transition: transform 100ms linear, width 100ms linear, opacity 100ms linear; }
@@ -889,10 +891,49 @@ body:before {
     border-radius: 0;
     opacity: 1;
     transition: transform 200ms ease-in, width 200ms ease-in, opacity 200ms ease-in; }
+  .mui-mfn-nav.mui-mainHead {
+    padding-top: 0; }
+    .mui-mfn-nav.mui-mainHead li:first-child {
+      position: sticky;
+      top: 0;
+      background: #191919;
+      z-index: 1; }
+      .mui-mfn-nav.mui-mainHead li:first-child a {
+        padding: 1.5rem 3rem;
+        opacity: 1;
+        box-shadow: 0 0 96px 0 black; }
+      .mui-mfn-nav.mui-mainHead li:first-child a.mui-mfn-active {
+        opacity: 1;
+        transform: scale(1);
+        background: #2d2d2d; }
+      .mui-mfn-nav.mui-mainHead li:first-child a:hover {
+        opacity: 1;
+        transform: scale(1);
+        background: #272727; }
+      .mui-mfn-nav.mui-mainHead li:first-child hr {
+        opacity: 0.2; }
   .mui-mfn-nav li {
     padding: 0;
     text-indent: 0;
     margin-bottom: 0; }
+    .mui-mfn-nav li.mui-subHead {
+      padding: 0.75rem 3rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #bbbbbb;
+      font-size: calc(24 / 16 * 1em);
+      line-height: calc(36 / 24);
+      margin: 0;
+      margin-bottom: calc(24 / 24 * 1em);
+      margin-top: 1.5rem; }
+      @media (min-width: 60rem) {
+        .mui-mfn-nav li.mui-subHead {
+          font-size: calc(16 / 16 * 1em);
+          line-height: calc(24 / 16);
+          margin: 0;
+          margin-bottom: calc(24 / 16 * 1em);
+          margin: 0;
+          margin-top: 1.5rem; } }
     .mui-mfn-nav li a {
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -902,41 +943,43 @@ body:before {
       margin: 0;
       color: white;
       display: block;
-      padding: 0.75em 3em;
+      padding: 0.75rem 3rem;
       transition: opacity 400ms ease-in, transform 100ms ease-in;
       opacity: 0;
       font-weight: bold;
-      font-size: calc(36 / 16 * 1em);
-      line-height: calc(48 / 36);
+      font-size: calc(24 / 16 * 1em);
+      line-height: calc(36 / 24);
       margin: 0;
-      margin-bottom: calc(24 / 36 * 1em); }
-      @media (min-width: 60em) {
+      margin-bottom: calc(24 / 24 * 1em); }
+      @media (min-width: 60rem) {
         .mui-mfn-nav li a {
           font-size: calc(16 / 16 * 1em);
           line-height: calc(24 / 16);
           margin: 0;
           margin-bottom: calc(24 / 16 * 1em);
-          margin: 0; } }
+          margin: 0; }
+          .mui-mfn-nav li a:hover {
+            opacity: 1;
+            transform: scale(1.1); } }
       .mui-mfn-nav li a.mui-mfn-menu-fadeIn {
         opacity: 0.3; }
-      .mui-mfn-nav li a.mui-mfn-active, .mui-mfn-nav li a:hover {
-        opacity: 1;
-        transform: scale(1.1); }
+      .mui-mfn-nav li a.mui-mfn-active {
+        background: black;
+        opacity: 1 !important; }
 
-@media (min-width: 60em) {
+@media (min-width: 60rem) {
   .mui-mfn-nav {
     display: block;
-    align-items: center;
+    align-itrems: center;
     text-align: left;
     position: fixed;
     left: 0;
     top: 0;
     opacity: 1;
-    width: 20em;
+    width: 20rem;
     transform: translate(0, 0);
     z-index: 100;
-    transition: none !important;
-    padding-bottom: 0; }
+    transition: none !important; }
     .mui-mfn-nav::-webkit-scrollbar {
       display: none; }
     .mui-mfn-nav li a {
@@ -945,31 +988,31 @@ body:before {
         opacity: 1;
         transform-origin: 20% 50%; } }
 
-@media (min-width: 60em) {
+@media (min-width: 60rem) {
   .mui-mfn-offset-wrapper {
-    width: calc(100% - 23em);
-    margin: 0 1.5em 0;
-    transform: translate(20em, 0); } }
+    width: calc(100% - 23rem);
+    margin: 0 1.5rem 0;
+    transform: translate(20rem, 0); } }
 
 .mui-mfn-navigation-bar {
   position: fixed;
   bottom: 0;
   left: 0;
-  background: black;
-  padding: 1.5em;
+  background: #191919;
+  padding: 1.5rem;
   display: flex;
   justify-content: space-between;
   z-index: 2; }
-  @media (min-width: 60em) {
+  @media (min-width: 60rem) {
     .mui-mfn-navigation-bar {
       display: none; } }
   .mui-mfn-navigation-bar .mui-mfn-menu-toggle {
-    flex: 0 0 1.75em; }
+    flex: 0 0 1.75rem; }
     .mui-mfn-navigation-bar .mui-mfn-menu-toggle svg {
       fill: white; }
   .mui-mfn-navigation-bar .mui-mfn-website-name {
     width: auto;
-    padding-left: 1.5em;
+    padding-left: 1.5rem;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -1111,6 +1154,9 @@ h1, h2, h3, h4, h5, h6 {
   font-family: georgia;
   font-style: italic; }
 
+main > section h1.xx-large {
+  margin-top: 0.57143em; }
+
 .highlight-wrapper .autoColumn {
   background: #333333; }
   .highlight-wrapper .autoColumn button {
@@ -1122,6 +1168,16 @@ h1, h2, h3, h4, h5, h6 {
 .highlight-wrapper pre {
   margin-top: 0; }
 
+.clear-mfn-position {
+  position: relative; }
+  .clear-mfn-position .mui-mfn-nav {
+    position: static;
+    height: 21rem; }
+  .clear-mfn-position .mui-mfn-navigation-bar {
+    display: flex;
+    position: static;
+    margin-bottom: 1.5rem; }
+
 .highlight-code {
   white-space: pre;
   word-wrap: normal;
@@ -1129,7 +1185,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 4.5rem; }
   .highlight-code code {
     font-size: 0.75rem;
-    line-height: 1.71429;
+    line-height: 2;
     width: 100%;
     padding: 0 0.75rem; }
 
@@ -1139,65 +1195,68 @@ hr {
   margin-top: -1px; }
 
 /* Dark */
-.dark-mui body {
-  background: #2b2b2b;
-  color: white; }
-.dark-mui .baselineGridSetup > .baselineGrid div,
-.dark-mui .baselineGridSetup > body > .baselineGrid div {
-  outline: 2px solid rgba(0, 0, 0, 0.5); }
-.dark-mui nav {
-  background: #353535;
-  box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2); }
-  .dark-mui nav a {
-    background: #212121;
-    color: white; }
-    .dark-mui nav a:hover {
-      color: white; }
-    .dark-mui nav a.active {
-      background: white;
-      color: #2b2b2b; }
-.dark-mui hr {
-  border-top: 2px solid #585858;
-  margin-bottom: calc(1.5rem - 1px);
-  margin-top: -1px; }
-.dark-mui textarea,
-.dark-mui fieldset,
-.dark-mui input[type="text"],
-.dark-mui input[type="email"],
-.dark-mui input[type="number"],
-.dark-mui input[type="password"],
-.dark-mui input[type="file"],
-.dark-mui input[type="search"],
-.dark-mui input[type="range"],
-.dark-mui details {
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25); }
-.dark-mui details {
-  color: black; }
-.dark-mui a {
-  color: #fffc00;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(255, 252, 0, 0.5); }
-  .dark-mui a:hover {
-    color: #fffc00;
-    border-bottom: 1px solid rgba(255, 252, 0, 0); }
-  .dark-mui a:focus {
-    color: #fffc00;
-    border-bottom: 1px solid rgba(255, 252, 0, 0); }
-.dark-mui nav a, .dark-mui nav a:hover, .dark-mui nav a:focus {
-  border-bottom: none; }
-.dark-mui legend {
-  background: #2b2b2b; }
-.dark-mui table {
-  color: black; }
-@media only screen and (min-width: 53.125em) {
-  .dark-mui table {
-    box-shadow: 0 0 0 1px #000000; } }
-.dark-mui button:focus, .dark-mui input:focus, .dark-mui textarea:focus, .dark-mui select:focus, .dark-mui a:focus, .dark-mui summary:focus {
-  outline-style: solid;
-  outline-color: white; }
-.dark-mui .tIcons svg {
-  fill: white; }
-
+ * .dark-mui
+ * body
+ *   background: black
+ *   color: white
+ * .baselineGridSetup, 
+ * .baselineGridSetup > body
+ *   > .baselineGrid
+ *     div
+ *       outline: 2px solid rgba(0, 0, 0, 0.5)
+ * nav
+ *   background: #353535
+ *   box-shadow: 0 2px 2px 2px rgba(0,0,0,0.2)
+ *   a
+ *     background: #212121
+ *     color: white
+ *     &:hover
+ *       color: white
+ *     &.active
+ *       background: white
+ *       color: #2b2b2b
+ * hr
+ *   border-top: 2px solid #585858
+ *   margin-bottom: calc(1.5rem - 1px)
+ *   margin-top: -1px
+ * textarea, 
+ * fieldset,
+ * input[type="text"], 
+ * input[type="email"], 
+ * input[type="number"], 
+ * input[type="password"], 
+ * input[type="file"], 
+ * input[type="search"], 
+ * input[type="range"],
+ * details
+ *   box-shadow: inset 0 0 0 1px rgba(255, 255, 255,0.25)
+ * details
+ *   color: black
+ * a
+ *   color: #fffc00
+ *   text-decoration: none
+ *   border-bottom: 1px solid rgba(#fffc00,0.5)
+ *   &:hover
+ *     color: #fffc00
+ *     border-bottom: 1px solid rgba(#fffc00,0)
+ *   &:focus
+ *     color: #fffc00
+ *     border-bottom: 1px solid rgba(#fffc00,0)
+ * nav a, nav a:hover, nav a:focus
+ *   border-bottom: none
+ * legend
+ *   background: #2b2b2b
+ * table
+ *   color: black
+ * @media only screen and (min-width: 53.125em)
+ *   table
+ *     box-shadow: 0 0 0 1px #000000
+ * button:focus, input:focus, textarea:focus, select:focus, a:focus, summary:focus
+ *   outline-style: solid
+ *   outline-color: white
+ * .tIcons
+ *   svg
+ *     fill: white */
 /* =========================================================================
  * Helper classes
  * ========================================================================== */

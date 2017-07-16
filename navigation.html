@@ -20,26 +20,38 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <!-- Menu -->
-        <nav class="mui-mfn-nav" role='navigation'>
+        <nav class="mui-mfn-nav mui-mainHead" role='navigation'>
           <ul class="nmb">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="layout.html">Layout</a></li>
-            <li><a href="navigation.html" class="mui-mfn-active">Navigation</a></li>
+            <li><a href="index.html">michaeltrilford.mui</a></li>
+
+            <li class="mui-subHead">Base</li>
+            <li><a href="resets.html">Resets</a></li>
+            <li><a href="baseline-grid.html">Baseline</a></li>
             <li><a href="typography.html">Typography</a></li>
-            <li><a href="buttons.html">Buttons</a></li>
+            <li><a href="formalize.html">Formalize</a></li>
             <li><a href="lists.html">Lists</a></li>
             <li><a href="images.html">Images</a></li>
             <li><a href="accordion.html">Accordion</a></li>
-            <li><a href="transformicons.html">Transformicons</a></li>
-            <li><a href="formalize.html">Formalize</a></li>
-            <li><a href="columns.html">Columns</a></li>
             <li><a href="table.html">Table</a></li>
+
+            <li class="mui-subHead">Layout</li>
+            <li><a href="columns.html">Columns</a></li>
+            <li><a href="wrapper.html">Wrappers</a></li>
+
+            <li class="mui-subHead">Components</li>
+            <li><a href="baseline-grid-overlay.html">Baseline Grid Overlay</a></li>
+            <li><a href="browser-upgrade.html">Browser Upgrade</a></li>
+            <li><a href="buttons.html">Buttons</a></li>
+            <li><a href="fancy-headings.html">Fancy Headings</a></li>
+            <li><a href="fancy-list.html">Fancy List</a></li>
+            <li><a href="navigation.html" class="mui-mfn-active">Navigation</a></li>
+            <li><a href="transformicons.html">Transformicons</a></li>
           </ul>
         </nav>
 
         <!-- Navigation Bar -->
         <aside class="mui-mfn-navigation-bar nmb">
-          <a class="bounceIn mui-mfn-menu-toggle tIcons" href="#" aria-hidden="true">
+          <a id="mui-mfn-menu-toggle" class="bounceIn mui-mfn-menu-toggle tIcons" href="#" aria-hidden="true">
             <!-- Menu Icon -->
             <svg viewBox="0 0 36 30">
               <rect width="36" height="6" />
@@ -60,7 +72,7 @@
             <article>
               <h1 class="xx-large">Navigation</h1>
               <hr>
-                <h3>Simple navigation</h3>
+                <h3>Simple Navigation</h3>
               <hr>
               <nav class="mui-nav">
                 <div class="wrapper">
@@ -89,7 +101,7 @@
 
             <article>
               <hr>
-                <h3>Priority navigation</h3>
+                <h3>Priority Navigation</h3>
               <hr>
               <nav class="mui-nav mui-pn" data-nav-count="7">
                 <a id="mui-pn-mobile-menu" class="mui-pn-switch" href="#">
@@ -141,6 +153,151 @@
     &lt;/nav&gt;
                 </code>
               </pre>
+            </article>
+
+            <article>
+              <hr>
+                <h3>MobileFirst Navigation</h3>
+              <hr>
+              <div class="clear-mfn-position">
+                <div class="col-2">
+                  <div>
+                    <p>Standard Menu</p>
+                    <nav class="mui-mfn-nav" role='navigation'>
+                      <ul class="nmb">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Nav Item 1</a></li>
+                        <li><a href="#" class="mui-mfn-active">Nav Item 2</a></li>
+                        <li><a href="#">Nav Item 3</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                  <div>
+                    <p>Logo &amp; Sub Head</p>
+                    <nav class="mui-mfn-nav mui-mainHead" role='navigation'>
+                      <ul class="nmb">
+                        <li><a href="#">Logo ( Home )</a></li>
+                        <li class="mui-subHead">Sub Head</li>
+                        <li><a href="#">Nav Item 1</a></li>
+                        <li><a href="#" class="mui-mfn-active">Nav Item 2</a></li>
+                        <li><a href="#">Nav Item 3</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+
+                <p>Mobile View</p>
+
+                <!-- Navigation Bar -->
+                <aside class="mui-mfn-navigation-bar nmb">
+                  <a class="bounceIn mui-mfn-menu-toggle tIcons" href="#" aria-hidden="true">
+                    <!-- Menu Icon -->
+                    <svg viewBox="0 0 36 30">
+                      <rect width="36" height="6" />
+                      <rect y="24" width="36" height="6" />
+                      <rect y="12" width="36" height="6" />
+                    </svg>
+                    <!-- Close Icon -->
+                    <svg viewBox="0 0 36 30">
+                      <polygon points="32.8,4.4 28.6,0.2 18,10.8 7.4,0.2 3.2,4.4 13.8,15 3.2,25.6 7.4,29.8 18,19.2 28.6,29.8 32.8,25.6 22.2,15 " />
+                    </svg>
+                  </a>
+                  <div class="bounceIn mui-mfn-website-name nmb">michaeltrilford.mui</div>
+                </aside>
+
+              </div>
+
+              <div class="highlight-wrapper">
+                <div class="autoColumn nmb menu">
+                  <button class="first active">Standard</button>
+                  <button class="second">Logo &amp; Sub Head</button>
+                </div>
+                <pre class="preFirst highlight-code">
+                  <code class="html">
+    &lt;body&gt;
+
+      &lt;!-- Menu --&gt;
+      &lt;nav class="mui-mfn-nav" role='navigation'&gt;
+        &lt;ul class="nmb"&gt;
+          &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="..."&gt;Nav Item 1&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="..." class="mui-mfn-active"&gt;Nav Item 2&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="..."&gt;Nav Item 3&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/nav&gt;
+
+      &lt;!-- Navigation Bar --&gt;
+      &lt;aside class="mui-mfn-navigation-bar nmb"&gt;
+        &lt;a class="bounceIn mui-mfn-menu-toggle tIcons" href="#" aria-hidden="true"&gt;
+          &lt;!-- Menu Icon - Transformicon --&gt;
+          &lt;svg viewBox="0 0 36 30"&gt;
+            &lt;rect width="36" height="6" /&gt;
+            &lt;rect y="24" width="36" height="6" /&gt;
+            &lt;rect y="12" width="36" height="6" /&gt;
+          &lt;/svg&gt;
+          &lt;!-- Close Icon - Transformicon --&gt;
+          &lt;svg viewBox="0 0 36 30"&gt;
+            &lt;polygon points="32.8,4.4 28.6,0.2 18,10.8 7.4,0.2 3.2,4.4 13.8,15 3.2,25.6 7.4,29.8 18,19.2 28.6,29.8 32.8,25.6 22.2,15 " /&gt;
+          &lt;/svg&gt;
+        &lt;/a&gt;
+        &lt;div class="bounceIn mui-mfn-website-name nmb"&gt;insertWebsiteName&lt;/div&gt;
+      &lt;/aside&gt;
+
+      &lt;!-- Main Content --&gt;
+      &lt;main class="mui-mfn-offset-wrapper"&gt;
+        &lt;section class="wrapper--medium"&gt;
+          ...
+        &lt;/section&gt;
+      &lt;/main&gt;
+
+
+    &lt;/body&gt;
+                  </code>
+                </pre>
+                <pre class="preSecond highlight-code">
+                  <code class="html">
+    &lt;body&gt;
+
+      &lt;!-- Menu --&gt;
+      &lt;nav class="mui-mfn-nav mui-mainHead" role='navigation'&gt;
+        &lt;ul class="nmb"&gt;
+          &lt;li&gt;&lt;a href="index.html"&gt;Logo (Home)&lt;/a&gt;&lt;/li&gt;
+          &lt;li class="mui-subHead">Sub Head&lt;/li&gt;
+          &lt;li&gt;&lt;a href="..."&gt;Nav Item 1&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="..." class="mui-mfn-active"&gt;Nav Item 2&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="..."&gt;Nav Item 3&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/nav&gt;
+
+      &lt;!-- Navigation Bar --&gt;
+      &lt;aside class="mui-mfn-navigation-bar nmb"&gt;
+        &lt;a class="bounceIn mui-mfn-menu-toggle tIcons" href="#" aria-hidden="true"&gt;
+          &lt;!-- Menu Icon - Transformicon --&gt;
+          &lt;svg viewBox="0 0 36 30"&gt;
+            &lt;rect width="36" height="6" /&gt;
+            &lt;rect y="24" width="36" height="6" /&gt;
+            &lt;rect y="12" width="36" height="6" /&gt;
+          &lt;/svg&gt;
+          &lt;!-- Close Icon - Transformicon --&gt;
+          &lt;svg viewBox="0 0 36 30"&gt;
+            &lt;polygon points="32.8,4.4 28.6,0.2 18,10.8 7.4,0.2 3.2,4.4 13.8,15 3.2,25.6 7.4,29.8 18,19.2 28.6,29.8 32.8,25.6 22.2,15 " /&gt;
+          &lt;/svg&gt;
+        &lt;/a&gt;
+        &lt;div class="bounceIn mui-mfn-website-name nmb"&gt;insertWebsiteName&lt;/div&gt;
+      &lt;/aside&gt;
+
+      &lt;!-- Main Content --&gt;
+      &lt;main class="mui-mfn-offset-wrapper"&gt;
+        &lt;section class="wrapper--medium"&gt;
+          ...
+        &lt;/section&gt;
+      &lt;/main&gt;
+
+
+    &lt;/body&gt;
+                  </code>
+                </pre>
+              </div>
             </article>
 
           </section>

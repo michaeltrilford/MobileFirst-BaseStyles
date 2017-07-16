@@ -1,6 +1,8 @@
 // 1. Turn off background scroll when Menu open
 .mui-mfn-fixed-background
   overflow: hidden
+  @media (min-width: 60rem)
+    overflow: visible
 
 // 2. Menu
 .mui-mfn-nav
@@ -10,10 +12,10 @@
   position: fixed
   bottom: 0
   z-index: 1
-  padding: 3em 0 5.375em 0
+  padding: 3rem 0 5.375rem 0
   width: 100%
-  text-align: center
-  background: black
+  //text-align: center
+  background: #191919
   opacity: 0
   transform: translate(0,100%)
   transition: transform 100ms linear, width 100ms linear, opacity 100ms linear
@@ -22,10 +24,43 @@
     border-radius: 0
     opacity: 1
     transition: transform 200ms ease-in, width 200ms ease-in, opacity 200ms ease-in
+  &.mui-mainHead
+    padding-top: 0
+    li:first-child
+      position: sticky
+      top: 0
+      background: #191919
+      z-index: 1
+      a
+        padding: 1.5rem 3rem
+        opacity: 1
+        box-shadow: 0 0 96px 0 black
+      a.mui-mfn-active
+        opacity: 1
+        transform: scale(1)
+        background: #2d2d2d
+      a:hover
+        opacity: 1
+        transform: scale(1)
+        background: #272727
+      hr
+        opacity: 0.2
   li
     padding: 0
     text-indent: 0
     margin-bottom: 0
+    &.mui-subHead
+      padding: 0.75rem 3rem
+      text-transform: uppercase
+      font-weight: bold
+      color: #bbbbbb
+      @include fontSize24
+      margin-top: 1.5rem
+      @media (min-width: 60rem)
+        @include fontSize16
+        @include noMargin
+        margin-top: 1.5rem
+
     a
       text-overflow: ellipsis
       white-space: nowrap
@@ -35,34 +70,36 @@
       margin: 0
       color: white
       display: block
-      padding: 0.75em 3em
+      padding: 0.75rem 3rem
       transition: opacity 400ms ease-in, transform 100ms ease-in
       opacity: 0
       font-weight: bold
-      @include fontSize36
-      @media (min-width: 60em)
+      @include fontSize24
+      @media (min-width: 60rem)
         @include fontSize16
         @include noMargin
+        &:hover
+          opacity: 1
+          transform: scale(1.1)
       &.mui-mfn-menu-fadeIn
         opacity: 0.3
-      &.mui-mfn-active,
-      &:hover
-        opacity: 1
-        transform: scale(1.1)
+      &.mui-mfn-active
+        background: black
+        opacity: 1 !important
+
 .mui-mfn-nav
-  @media (min-width: 60em)
+  @media (min-width: 60rem)
     display: block
-    align-items: center
+    align-itrems: center
     text-align: left
     position: fixed
     left: 0
     top: 0
     opacity: 1
-    width: 20em
+    width: 20rem
     transform: translate(0,0)
     z-index: 100
     transition: none !important
-    padding-bottom: 0
     &::-webkit-scrollbar
       display: none
     li
@@ -74,49 +111,30 @@
 
 // 3. Main Content Wrapper
 .mui-mfn-offset-wrapper
-  @media (min-width: 60em)
-    width: calc(100% - 23em)
-    margin: 0 1.5em 0
-    transform: translate(20em, 0)
-
-  //height: calc(100vh - 4.5em)
-  //overflow: hidden
-  //overflow-y: scroll
-  //-webkit-overflow-scrolling: touch
-  //padding-left: 1.5em
-  //padding-right: 1.5em
-  //padding-bottom: 0
-  //width: 100%
-  //@media (min-width: 60em)
-    //height: auto
-    //overflow: visible
-    //padding-left: 0
-    //padding-right: 0
-    //padding-bottom: 1.5em
-    //max-width: 100%
-    //width: calc(100% - 23em)
-    //margin: 0 1.5em 0
-    //transform: translate(20em,0)
+  @media (min-width: 60rem)
+    width: calc(100% - 23rem)
+    margin: 0 1.5rem 0
+    transform: translate(20rem, 0)
       
 // 4. Navigation Bar
 .mui-mfn-navigation-bar
   position: fixed
   bottom: 0
   left: 0
-  background: rgba(black, 1)
-  padding: 1.5em
+  background: #191919
+  padding: 1.5rem
   display: flex
   justify-content: space-between
   z-index: 2
-  @media (min-width: 60em)
+  @media (min-width: 60rem)
     display: none
   .mui-mfn-menu-toggle
-    flex: 0 0 1.75em
+    flex: 0 0 1.75rem
     svg
       fill: white
   .mui-mfn-website-name
     width: auto
-    padding-left: 1.5em
+    padding-left: 1.5rem
     text-overflow: ellipsis
     white-space: nowrap
     overflow: hidden

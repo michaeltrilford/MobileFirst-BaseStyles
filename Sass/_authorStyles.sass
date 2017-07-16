@@ -14,7 +14,8 @@ h1,h2,h3,h4,h5,h6
   font-style: italic
 
 
-
+main > section h1.xx-large
+  margin-top: 0.57143em
 
 .highlight-wrapper
   .autoColumn
@@ -28,6 +29,17 @@ h1,h2,h3,h4,h5,h6
   pre
     margin-top: 0
 
+.clear-mfn-position
+  position: relative
+  .mui-mfn-nav
+    position: static
+    height: 21rem
+  .mui-mfn-navigation-bar
+    display: flex
+    position: static
+    margin-bottom: 1.5rem
+
+
 .highlight-code
   white-space: pre
   word-wrap: normal
@@ -35,7 +47,7 @@ h1,h2,h3,h4,h5,h6
   margin-bottom: 4.5rem
   code
     font-size: 0.75rem
-    line-height: 1.714285714285714
+    line-height: 2
     width: 100%
     padding: 0 0.75rem
 
@@ -45,12 +57,10 @@ hr
   margin-bottom: calc(1.5rem - 1px)
   margin-top: -1px
 
-
-
 /* Dark */
-.dark-mui
+  .dark-mui
   body
-    background: #2b2b2b
+    background: black
     color: white
   .baselineGridSetup, 
   .baselineGridSetup > body
