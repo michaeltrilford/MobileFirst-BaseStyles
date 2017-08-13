@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js baselineGridSetup" lang="">
+<html class="no-js" lang="">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -42,8 +42,6 @@
             <li><a href="baseline-grid-overlay.html">Baseline Grid Overlay</a></li>
             <li><a href="browser-upgrade.html">Browser Upgrade</a></li>
             <li><a href="buttons.html">Buttons</a></li>
-            <li><a href="fancy-headings.html">Fancy Headings</a></li>
-            <li><a href="fancy-list.html">Fancy List</a></li>
             <li><a href="navigation.html" class="mui-mfn-active">Navigation</a></li>
             <li><a href="transformicons.html">Transformicons</a></li>
           </ul>
@@ -67,22 +65,25 @@
         </aside>
 
         <main class="mui-mfn-offset-wrapper">
-          <section class="wrapper--medium">
+          <article class="wrapper--medium">
+
+            <div class="header">
+              <h1 class="large">Navigation</h1>
+              <hr>
+            </div>
             
-            <article>
-              <h1 class="xx-large">Navigation</h1>
-              <hr>
-                <h3>Simple Navigation</h3>
-              <hr>
-              <nav class="mui-nav">
-                <div class="wrapper">
-                    <a href="#">Menu item 1</a>
-                    <a href="#">Menu item 2</a>
-                    <a href="#">Menu item 3</a>
-                    <a href="#">Menu item 4</a>
-                    <a href="#">Menu item 5</a>
-                </div>
-              </nav>
+            <section>
+              <h3>Simple Navigation</h3>
+              <div class="card">
+                <nav class="mui-nav">
+                  <div class="wrapper">
+                      <a href="#">Menu item 1</a>
+                      <a href="#">Menu item 2</a>
+                      <a href="#">Menu item 3</a>
+                      <a href="#">Menu item 4</a>
+                  </div>
+                </nav>
+              </div>
               <pre class="highlight-code">
                 <code class="html">
     &lt;nav&gt;
@@ -92,40 +93,42 @@
           &lt;a href="#">Menu item 2&lt;/a&gt;
           &lt;a href="#">Menu item 3&lt;/a&gt;
           &lt;a href="#">Menu item 4&lt;/a&gt;
-          &lt;a href="#">Menu item 5&lt;/a&gt;
       &lt;/div&gt;
     &lt;/nav&gt;
                 </code>
               </pre>
-            </article>
+            </section>
 
-            <article>
-              <hr>
-                <h3>Priority Navigation</h3>
-              <hr>
-              <nav class="mui-nav mui-pn" data-nav-count="7">
-                <a id="mui-pn-mobile-menu" class="mui-pn-switch" href="#">
-                  <span>View Menu</span>
-                  <span style="display: none;">Hide Menu</span>
-                </a>
-                <div class="wrapper mui-pn-inner">
-                    <a href="#">Menu item 1</a>
-                    <a href="#">Menu item 2</a>
-                    <a href="#">Menu item 3</a>
-                    <a href="#">Menu item 4</a>
-                    <a href="#">Menu item 5</a>
-                    <a href="#">Menu item 6</a>
-                    <a href="#">Menu item 7</a>
-                    <a href="#">Menu item 8</a>
-                    <a href="#">Menu item 9</a>
-                    <a href="#">Menu item 10</a>
-                    <a href="#">Menu item 11</a>
-                    <a href="#">Menu item 12</a>
-                    <a href="#">Menu item 13</a>
-                    <a href="#">Menu item 14</a>
-                    <a href="#">Menu item 15</a>
-                </div>
-              </nav>
+            <!--  -->
+
+            
+            <section>
+              <h3>Priority Navigation</h3>
+              <div class="card">
+                <nav class="mui-nav mui-pn" data-nav-count="7">
+                  <a id="mui-pn-mobile-menu" class="mui-pn-switch" href="#">
+                    <span>View Menu</span>
+                    <span style="display: none;">Hide Menu</span>
+                  </a>
+                  <div class="wrapper mui-pn-inner">
+                      <a href="#">Menu item 1</a>
+                      <a href="#">Menu item 2</a>
+                      <a href="#">Menu item 3</a>
+                      <a href="#">Menu item 4</a>
+                      <a href="#">Menu item 5</a>
+                      <a href="#">Menu item 6</a>
+                      <a href="#">Menu item 7</a>
+                      <a href="#">Menu item 8</a>
+                      <a href="#">Menu item 9</a>
+                      <a href="#">Menu item 10</a>
+                      <a href="#">Menu item 11</a>
+                      <a href="#">Menu item 12</a>
+                      <a href="#">Menu item 13</a>
+                      <a href="#">Menu item 14</a>
+                      <a href="#">Menu item 15</a>
+                  </div>
+                </nav>
+              </div>
               <pre class="highlight-code">
                 <code class="html">
     &lt;nav class="mui-nav mui-pn" data-nav-count="7"&gt;
@@ -153,60 +156,59 @@
     &lt;/nav&gt;
                 </code>
               </pre>
-            </article>
+            </section>
 
-            <article>
-              <hr>
-                <h3>MobileFirst Navigation</h3>
-              <hr>
-              <div class="clear-mfn-position">
-                <div class="col-2">
-                  <div>
-                    <p>Standard Menu</p>
-                    <nav class="mui-mfn-nav" role='navigation'>
-                      <ul class="nmb">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Nav Item 1</a></li>
-                        <li><a href="#" class="mui-mfn-active">Nav Item 2</a></li>
-                        <li><a href="#">Nav Item 3</a></li>
-                      </ul>
-                    </nav>
+            <section>
+              <h3>MobileFirst Navigation</h3>
+              <div class="card">
+                <div class="clear-mfn-position">
+                  <div class="col-2">
+                    <div>
+                      <h5>Standard Menu</h5>
+                      <nav class="mui-mfn-nav" role='navigation'>
+                        <ul class="nmb">
+                          <li><a href="#">Home</a></li>
+                          <li><a href="#">Nav Item 1</a></li>
+                          <li><a href="#" class="mui-mfn-active">Nav Item 2</a></li>
+                          <li><a href="#">Nav Item 3</a></li>
+                        </ul>
+                      </nav>
+                    </div>
+                    <div>
+                      <h5>Logo &amp; Sub Head</h5>
+                      <nav class="mui-mfn-nav mui-mainHead" role='navigation'>
+                        <ul class="nmb">
+                          <li><a href="#">Logo ( Home )</a></li>
+                          <li class="mui-subHead">Sub Head</li>
+                          <li><a href="#">Nav Item 1</a></li>
+                          <li><a href="#" class="mui-mfn-active">Nav Item 2</a></li>
+                          <li><a href="#">Nav Item 3</a></li>
+                        </ul>
+                      </nav>
+                    </div>
                   </div>
-                  <div>
-                    <p>Logo &amp; Sub Head</p>
-                    <nav class="mui-mfn-nav mui-mainHead" role='navigation'>
-                      <ul class="nmb">
-                        <li><a href="#">Logo ( Home )</a></li>
-                        <li class="mui-subHead">Sub Head</li>
-                        <li><a href="#">Nav Item 1</a></li>
-                        <li><a href="#" class="mui-mfn-active">Nav Item 2</a></li>
-                        <li><a href="#">Nav Item 3</a></li>
-                      </ul>
-                    </nav>
-                  </div>
+
+                  <h5>Mobile View</h5>
+
+                  <!-- Navigation Bar -->
+                  <aside class="mui-mfn-navigation-bar nmb">
+                    <a class="bounceIn mui-mfn-menu-toggle tIcons" href="#" aria-hidden="true">
+                      <!-- Menu Icon -->
+                      <svg viewBox="0 0 36 30">
+                        <rect width="36" height="6" />
+                        <rect y="24" width="36" height="6" />
+                        <rect y="12" width="36" height="6" />
+                      </svg>
+                      <!-- Close Icon -->
+                      <svg viewBox="0 0 36 30">
+                        <polygon points="32.8,4.4 28.6,0.2 18,10.8 7.4,0.2 3.2,4.4 13.8,15 3.2,25.6 7.4,29.8 18,19.2 28.6,29.8 32.8,25.6 22.2,15 " />
+                      </svg>
+                    </a>
+                    <div class="bounceIn mui-mfn-website-name nmb">michaeltrilford.mui</div>
+                  </aside>
+
                 </div>
-
-                <p>Mobile View</p>
-
-                <!-- Navigation Bar -->
-                <aside class="mui-mfn-navigation-bar nmb">
-                  <a class="bounceIn mui-mfn-menu-toggle tIcons" href="#" aria-hidden="true">
-                    <!-- Menu Icon -->
-                    <svg viewBox="0 0 36 30">
-                      <rect width="36" height="6" />
-                      <rect y="24" width="36" height="6" />
-                      <rect y="12" width="36" height="6" />
-                    </svg>
-                    <!-- Close Icon -->
-                    <svg viewBox="0 0 36 30">
-                      <polygon points="32.8,4.4 28.6,0.2 18,10.8 7.4,0.2 3.2,4.4 13.8,15 3.2,25.6 7.4,29.8 18,19.2 28.6,29.8 32.8,25.6 22.2,15 " />
-                    </svg>
-                  </a>
-                  <div class="bounceIn mui-mfn-website-name nmb">michaeltrilford.mui</div>
-                </aside>
-
               </div>
-
               <div class="highlight-wrapper">
                 <div class="autoColumn nmb menu">
                   <button class="first active">Standard</button>
@@ -300,9 +302,9 @@
                 </pre>
                 </div>
               </div>
-            </article>
+            </section>
 
-          </section>
+          </article>
         </main>
 
         <!-- Grid Overlay -->

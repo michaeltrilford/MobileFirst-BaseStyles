@@ -1164,8 +1164,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: georgia;
   font-style: italic; }
 
-main > section h1.xx-large {
-  margin-top: 0.57143em; }
+.header {
+  margin-bottom: 3.75rem; }
+  .header h1 {
+    margin-top: 2.25rem; }
 
 .highlight-wrapper .autoColumn {
   background: #333333; }
@@ -1204,69 +1206,81 @@ hr {
   margin-bottom: calc(1.5rem - 1px);
   margin-top: -1px; }
 
+.card {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 3rem;
+  margin-bottom: 0;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
+  background: white;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0; }
+  .card > *:last-child {
+    margin-bottom: 0; }
+
+.clear-mfn-position nav.mui-mfn-nav {
+  width: 100%; }
+
 /* Dark */
- * .dark-mui
- * body
- *   background: black
- *   color: white
- * .baselineGridSetup, 
- * .baselineGridSetup > body
- *   > .baselineGrid
- *     div
- *       outline: 2px solid rgba(0, 0, 0, 0.5)
- * nav
- *   background: #353535
- *   box-shadow: 0 2px 2px 2px rgba(0,0,0,0.2)
- *   a
- *     background: #212121
- *     color: white
- *     &:hover
- *       color: white
- *     &.active
- *       background: white
- *       color: #2b2b2b
- * hr
- *   border-top: 2px solid #585858
- *   margin-bottom: calc(1.5rem - 1px)
- *   margin-top: -1px
- * textarea, 
- * fieldset,
- * input[type="text"], 
- * input[type="email"], 
- * input[type="number"], 
- * input[type="password"], 
- * input[type="file"], 
- * input[type="search"], 
- * input[type="range"],
- * details
- *   box-shadow: inset 0 0 0 1px rgba(255, 255, 255,0.25)
- * details
- *   color: black
- * a
- *   color: #fffc00
- *   text-decoration: none
- *   border-bottom: 1px solid rgba(#fffc00,0.5)
- *   &:hover
- *     color: #fffc00
- *     border-bottom: 1px solid rgba(#fffc00,0)
- *   &:focus
- *     color: #fffc00
- *     border-bottom: 1px solid rgba(#fffc00,0)
- * nav a, nav a:hover, nav a:focus
- *   border-bottom: none
- * legend
- *   background: #2b2b2b
- * table
- *   color: black
- * @media only screen and (min-width: 53.125em)
- *   table
- *     box-shadow: 0 0 0 1px #000000
- * button:focus, input:focus, textarea:focus, select:focus, a:focus, summary:focus
- *   outline-style: solid
- *   outline-color: white
- * .tIcons
- *   svg
- *     fill: white */
+.dark-mui body {
+  background: black;
+  color: white; }
+.dark-mui .baselineGridSetup > .baselineGrid div,
+.dark-mui .baselineGridSetup > body > .baselineGrid div {
+  outline: 2px solid rgba(0, 0, 0, 0.5); }
+.dark-mui nav {
+  background: #353535;
+  box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2); }
+  .dark-mui nav a {
+    background: #212121;
+    color: white; }
+    .dark-mui nav a:hover {
+      color: white; }
+    .dark-mui nav a.active {
+      background: white;
+      color: #2b2b2b; }
+.dark-mui hr {
+  border-top: 2px solid #585858;
+  margin-bottom: calc(1.5rem - 1px);
+  margin-top: -1px; }
+.dark-mui textarea,
+.dark-mui fieldset,
+.dark-mui input[type="text"],
+.dark-mui input[type="email"],
+.dark-mui input[type="number"],
+.dark-mui input[type="password"],
+.dark-mui input[type="file"],
+.dark-mui input[type="search"],
+.dark-mui input[type="range"],
+.dark-mui details {
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25); }
+.dark-mui details {
+  color: black; }
+.dark-mui a {
+  color: #fffc00;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 252, 0, 0.5); }
+  .dark-mui a:hover {
+    color: #fffc00;
+    border-bottom: 1px solid rgba(255, 252, 0, 0); }
+  .dark-mui a:focus {
+    color: #fffc00;
+    border-bottom: 1px solid rgba(255, 252, 0, 0); }
+.dark-mui nav a, .dark-mui nav a:hover, .dark-mui nav a:focus {
+  border-bottom: none; }
+.dark-mui legend {
+  background: #2b2b2b; }
+.dark-mui table {
+  color: black; }
+@media only screen and (min-width: 53.125em) {
+  .dark-mui table {
+    box-shadow: 0 0 0 1px #000000; } }
+.dark-mui button:focus, .dark-mui input:focus, .dark-mui textarea:focus, .dark-mui select:focus, .dark-mui a:focus, .dark-mui summary:focus {
+  outline-style: solid;
+  outline-color: white; }
+.dark-mui .tIcons svg {
+  fill: white; }
+
 /* =========================================================================
  * Helper classes
  * ========================================================================== */
@@ -1388,6 +1402,12 @@ hr {
 
 .mui-show {
   display: flex; }
+
+.overflow-hidden {
+  overflow: hidden; }
+
+.mui-light-text {
+  color: #cccccc; }
 
 /* ==========================================================================
  * Media Queries / Print

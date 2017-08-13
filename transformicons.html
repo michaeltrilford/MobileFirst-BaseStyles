@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js mui-baselineGridSetup" lang="">
+<html class="no-js" lang="">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -42,8 +42,6 @@
             <li><a href="baseline-grid-overlay.html">Baseline Grid Overlay</a></li>
             <li><a href="browser-upgrade.html">Browser Upgrade</a></li>
             <li><a href="buttons.html">Buttons</a></li>
-            <li><a href="fancy-headings.html">Fancy Headings</a></li>
-            <li><a href="fancy-list.html">Fancy List</a></li>
             <li><a href="navigation.html">Navigation</a></li>
             <li><a href="transformicons.html" class="mui-mfn-active">Transformicons</a></li>
           </ul>
@@ -67,48 +65,51 @@
         </aside>
 
         <main class="mui-mfn-offset-wrapper">
-          <section class="wrapper--medium">
+          <article class="wrapper--medium">
         
-            <article>
-              <h1 class="xx-large">Transformicons</h1>
+            <div class="header">
+              <h1 class="large">Transformicons</h1>
               <hr>
+            </div>
 
-              <h3>Menu/Close</h3>
-              <hr>
-              <div class="autoColumn cf">
-                <div class="nmb">
-                  <p>Animation type: Scale</p>
-                  <article class="nmb">
-                    <a class="tIcons" href="#">
-                      <!-- Menu Icon -->
-                      <svg viewBox="0 0 36 30">
-                        <rect width="36" height="6"/>
-                        <rect y="24" width="36" height="6"/>
-                        <rect y="12" width="36" height="6"/>
-                      </svg>
-                      <!-- Close Icon -->
-                      <svg viewBox="0 0 36 30">
-                        <polygon points="32.8,4.4 28.6,0.2 18,10.8 7.4,0.2 3.2,4.4 13.8,15 3.2,25.6 7.4,29.8 18,19.2 28.6,29.8 32.8,25.6 22.2,15 "/>
-                      </svg>
-                    </a>
-                  </article>
-                </div>
-                <div class="nmb">
-                  <p>Animation type: Rotate</p>
-                  <article class="nmb">
-                    <a class="tIcons tRotate" href="#">
-                      <!-- Menu Icon -->
-                      <svg viewBox="0 0 36 30">
-                        <rect width="36" height="6"/>
-                        <rect y="24" width="36" height="6"/>
-                        <rect y="12" width="36" height="6"/>
-                      </svg>
-                      <!-- Close Icon -->
-                      <svg viewBox="0 0 36 30">
-                        <polygon points="32.8,4.4 28.6,0.2 18,10.8 7.4,0.2 3.2,4.4 13.8,15 3.2,25.6 7.4,29.8 18,19.2 28.6,29.8 32.8,25.6 22.2,15 "/>
-                      </svg>
-                    </a>
-                  </article>
+            <section>
+              <h3>Menu <span class="mui-light-text">/</span> Close</h3>
+              <div class="card">
+                <div class="autoColumn cf">
+                  <div class="nmb">
+                    <p>Animation type: Scale</p>
+                    <div class="nmb">
+                      <a class="tIcons" href="#">
+                        <!-- Menu Icon -->
+                        <svg viewBox="0 0 36 30">
+                          <rect width="36" height="6"/>
+                          <rect y="24" width="36" height="6"/>
+                          <rect y="12" width="36" height="6"/>
+                        </svg>
+                        <!-- Close Icon -->
+                        <svg viewBox="0 0 36 30">
+                          <polygon points="32.8,4.4 28.6,0.2 18,10.8 7.4,0.2 3.2,4.4 13.8,15 3.2,25.6 7.4,29.8 18,19.2 28.6,29.8 32.8,25.6 22.2,15 "/>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="nmb">
+                    <p>Animation type: Rotate</p>
+                    <div class="nmb">
+                      <a class="tIcons tRotate" href="#">
+                        <!-- Menu Icon -->
+                        <svg viewBox="0 0 36 30">
+                          <rect width="36" height="6"/>
+                          <rect y="24" width="36" height="6"/>
+                          <rect y="12" width="36" height="6"/>
+                        </svg>
+                        <!-- Close Icon -->
+                        <svg viewBox="0 0 36 30">
+                          <polygon points="32.8,4.4 28.6,0.2 18,10.8 7.4,0.2 3.2,4.4 13.8,15 3.2,25.6 7.4,29.8 18,19.2 28.6,29.8 32.8,25.6 22.2,15 "/>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="highlight-wrapper">
@@ -117,95 +118,82 @@
                   <button>Rotate</button>
                 </div>
                 <div class="codeSnippet nmb">
-                <pre class="highlight-code">
-                  <code class="html">
-    &lt;a class="tIcons" href="#"&gt;
-      &lt;!-- Menu Icon --&gt;
-      &lt;svg viewBox="0 0 36 30"&gt;
-        &lt;rect width="36" height="6"/&gt;
-        &lt;rect y="24" width="36" height="6"/&gt;
-        &lt;rect y="12" width="36" height="6"/&gt;
-      &lt;/svg&gt;
-      &lt;!-- Close Icon --&gt;
-      &lt;svg viewBox="0 0 36 30"&gt;
-        &lt;polygon points="32.8,4.4 28.6,0.2 18,10.8 7.4,0.2 3.2,4.4 13.8,15 3.2,25.6 7.4,29.8 18,19.2 28.6,29.8 32.8,25.6 22.2,15 "/&gt;
-      &lt;/svg&gt;
-    &lt;/a&gt;
-                  </code>
-                </pre>
-                <pre class="highlight-code">
-                  <code class="html">
-    &lt;a class="tIcons tRotate" href="#"&gt;
-      &lt;!-- Menu Icon --&gt;
-      &lt;svg viewBox="0 0 36 30"&gt;
-        &lt;rect width="36" height="6"/&gt;
-        &lt;rect y="24" width="36" height="6"/&gt;
-        &lt;rect y="12" width="36" height="6"/&gt;
-      &lt;/svg&gt;
-      &lt;!-- Close Icon --&gt;
-      &lt;svg viewBox="0 0 36 30"&gt;
-        &lt;polygon points="32.8,4.4 28.6,0.2 18,10.8 7.4,0.2 3.2,4.4 13.8,15 3.2,25.6 7.4,29.8 18,19.2 28.6,29.8 32.8,25.6 22.2,15 "/&gt;
-      &lt;/svg&gt;
-    &lt;/a&gt;
-                  </code>
-                </pre>
-                <pre class="highlight-code">
-                  <code class="html">
-    &lt;a class="tIcons" href="#"&gt;
-      &lt;!-- Menu Icon --&gt;
-      &lt;svg viewBox="0 0 36 30"&gt;
-        &lt;rect width="36" height="6"/&gt;
-        &lt;rect y="24" width="36" height="6"/&gt;
-        &lt;rect y="12" width="36" height="6"/&gt;
-      &lt;/svg&gt;
-      &lt;!-- Close Icon --&gt;
-      &lt;svg viewBox="0 0 36 30"&gt;
-        &lt;polygon points="32.8,4.4 28.6,0.2 18,10.8 7.4,0.2 3.2,4.4 13.8,15 3.2,25.6 7.4,29.8 18,19.2 28.6,29.8 32.8,25.6 22.2,15 "/&gt;
-      &lt;/svg&gt;
-    &lt;/a&gt;
-                  </code>
-                </pre>
+                  <pre class="highlight-code">
+                    <code class="html">
+  &lt;a class="tIcons" href="#"&gt;
+    &lt;!-- Menu Icon --&gt;
+    &lt;svg viewBox="0 0 36 30"&gt;
+      &lt;rect width="36" height="6"/&gt;
+      &lt;rect y="24" width="36" height="6"/&gt;
+      &lt;rect y="12" width="36" height="6"/&gt;
+    &lt;/svg&gt;
+    &lt;!-- Close Icon --&gt;
+    &lt;svg viewBox="0 0 36 30"&gt;
+      &lt;polygon points="32.8,4.4 28.6,0.2 18,10.8 7.4,0.2 3.2,4.4 13.8,15 3.2,25.6 7.4,29.8 18,19.2 28.6,29.8 32.8,25.6 22.2,15 "/&gt;
+    &lt;/svg&gt;
+  &lt;/a&gt;
+                    </code>
+                  </pre>
+                  <pre class="highlight-code">
+                    <code class="html">
+  &lt;a class="tIcons tRotate" href="#"&gt;
+    &lt;!-- Menu Icon --&gt;
+    &lt;svg viewBox="0 0 36 30"&gt;
+      &lt;rect width="36" height="6"/&gt;
+      &lt;rect y="24" width="36" height="6"/&gt;
+      &lt;rect y="12" width="36" height="6"/&gt;
+    &lt;/svg&gt;
+    &lt;!-- Close Icon --&gt;
+    &lt;svg viewBox="0 0 36 30"&gt;
+      &lt;polygon points="32.8,4.4 28.6,0.2 18,10.8 7.4,0.2 3.2,4.4 13.8,15 3.2,25.6 7.4,29.8 18,19.2 28.6,29.8 32.8,25.6 22.2,15 "/&gt;
+    &lt;/svg&gt;
+  &lt;/a&gt;
+                    </code>
+                  </pre>
                 </div>
               </div>
+            </section>
 
-              <hr>
+            <!--  -->
 
-              <h3>Menu/Back</h3>
-              <hr>
-              <div class="autoColumn cf">
-                <div class="nmb">
-                  <p>Animation type: Scale</p>
-                  <article class="nmb">
-                    <a class="tIcons" href="#">
-                      <!-- Menu Icon -->
-                      <svg viewBox="0 0 36 30">
-                        <rect width="36" height="6"/>
-                        <rect y="24" width="36" height="6"/>
-                        <rect y="12" width="36" height="6"/>
-                      </svg>
-                      <!-- Arrow Icon -->
-                      <svg viewBox="0 0 36 30">
-                        <path d="M36,12H10.2l7.6-7.6l-4.2-4.2L1.1,12.6C1.2,12.6,1,12.7,1,12.8l-0.1,0.1l0,0c0,0,0,0,0,0l0,0c0,0,0,0,0,0 c-0.1,0.1-0.2,0.3-0.4,0.4C0.2,13.8,0,14.4,0,15c0,0.6,0.2,1.1,0.5,1.6c0.1,0.2,0.3,0.4,0.4,0.5l0,0c0,0,0.1,0.1,0.1,0.1l0.1,0.1 l12.5,12.5l4.2-4.2L10.2,18H36V12z"/>
-                      </svg>
-                    </a>
-                  </article>
-                </div>
-                <div class="nmb">
-                  <p>Animation type: Rotate</p>
-                  <article class="nmb">
-                    <a class="tIcons tRotate" href="#">
-                      <!-- Menu Icon -->
-                      <svg viewBox="0 0 36 30">
-                        <rect width="36" height="6"/>
-                        <rect y="24" width="36" height="6"/>
-                        <rect y="12" width="36" height="6"/>
-                      </svg>
-                      <!-- Arrow Icon -->
-                      <svg viewBox="0 0 36 30">
-                        <path d="M36,12H10.2l7.6-7.6l-4.2-4.2L1.1,12.6C1.2,12.6,1,12.7,1,12.8l-0.1,0.1l0,0c0,0,0,0,0,0l0,0c0,0,0,0,0,0 c-0.1,0.1-0.2,0.3-0.4,0.4C0.2,13.8,0,14.4,0,15c0,0.6,0.2,1.1,0.5,1.6c0.1,0.2,0.3,0.4,0.4,0.5l0,0c0,0,0.1,0.1,0.1,0.1l0.1,0.1 l12.5,12.5l4.2-4.2L10.2,18H36V12z"/>
-                      </svg>
-                    </a>
-                  </article>
+            <section>
+              <h3>Menu <span class="mui-light-text">/</span> Back</h3>
+              <div class="card">
+                <div class="autoColumn cf">
+                  <div class="nmb">
+                    <p>Animation type: Scale</p>
+                    <article class="nmb">
+                      <a class="tIcons" href="#">
+                        <!-- Menu Icon -->
+                        <svg viewBox="0 0 36 30">
+                          <rect width="36" height="6"/>
+                          <rect y="24" width="36" height="6"/>
+                          <rect y="12" width="36" height="6"/>
+                        </svg>
+                        <!-- Arrow Icon -->
+                        <svg viewBox="0 0 36 30">
+                          <path d="M36,12H10.2l7.6-7.6l-4.2-4.2L1.1,12.6C1.2,12.6,1,12.7,1,12.8l-0.1,0.1l0,0c0,0,0,0,0,0l0,0c0,0,0,0,0,0 c-0.1,0.1-0.2,0.3-0.4,0.4C0.2,13.8,0,14.4,0,15c0,0.6,0.2,1.1,0.5,1.6c0.1,0.2,0.3,0.4,0.4,0.5l0,0c0,0,0.1,0.1,0.1,0.1l0.1,0.1 l12.5,12.5l4.2-4.2L10.2,18H36V12z"/>
+                        </svg>
+                      </a>
+                    </article>
+                  </div>
+                  <div class="nmb">
+                    <p>Animation type: Rotate</p>
+                    <article class="nmb">
+                      <a class="tIcons tRotate" href="#">
+                        <!-- Menu Icon -->
+                        <svg viewBox="0 0 36 30">
+                          <rect width="36" height="6"/>
+                          <rect y="24" width="36" height="6"/>
+                          <rect y="12" width="36" height="6"/>
+                        </svg>
+                        <!-- Arrow Icon -->
+                        <svg viewBox="0 0 36 30">
+                          <path d="M36,12H10.2l7.6-7.6l-4.2-4.2L1.1,12.6C1.2,12.6,1,12.7,1,12.8l-0.1,0.1l0,0c0,0,0,0,0,0l0,0c0,0,0,0,0,0 c-0.1,0.1-0.2,0.3-0.4,0.4C0.2,13.8,0,14.4,0,15c0,0.6,0.2,1.1,0.5,1.6c0.1,0.2,0.3,0.4,0.4,0.5l0,0c0,0,0.1,0.1,0.1,0.1l0.1,0.1 l12.5,12.5l4.2-4.2L10.2,18H36V12z"/>
+                        </svg>
+                      </a>
+                    </article>
+                  </div>
                 </div>
               </div>
               <div class="highlight-wrapper">
@@ -214,8 +202,8 @@
                   <button class="second">Rotate</button>
                 </div>
                 <div class="codeSnippet nmb">
-                <pre class="preFirst highlight-code">
-                  <code class="html">
+                  <pre class="preFirst highlight-code">
+                    <code class="html">
     &lt;a class="tIcons" href="#"&gt;
       &lt;!-- Menu Icon --&gt;
       &lt;svg viewBox="0 0 36 30"&gt;
@@ -228,10 +216,10 @@
         &lt;path d="M36,12H10.2l7.6-7.6l-4.2-4.2L1.1,12.6C1.2,12.6,1,12.7,1,12.8l-0.1,0.1l0,0c0,0,0,0,0,0l0,0c0,0,0,0,0,0 c-0.1,0.1-0.2,0.3-0.4,0.4C0.2,13.8,0,14.4,0,15c0,0.6,0.2,1.1,0.5,1.6c0.1,0.2,0.3,0.4,0.4,0.5l0,0c0,0,0.1,0.1,0.1,0.1l0.1,0.1 l12.5,12.5l4.2-4.2L10.2,18H36V12z"/&gt;
       &lt;/svg&gt;
     &lt;/a&gt;
-                  </code>
-                </pre>
-                <pre class="preSecond highlight-code">
-                  <code class="html">
+                    </code>
+                  </pre>
+                  <pre class="preSecond highlight-code">
+                    <code class="html">
     &lt;a class="tIcons tRotate" href="#"&gt;
       &lt;!-- Menu Icon --&gt;
       &lt;svg viewBox="0 0 36 30"&gt;
@@ -244,61 +232,64 @@
         &lt;path d="M36,12H10.2l7.6-7.6l-4.2-4.2L1.1,12.6C1.2,12.6,1,12.7,1,12.8l-0.1,0.1l0,0c0,0,0,0,0,0l0,0c0,0,0,0,0,0 c-0.1,0.1-0.2,0.3-0.4,0.4C0.2,13.8,0,14.4,0,15c0,0.6,0.2,1.1,0.5,1.6c0.1,0.2,0.3,0.4,0.4,0.5l0,0c0,0,0.1,0.1,0.1,0.1l0.1,0.1 l12.5,12.5l4.2-4.2L10.2,18H36V12z"/&gt;
       &lt;/svg&gt;
     &lt;/a&gt;
-                  </code>
-                </pre>
+                    </code>
+                  </pre>
                 </div>
               </div>
+            </section>
 
-              <hr>
+            <!--  -->
 
-              <h3>Gallery/Close</h3>
-              <hr>
-              <div class="autoColumn cf">
-                <div class="nmb">
-                  <p>Animation type: Scale</p>
-                  <article class="nmb">
-                    <a class="tIcons" href="#">
-                      <!-- Gallery Icon -->
-                      <svg viewBox="0 0 36 30">
-                        <rect x="3" width="8" height="8"/>
-                        <rect x="14" width="8" height="8"/>
-                        <rect x="25" width="8" height="8"/>
-                        <rect x="3" y="11" width="8" height="8"/>
-                        <rect x="14" y="11" width="8" height="8"/>
-                        <rect x="25" y="11" width="8" height="8"/>
-                        <rect x="3" y="22" width="8" height="8"/>
-                        <rect x="14" y="22" width="8" height="8"/>
-                        <rect x="25" y="22" width="8" height="8"/>
-                      </svg>
-                      <!-- Close Icon -->
-                      <svg viewBox="0 0 36 30">
-                        <polygon points="32.8,4.4 28.6,0.2 18,10.8 7.4,0.2 3.2,4.4 13.8,15 3.2,25.6 7.4,29.8 18,19.2 28.6,29.8 32.8,25.6 22.2,15 "/>
-                      </svg>
-                    </a>
-                  </article>
-                </div>
-                <div class="nmb">
-                  <p>Animation type: Rotate</p>
-                  <article class="nmb">
-                    <a class="tIcons tRotate" href="#">
-                      <!-- Gallery Icon -->
-                      <svg viewBox="0 0 36 30">
-                        <rect x="3" width="8" height="8"/>
-                        <rect x="14" width="8" height="8"/>
-                        <rect x="25" width="8" height="8"/>
-                        <rect x="3" y="11" width="8" height="8"/>
-                        <rect x="14" y="11" width="8" height="8"/>
-                        <rect x="25" y="11" width="8" height="8"/>
-                        <rect x="3" y="22" width="8" height="8"/>
-                        <rect x="14" y="22" width="8" height="8"/>
-                        <rect x="25" y="22" width="8" height="8"/>
-                      </svg>
-                      <!-- Close Icon -->
-                      <svg viewBox="0 0 36 30">
-                        <polygon points="32.8,4.4 28.6,0.2 18,10.8 7.4,0.2 3.2,4.4 13.8,15 3.2,25.6 7.4,29.8 18,19.2 28.6,29.8 32.8,25.6 22.2,15 "/>
-                      </svg>
-                    </a>
-                  </article>
+            <section>
+              <h3>Gallery <span class="mui-light-text">/</span> Close</h3>
+              <div class="card">
+                <div class="autoColumn cf">
+                  <div class="nmb">
+                    <p>Animation type: Scale</p>
+                    <article class="nmb">
+                      <a class="tIcons" href="#">
+                        <!-- Gallery Icon -->
+                        <svg viewBox="0 0 36 30">
+                          <rect x="3" width="8" height="8"/>
+                          <rect x="14" width="8" height="8"/>
+                          <rect x="25" width="8" height="8"/>
+                          <rect x="3" y="11" width="8" height="8"/>
+                          <rect x="14" y="11" width="8" height="8"/>
+                          <rect x="25" y="11" width="8" height="8"/>
+                          <rect x="3" y="22" width="8" height="8"/>
+                          <rect x="14" y="22" width="8" height="8"/>
+                          <rect x="25" y="22" width="8" height="8"/>
+                        </svg>
+                        <!-- Close Icon -->
+                        <svg viewBox="0 0 36 30">
+                          <polygon points="32.8,4.4 28.6,0.2 18,10.8 7.4,0.2 3.2,4.4 13.8,15 3.2,25.6 7.4,29.8 18,19.2 28.6,29.8 32.8,25.6 22.2,15 "/>
+                        </svg>
+                      </a>
+                    </article>
+                  </div>
+                  <div class="nmb">
+                    <p>Animation type: Rotate</p>
+                    <article class="nmb">
+                      <a class="tIcons tRotate" href="#">
+                        <!-- Gallery Icon -->
+                        <svg viewBox="0 0 36 30">
+                          <rect x="3" width="8" height="8"/>
+                          <rect x="14" width="8" height="8"/>
+                          <rect x="25" width="8" height="8"/>
+                          <rect x="3" y="11" width="8" height="8"/>
+                          <rect x="14" y="11" width="8" height="8"/>
+                          <rect x="25" y="11" width="8" height="8"/>
+                          <rect x="3" y="22" width="8" height="8"/>
+                          <rect x="14" y="22" width="8" height="8"/>
+                          <rect x="25" y="22" width="8" height="8"/>
+                        </svg>
+                        <!-- Close Icon -->
+                        <svg viewBox="0 0 36 30">
+                          <polygon points="32.8,4.4 28.6,0.2 18,10.8 7.4,0.2 3.2,4.4 13.8,15 3.2,25.6 7.4,29.8 18,19.2 28.6,29.8 32.8,25.6 22.2,15 "/>
+                        </svg>
+                      </a>
+                    </article>
+                  </div>
                 </div>
               </div>
               <div class="highlight-wrapper">
@@ -307,8 +298,8 @@
                   <button class="second">Rotate</button>
                 </div>
                 <div class="codeSnippet nmb">
-                <pre class="preFirst highlight-code">
-                  <code class="html">
+                  <pre class="preFirst highlight-code">
+                    <code class="html">
     &lt;form action="#"&gt;
     &lt;a class="tIcons" href="#"&gt;
       &lt;!-- Gallery Icon --&gt;
@@ -328,10 +319,10 @@
         &lt;polygon points="32.8,4.4 28.6,0.2 18,10.8 7.4,0.2 3.2,4.4 13.8,15 3.2,25.6 7.4,29.8 18,19.2 28.6,29.8 32.8,25.6 22.2,15 "/&gt;
       &lt;/svg&gt;
     &lt;/a&gt;
-                  </code>
-                </pre>
-                <pre class="preSecond highlight-code">
-                  <code class="html">
+                    </code>
+                  </pre>
+                  <pre class="preSecond highlight-code">
+                    <code class="html">
     &lt;form action="#"&gt;
     &lt;a class="tIcons rotate" href="#"&gt;
       &lt;!-- Gallery Icon --&gt;
@@ -351,61 +342,62 @@
         &lt;polygon points="32.8,4.4 28.6,0.2 18,10.8 7.4,0.2 3.2,4.4 13.8,15 3.2,25.6 7.4,29.8 18,19.2 28.6,29.8 32.8,25.6 22.2,15 "/&gt;
       &lt;/svg&gt;
     &lt;/a&gt;
-                  </code>
-                </pre>
+                    </code>
+                  </pre>
                 </div>
               </div>
+            </section>
 
-              <hr>
-
-              <h3>Gallery/Back</h3>
-              <hr>
-              <div class="autoColumn cf">
-                <div class="nmb">
-                  <p>Animation type: Scale</p>
-                  <article class="nmb">
-                    <a class="tIcons" href="#">
-                      <!-- Gallery Icon -->
-                      <svg viewBox="0 0 36 30">
-                        <rect x="3" width="8" height="8"/>
-                        <rect x="14" width="8" height="8"/>
-                        <rect x="25" width="8" height="8"/>
-                        <rect x="3" y="11" width="8" height="8"/>
-                        <rect x="14" y="11" width="8" height="8"/>
-                        <rect x="25" y="11" width="8" height="8"/>
-                        <rect x="3" y="22" width="8" height="8"/>
-                        <rect x="14" y="22" width="8" height="8"/>
-                        <rect x="25" y="22" width="8" height="8"/>
-                      </svg>
-                      <!-- Arrow Icon -->
-                      <svg viewBox="0 0 36 30">
-                        <path d="M36,12H10.2l7.6-7.6l-4.2-4.2L1.1,12.6C1.2,12.6,1,12.7,1,12.8l-0.1,0.1l0,0c0,0,0,0,0,0l0,0c0,0,0,0,0,0 c-0.1,0.1-0.2,0.3-0.4,0.4C0.2,13.8,0,14.4,0,15c0,0.6,0.2,1.1,0.5,1.6c0.1,0.2,0.3,0.4,0.4,0.5l0,0c0,0,0.1,0.1,0.1,0.1l0.1,0.1 l12.5,12.5l4.2-4.2L10.2,18H36V12z"/>
-                      </svg>
-                    </a>
-                  </article>
-                </div>
-                <div class="nmb">
-                  <p>Animation type: Rotate</p>
-                  <article class="nmb">
-                    <a class="tIcons tRotate" href="#">
-                      <!-- Gallery Icon -->
-                      <svg viewBox="0 0 36 30">
-                        <rect x="3" width="8" height="8"/>
-                        <rect x="14" width="8" height="8"/>
-                        <rect x="25" width="8" height="8"/>
-                        <rect x="3" y="11" width="8" height="8"/>
-                        <rect x="14" y="11" width="8" height="8"/>
-                        <rect x="25" y="11" width="8" height="8"/>
-                        <rect x="3" y="22" width="8" height="8"/>
-                        <rect x="14" y="22" width="8" height="8"/>
-                        <rect x="25" y="22" width="8" height="8"/>
-                      </svg>
-                      <!-- Arrow Icon -->
-                      <svg viewBox="0 0 36 30">
-                        <path d="M36,12H10.2l7.6-7.6l-4.2-4.2L1.1,12.6C1.2,12.6,1,12.7,1,12.8l-0.1,0.1l0,0c0,0,0,0,0,0l0,0c0,0,0,0,0,0 c-0.1,0.1-0.2,0.3-0.4,0.4C0.2,13.8,0,14.4,0,15c0,0.6,0.2,1.1,0.5,1.6c0.1,0.2,0.3,0.4,0.4,0.5l0,0c0,0,0.1,0.1,0.1,0.1l0.1,0.1 l12.5,12.5l4.2-4.2L10.2,18H36V12z"/>
-                      </svg>
-                    </a>
-                  </article>
+            <section>
+              <h3>Gallery <span class="mui-light-text">/</span> Back</h3>
+              <div class="card">
+                <div class="autoColumn cf">
+                  <div class="nmb">
+                    <p>Animation type: Scale</p>
+                    <div class="nmb">
+                      <a class="tIcons" href="#">
+                        <!-- Gallery Icon -->
+                        <svg viewBox="0 0 36 30">
+                          <rect x="3" width="8" height="8"/>
+                          <rect x="14" width="8" height="8"/>
+                          <rect x="25" width="8" height="8"/>
+                          <rect x="3" y="11" width="8" height="8"/>
+                          <rect x="14" y="11" width="8" height="8"/>
+                          <rect x="25" y="11" width="8" height="8"/>
+                          <rect x="3" y="22" width="8" height="8"/>
+                          <rect x="14" y="22" width="8" height="8"/>
+                          <rect x="25" y="22" width="8" height="8"/>
+                        </svg>
+                        <!-- Arrow Icon -->
+                        <svg viewBox="0 0 36 30">
+                          <path d="M36,12H10.2l7.6-7.6l-4.2-4.2L1.1,12.6C1.2,12.6,1,12.7,1,12.8l-0.1,0.1l0,0c0,0,0,0,0,0l0,0c0,0,0,0,0,0 c-0.1,0.1-0.2,0.3-0.4,0.4C0.2,13.8,0,14.4,0,15c0,0.6,0.2,1.1,0.5,1.6c0.1,0.2,0.3,0.4,0.4,0.5l0,0c0,0,0.1,0.1,0.1,0.1l0.1,0.1 l12.5,12.5l4.2-4.2L10.2,18H36V12z"/>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="nmb">
+                    <p>Animation type: Rotate</p>
+                    <div class="nmb">
+                      <a class="tIcons tRotate" href="#">
+                        <!-- Gallery Icon -->
+                        <svg viewBox="0 0 36 30">
+                          <rect x="3" width="8" height="8"/>
+                          <rect x="14" width="8" height="8"/>
+                          <rect x="25" width="8" height="8"/>
+                          <rect x="3" y="11" width="8" height="8"/>
+                          <rect x="14" y="11" width="8" height="8"/>
+                          <rect x="25" y="11" width="8" height="8"/>
+                          <rect x="3" y="22" width="8" height="8"/>
+                          <rect x="14" y="22" width="8" height="8"/>
+                          <rect x="25" y="22" width="8" height="8"/>
+                        </svg>
+                        <!-- Arrow Icon -->
+                        <svg viewBox="0 0 36 30">
+                          <path d="M36,12H10.2l7.6-7.6l-4.2-4.2L1.1,12.6C1.2,12.6,1,12.7,1,12.8l-0.1,0.1l0,0c0,0,0,0,0,0l0,0c0,0,0,0,0,0 c-0.1,0.1-0.2,0.3-0.4,0.4C0.2,13.8,0,14.4,0,15c0,0.6,0.2,1.1,0.5,1.6c0.1,0.2,0.3,0.4,0.4,0.5l0,0c0,0,0.1,0.1,0.1,0.1l0.1,0.1 l12.5,12.5l4.2-4.2L10.2,18H36V12z"/>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="highlight-wrapper">
@@ -414,8 +406,8 @@
                   <button class="second">Rotate</button>
                 </div>
                 <div class="codeSnippet nmb">
-                <pre class="preFirst highlight-code">
-                  <code class="html">
+                  <pre class="preFirst highlight-code">
+                    <code class="html">
     &lt;form action="#"&gt;
     &lt;a class="tIcons" href="#"&gt;
       &lt;!-- Gallery Icon --&gt;
@@ -435,10 +427,10 @@
         &lt;path d="M36,12H10.2l7.6-7.6l-4.2-4.2L1.1,12.6C1.2,12.6,1,12.7,1,12.8l-0.1,0.1l0,0c0,0,0,0,0,0l0,0c0,0,0,0,0,0 c-0.1,0.1-0.2,0.3-0.4,0.4C0.2,13.8,0,14.4,0,15c0,0.6,0.2,1.1,0.5,1.6c0.1,0.2,0.3,0.4,0.4,0.5l0,0c0,0,0.1,0.1,0.1,0.1l0.1,0.1 l12.5,12.5l4.2-4.2L10.2,18H36V12z"/&gt;
       &lt;/svg&gt;
     &lt;/a&gt;
-                  </code>
-                </pre>
-                <pre class="preSecond highlight-code">
-                  <code class="html">
+                    </code>
+                  </pre>
+                  <pre class="preSecond highlight-code">
+                    <code class="html">
     &lt;form action="#"&gt;
     &lt;a class="tIcons rotate" href="#"&gt;
       &lt;!-- Gallery Icon --&gt;
@@ -458,45 +450,48 @@
         &lt;path d="M36,12H10.2l7.6-7.6l-4.2-4.2L1.1,12.6C1.2,12.6,1,12.7,1,12.8l-0.1,0.1l0,0c0,0,0,0,0,0l0,0c0,0,0,0,0,0 c-0.1,0.1-0.2,0.3-0.4,0.4C0.2,13.8,0,14.4,0,15c0,0.6,0.2,1.1,0.5,1.6c0.1,0.2,0.3,0.4,0.4,0.5l0,0c0,0,0.1,0.1,0.1,0.1l0.1,0.1 l12.5,12.5l4.2-4.2L10.2,18H36V12z"/&gt;
       &lt;/svg&gt;
     &lt;/a&gt;
-                  </code>
-                </pre>
+                    </code>
+                  </pre>
                 </div>
               </div>
+            </section>
 
-              <hr>
+            <!--  -->
 
-              <h3>Add/Remove</h3>
-              <hr>
-              <div class="autoColumn cf">
-                <div class="nmb">
-                  <p>Animation type: Scale</p>
-                  <article class="nmb">
-                    <a class="tIcons" href="#">
-                      <!-- Show Icon -->
-                      <svg viewBox="0 0 36 30">
-                        <polygon points="33,12 21,12 21,0 15,0 15,12 3,12 3,18 15,18 15,30 21,30 21,18 33,18 "/>
-                      </svg>
-                      <!-- Hide Icon -->
-                      <svg viewBox="0 0 36 30">
-                        <rect x="3" y="12" width="30" height="6"/>
-                      </svg>
-                    </a>
-                  </article>
-                </div>
-                <div class="nmb">
-                  <p>Animation type: Rotate</p>
-                  <article class="nmb">
-                    <a class="tIcons tRotate" href="#">
-                      <!-- Show Icon -->
-                      <svg viewBox="0 0 36 30">
-                        <polygon points="33,12 21,12 21,0 15,0 15,12 3,12 3,18 15,18 15,30 21,30 21,18 33,18 "/>
-                      </svg>
-                      <!-- Hide Icon -->
-                      <svg viewBox="0 0 36 30">
-                        <rect x="3" y="12" width="30" height="6"/>
-                      </svg>
-                    </a>
-                  </article>
+            <section>
+              <h3>Add <span class="mui-light-text">/</span> Remove</h3>
+              <div class="card">
+                <div class="autoColumn cf">
+                  <div class="nmb">
+                    <p>Animation type: Scale</p>
+                    <div class="nmb">
+                      <a class="tIcons" href="#">
+                        <!-- Show Icon -->
+                        <svg viewBox="0 0 36 30">
+                          <polygon points="33,12 21,12 21,0 15,0 15,12 3,12 3,18 15,18 15,30 21,30 21,18 33,18 "/>
+                        </svg>
+                        <!-- Hide Icon -->
+                        <svg viewBox="0 0 36 30">
+                          <rect x="3" y="12" width="30" height="6"/>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="nmb">
+                    <p>Animation type: Rotate</p>
+                    <div class="nmb">
+                      <a class="tIcons tRotate" href="#">
+                        <!-- Show Icon -->
+                        <svg viewBox="0 0 36 30">
+                          <polygon points="33,12 21,12 21,0 15,0 15,12 3,12 3,18 15,18 15,30 21,30 21,18 33,18 "/>
+                        </svg>
+                        <!-- Hide Icon -->
+                        <svg viewBox="0 0 36 30">
+                          <rect x="3" y="12" width="30" height="6"/>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="highlight-wrapper">
@@ -505,8 +500,8 @@
                   <button class="second">Rotate</button>
                 </div>
                 <div class="codeSnippet nmb">
-                <pre class="preFirst highlight-code">
-                  <code class="html">
+                  <pre class="preFirst highlight-code">
+                    <code class="html">
     &lt;form action="#"&gt;
     &lt;a class="tIcons" href="#"&gt;
       &lt;!-- Show Icon --&gt;
@@ -518,10 +513,10 @@
         &lt;rect x="3" y="12" width="30" height="6"/&gt;
       &lt;/svg&gt;
     &lt;/a&gt;
-                  </code>
-                </pre>
-                <pre class="preSecond highlight-code">
-                  <code class="html">
+                    </code>
+                  </pre>
+                  <pre class="preSecond highlight-code">
+                    <code class="html">
     &lt;form action="#"&gt;
     &lt;a class="tIcons rotate" href="#"&gt;
       &lt;!-- Show Icon --&gt;
@@ -533,14 +528,15 @@
         &lt;rect x="3" y="12" width="30" height="6"/&gt;
       &lt;/svg&gt;
     &lt;/a&gt;
-                  </code>
-                </pre>
+                    </code>
+                  </pre>
                 </div>
               </div>
+            </section>
 
-            </article>
+            <!--  -->
 
-          </section>
+          </article>
 
         </main>
 

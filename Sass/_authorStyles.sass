@@ -13,9 +13,12 @@ h1,h2,h3,h4,h5,h6
   font-family: georgia
   font-style: italic
 
+.header
+  margin-bottom: 3.75rem
+  h1
+    margin-top: 2.25rem
+  hr
 
-main > section h1.xx-large
-  margin-top: 0.57143em
 
 .highlight-wrapper
   .autoColumn
@@ -57,8 +60,24 @@ hr
   margin-bottom: calc(1.5rem - 1px)
   margin-top: -1px
 
+.card
+  border: 1px solid #e0e0e0
+  border-radius: 6px
+  padding: 3rem
+  margin-bottom: 0
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05)
+  background: white
+  border-bottom-left-radius: 0
+  border-bottom-right-radius: 0
+  > *:last-child
+    margin-bottom: 0
+
+
+.clear-mfn-position nav.mui-mfn-nav
+  width: 100%
+
 /* Dark */
-  .dark-mui
+.dark-mui
   body
     background: black
     color: white
@@ -120,3 +139,10 @@ hr
   .tIcons
     svg
       fill: white
+
+
+
+
+
+
+  

@@ -26,8 +26,8 @@ u('#mui-mfn-menu-toggle').on('click', function(e) {
 
 /* D. Tabs for code snippets
 ------------------------------------------------------------------- */
-u("pre:first-child").addClass('mui-show');
-u("pre").addClass('mui-hide');
+u(".highlight-wrapper pre:first-child").addClass('mui-show');
+u(".highlight-wrapper pre").addClass('mui-hide');
 
 // First
 u(".menu button:nth-of-type(1)").on('click', function(e) {
@@ -70,6 +70,17 @@ u(myElements.nodes.slice(0, navCount)).addClass('inline-block');
 u('#mui-pn-reveal').on('click', function(e) {
   e.preventDefault();
   u(".mui-pn-inner").toggleClass("mui-pn-reveal");
+});
+
+
+
+/* F. */
+u('.mui-mainHead').on('scroll', function(e) {
+  u('body').addClass('overflow-hidden');
+});
+
+u('.mui-mfn-offset-wrapper').on('mouseover', function(e) {
+  u('body').removeClass('overflow-hidden');
 });
 
 
