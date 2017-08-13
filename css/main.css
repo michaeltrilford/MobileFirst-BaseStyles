@@ -1165,9 +1165,15 @@ h1, h2, h3, h4, h5, h6 {
   font-style: italic; }
 
 .header {
-  margin-bottom: 3.75rem; }
+  margin-bottom: 3.75rem;
+  padding-top: 1.5rem; }
+  .csspositionsticky .header {
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 10000; }
   .header h1 {
-    margin-top: 2.25rem; }
+    margin-top: 0; }
 
 .highlight-wrapper .autoColumn {
   background: #333333; }
