@@ -1,12 +1,16 @@
 // Mobile First / Priority Navigation Setup: 
 .mui-pn 
   .mui-pn-inner
-    display: none
+    max-height: 0
+    transition: max-height .10s ease-in-out
+    overflow-y: hidden
     padding: 0
     margin: 0
     width: 100%
     @media only screen and (min-width: 31.25em)
       display: block !important
+      max-height: initial
+      overflow-y: initial
       width: calc( 100% - 3em )
       max-width: 73.75em
       margin: 0 auto
@@ -19,6 +23,11 @@
         background: white
         .js &
           display: none
+    .inline-block
+      @media only screen and (min-width: 31.25em)
+        .js &
+          display: inline-block
+
     &.mui-pn-reveal
       a
         @media only screen and (min-width: 31.25em)
@@ -44,6 +53,9 @@
   &.mui-pn-active
     background: white
     color: black 
+    + .mui-pn-inner
+      max-height: 200vh
+      transition: max-height .4s ease-in-out
   @media only screen and (min-width: 31.25em)
     display: none !important
 

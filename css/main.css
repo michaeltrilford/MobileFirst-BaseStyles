@@ -732,11 +732,11 @@ a {
 .wrapper--large {
   max-width: 73.75em; }
 
-.baselineGridSetup,
-.baselineGridSetup > body {
+.mui-baselineGridSetup,
+.mui-baselineGridSetup > body {
   height: 100vh; }
-  .baselineGridSetup > .baselineGrid,
-  .baselineGridSetup > body > .baselineGrid {
+  .mui-baselineGridSetup > .mui-baselineGrid,
+  .mui-baselineGridSetup > body > .mui-baselineGrid {
     z-index: -1;
     position: absolute;
     pointer-events: none;
@@ -747,11 +747,11 @@ a {
     height: auto;
     overflow-y: hidden; }
     @media (min-height: 828px) {
-      .baselineGridSetup > .baselineGrid,
-      .baselineGridSetup > body > .baselineGrid {
+      .mui-baselineGridSetup > .mui-baselineGrid,
+      .mui-baselineGridSetup > body > .mui-baselineGrid {
         height: 100vh; } }
-    .baselineGridSetup > .baselineGrid div,
-    .baselineGridSetup > body > .baselineGrid div {
+    .mui-baselineGridSetup > .mui-baselineGrid div,
+    .mui-baselineGridSetup > body > .mui-baselineGrid div {
       width: calc(100% + 2px);
       transform: translate(-1px, 0);
       height: 0.75em;
@@ -759,40 +759,40 @@ a {
       opacity: 0.3;
       outline-offset: -1px;
       margin-bottom: 0.75em; }
-      .baselineGridSetup > .baselineGrid div:nth-last-of-type(9),
-      .baselineGridSetup > body > .baselineGrid div:nth-last-of-type(9) {
+      .mui-baselineGridSetup > .mui-baselineGrid div:nth-last-of-type(9),
+      .mui-baselineGridSetup > body > .mui-baselineGrid div:nth-last-of-type(9) {
         opacity: 0.28; }
-      .baselineGridSetup > .baselineGrid div:nth-last-of-type(8),
-      .baselineGridSetup > body > .baselineGrid div:nth-last-of-type(8) {
+      .mui-baselineGridSetup > .mui-baselineGrid div:nth-last-of-type(8),
+      .mui-baselineGridSetup > body > .mui-baselineGrid div:nth-last-of-type(8) {
         opacity: 0.24; }
-      .baselineGridSetup > .baselineGrid div:nth-last-of-type(7),
-      .baselineGridSetup > body > .baselineGrid div:nth-last-of-type(7) {
+      .mui-baselineGridSetup > .mui-baselineGrid div:nth-last-of-type(7),
+      .mui-baselineGridSetup > body > .mui-baselineGrid div:nth-last-of-type(7) {
         opacity: 0.2; }
-      .baselineGridSetup > .baselineGrid div:nth-last-of-type(6),
-      .baselineGridSetup > body > .baselineGrid div:nth-last-of-type(6) {
+      .mui-baselineGridSetup > .mui-baselineGrid div:nth-last-of-type(6),
+      .mui-baselineGridSetup > body > .mui-baselineGrid div:nth-last-of-type(6) {
         opacity: 0.18; }
-      .baselineGridSetup > .baselineGrid div:nth-last-of-type(5),
-      .baselineGridSetup > body > .baselineGrid div:nth-last-of-type(5) {
+      .mui-baselineGridSetup > .mui-baselineGrid div:nth-last-of-type(5),
+      .mui-baselineGridSetup > body > .mui-baselineGrid div:nth-last-of-type(5) {
         opacity: 0.14; }
-      .baselineGridSetup > .baselineGrid div:nth-last-of-type(4),
-      .baselineGridSetup > body > .baselineGrid div:nth-last-of-type(4) {
+      .mui-baselineGridSetup > .mui-baselineGrid div:nth-last-of-type(4),
+      .mui-baselineGridSetup > body > .mui-baselineGrid div:nth-last-of-type(4) {
         opacity: 0.1; }
-      .baselineGridSetup > .baselineGrid div:nth-last-of-type(3),
-      .baselineGridSetup > body > .baselineGrid div:nth-last-of-type(3) {
+      .mui-baselineGridSetup > .mui-baselineGrid div:nth-last-of-type(3),
+      .mui-baselineGridSetup > body > .mui-baselineGrid div:nth-last-of-type(3) {
         opacity: 0.08; }
-      .baselineGridSetup > .baselineGrid div:nth-last-of-type(2),
-      .baselineGridSetup > body > .baselineGrid div:nth-last-of-type(2) {
+      .mui-baselineGridSetup > .mui-baselineGrid div:nth-last-of-type(2),
+      .mui-baselineGridSetup > body > .mui-baselineGrid div:nth-last-of-type(2) {
         opacity: 0.04; }
-      .baselineGridSetup > .baselineGrid div:nth-last-of-type(1),
-      .baselineGridSetup > body > .baselineGrid div:nth-last-of-type(1) {
+      .mui-baselineGridSetup > .mui-baselineGrid div:nth-last-of-type(1),
+      .mui-baselineGridSetup > body > .mui-baselineGrid div:nth-last-of-type(1) {
         opacity: 0; }
-  .baselineGridSetup:active .baselineGrid,
-  .baselineGridSetup > body:active .baselineGrid {
+  .mui-baselineGridSetup:active .mui-baselineGrid,
+  .mui-baselineGridSetup > body:active .mui-baselineGrid {
     display: none; }
 
 .browserupgrade {
   text-align: center;
-  padding: 0.75em;
+  padding: 0.75em 0.75em;
   color: #ccc;
   background: #333; }
   .browserupgrade a {
@@ -1020,18 +1020,22 @@ body:before {
     color: white; }
 
 .navScroll {
-  transition: 1s linear ease-in-out; }
+  transition: 1s ease-in-out; }
   .navScroll.scrollEnabled {
     transform: translate(0, -100%); }
 
 .mui-pn .mui-pn-inner {
-  display: none;
+  max-height: 0;
+  transition: max-height 0.1s ease-in-out;
+  overflow-y: hidden;
   padding: 0;
   margin: 0;
   width: 100%; }
   @media only screen and (min-width: 31.25em) {
     .mui-pn .mui-pn-inner {
       display: block !important;
+      max-height: initial;
+      overflow-y: initial;
       width: calc( 100% - 3em );
       max-width: 73.75em;
       margin: 0 auto;
@@ -1045,6 +1049,9 @@ body:before {
         background: white; }
         .js .mui-pn .mui-pn-inner a {
           display: none; } }
+  @media only screen and (min-width: 31.25em) {
+    .js .mui-pn .mui-pn-inner .inline-block {
+      display: inline-block; } }
   @media only screen and (min-width: 31.25em) {
     .mui-pn .mui-pn-inner.mui-pn-reveal a {
       display: inline-block; } }
@@ -1069,6 +1076,9 @@ body:before {
   #mui-pn-mobile-menu.mui-pn-active {
     background: white;
     color: black; }
+    #mui-pn-mobile-menu.mui-pn-active + .mui-pn-inner {
+      max-height: 200vh;
+      transition: max-height 0.4s ease-in-out; }
   @media only screen and (min-width: 31.25em) {
     #mui-pn-mobile-menu {
       display: none !important; } }
@@ -1310,6 +1320,9 @@ hr {
 .show {
   opacity: 1 !important; }
 
+.inline-block {
+  display: inline-block; }
+
 .pull-right {
   float: right; }
 
@@ -1369,6 +1382,12 @@ hr {
   border-bottom: none; }
   .nbb:hover {
     border-bottom: none; }
+
+.mui-hide {
+  display: none; }
+
+.mui-show {
+  display: flex; }
 
 /* ==========================================================================
  * Media Queries / Print

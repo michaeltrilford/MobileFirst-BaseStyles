@@ -1,0 +1,49 @@
+.mui-rt
+  table
+    width: 100%
+    border-collapse: collapse
+    background: white
+    @media only screen and (min-width: 53.125em)
+      box-shadow: 0 0 0 1px lighten(black,80%)
+
+  thead
+    display: none
+    @media only screen and (min-width: 53.125em)
+      display: table-header-group
+    tr
+      font-weight: bold
+
+  td, th
+    padding: 1.5em
+    @media only screen and (min-width: 31.25em)
+      padding: 0.75em 1.5em
+
+  td
+    &:before
+      content: attr(data-label)
+      float: left
+      width: 100%
+      font-weight: bold
+    display: block
+    box-shadow: inset 0 -1px 0 0 lighten(black,90%)
+    @media only screen and (min-width: 31.25em)
+      &:before
+        width: auto
+        padding-right: 3em
+      text-align: right
+    @media only screen and (min-width: 53.125em)
+      box-shadow: 0 -1px 0 0 lighten(black,90%)
+      &:before
+        display: none
+      display: table-cell
+      text-align: left
+
+  tr
+    display: block
+    margin-bottom: 1.5em
+    box-shadow: inset 0 0 0 1px lighten(black,90%)
+    @media only screen and (min-width: 53.125em)
+      display: table-row
+      vertical-align: top
+      text-align: left
+      margin-bottom: 0
