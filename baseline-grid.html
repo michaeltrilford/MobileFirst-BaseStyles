@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js baselineGridSetup" lang="">
+<html class="no-js mui-baselineGridSetup" lang="" data-grid-count="30">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -68,14 +68,93 @@
           <article class="wrapper--medium">
 
             <div class="header">
-              <h1 class="large">Baseline Grid</h1>
+              <h1 class="large">Vertical Rythym</h1>
               <hr>
             </div>
 
-            <section>
+            <section style="margin-bottom: 4.5rem;">
+              <h3>Typographic Scale</h3>
               <div class="card">
-                <h3>Coming soon</h3>
+                <p><strong>This scale is the basis of the vertical rythym for this starter kit.</strong></p>
+                <hr>
+                <p class="nmb">6px, 7px, 8px, 9px, 10px, 11px, 12px</p>
+                <p class="mui-light-text">|------------------- +1 -------------------|</p>
+                <p class="nmb">12px, 14px, 16px, 18px</p>
+                <p class="mui-light-text">|----------- +2 -----------|</p>
+                <p class="nmb">18px, 21px, 24px</p>
+                <p class="mui-light-text">|------- +3 -------|</p>
+                <p class="nmb">24px, 36px, 48px, 60px, 72px, 84px, 96px, 108, 120, 132, 144, 156, 168, 180, 192</p>
+                <p class="mui-light-text">|------------------------------------------- +12 --------------------------------------------|</p>
               </div>
+            </section>
+
+            <section>
+              <h3>Base: Font Size</h3>
+              <div class="card">
+                <p><strong>Even though the CSS is structured in a Mobile First approach, the desktop font-size of 16px is used to calulate the rem units for devices below desktop.</strong></p>
+                <hr>
+                <p class="nmb"><strong>Small Devices:</strong></p> 
+                <mark>12px / 16px = 0.75rem</mark>   
+                <p class="nmb"><strong>Medium Devices:</strong></p>
+                <mark>14px / 16px = 0.875rem</mark> 
+                <p class="nmb"><strong>Large Devices:</strong></p>
+                <mark>16px / 16px = 1rem</mark> 
+
+              </div>
+              </div>
+              <pre class="highlight-code">
+                <code class="sass">
+    html {
+      font-size: 0.75rem;
+    }
+    @media only screen and (min-width: 48rem)
+      html {
+        font-size: 0.875rem;
+      }
+    @media only screen and (min-width: 53.125rem)
+      html {
+        font-size: 1rem;
+      }
+                </code>
+              </pre>
+            </section>
+
+            <section>
+              <h3>Base: Line Height</h3>
+              <div class="card">
+                <p class="nmb"><strong>Small Devices:</strong></p> 
+                <mark>1.5 * 12px = 18px</mark>   
+                <p class="nmb"><strong>Medium Devices:</strong></p>
+                <mark>1.5 * 14px = 21px</mark> 
+                <p class="nmb"><strong>Large Devices:</strong></p>
+                <mark>1.5 * 16px = 24px</mark> 
+              </div>
+              <pre class="highlight-code">
+                <code class="sass">
+    html {
+      line-height: 1.5;
+    }
+                </code>
+              </pre>
+            </section>
+
+            <section>
+              <h3>Base: Bottom Margin</h3>
+              <div class="card">
+                <p class="nmb"><strong>Small Devices:</strong></p> 
+                <mark>1.5 * 12px = 18px</mark>   
+                <p class="nmb"><strong>Medium Devices:</strong></p>
+                <mark>1.5 * 14px = 21px</mark> 
+                <p class="nmb"><strong>Large Devices:</strong></p>
+                <mark>1.5 * 16px = 24px</mark> 
+              </div>
+              <pre class="highlight-code">
+                <code class="css">
+    h1, h2, h3, h4, h5, h6, p, header, table, figure, footer, details, section, article, dl, menu, ul, ol, pre, aside, div, hr, dd, fieldset, textarea, keygen, select, input { 
+      margin: 0 0 1.5rem 0; 
+    }
+                </code>
+              </pre>
             </section>
 
           </article>

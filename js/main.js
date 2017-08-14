@@ -9,8 +9,9 @@ u("a.tIcons").on('click', function(e) {
 ------------------------------------------------------------------- */
 u('.mui-baselineGridSetup').append('<div class="mui-baselineGrid"></div>');
 var baselineGrid = u(".mui-baselineGrid");
-var count = 24;
-for (var i=0; i<count; i++) {
+//var gridCount = 36;
+var gridCount = u("html").attr('data-grid-count');
+for (var i=0; i<gridCount; i++) {
    baselineGrid.append("<div>");
 }
 
