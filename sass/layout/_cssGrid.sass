@@ -1,0 +1,124 @@
+// 1. THE GRID SETUP  
+
+//////////////////////////////////////////////////////////////////////////////
+// Default: 12 Column & 1 Row ////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+.gridWrapper
+  display: grid
+  grid-template-columns: repeat(12, 1fr)
+  // 24px Grid Gap By Default
+  grid-gap: 1.5em
+    
+  //////////////////////////////////////////////////////////////////////////////
+  // Default overide: Use a class to overide default.
+  // <div class="gridWrapper colTotal-X">
+    // <div class="box a">1</div>
+    // <div class="box b">2</div>
+  // </div>
+  //////////////////////////////////////////////////////////////////////////////
+  &.colTotal-1
+    grid-template-columns: repeat(1, 1fr)
+  &.colTotal-2
+    grid-template-columns: repeat(2, 1fr)  
+  &.colTotal-3
+    grid-template-columns: repeat(3, 1fr)  
+  &.colTotal-4
+    grid-template-columns: repeat(4, 1fr)  
+  &.colTotal-5
+    grid-template-columns: repeat(5, 1fr)  
+  &.colTotal-6
+    grid-template-columns: repeat(6, 1fr)  
+  &.colTotal-7
+    grid-template-columns: repeat(7, 1fr)  
+  &.colTotal-8
+    grid-template-columns: repeat(8, 1fr)  
+  &.colTotal-9
+    grid-template-columns: repeat(9, 1fr)  
+  &.colTotal-10
+    grid-template-columns: repeat(10, 1fr)  
+  &.colTotal-11
+    grid-template-columns: repeat(11, 1fr)  
+  &.colTotal-12
+    grid-template-columns: repeat(12, 1fr)  
+   
+    
+//////////////////////////////////////////////////////////////////////////////
+// Flow Orientation //////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+.auto-flow-row
+  grid-auto-flow: row
+.auto-flow-column
+  grid-auto-flow: column
+.auto-flow-row,
+.auto-flow-column
+  &.rowTotal-3
+    grid-template-rows: repeat(3, 4.5em)
+ 
+//////////////////////////////////////////////////////////////////////////////
+// Clear Grid Gap & Margin ///////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+.noGap
+  grid-gap: 0
+  > div
+    margin: 0
+    
+//////////////////////////////////////////////////////////////////////////////
+// Example: Mobile First Approach ////////////////////////////////////////////
+// 2 Column & 3 Rows / Note: Max Six Column //////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+.maxCol-6
+  // How Many Columns
+  grid-template-columns: repeat(2, 1fr)  
+  
+  // 3 Column & 2 Rows / Note: Max Six Column //////////////////////////////////
+  @media only screen and (min-width: 31.25em)
+    // How Many Columns
+    grid-template-columns: repeat(3, 1fr)  
+        
+  // 4 Column & 2 Rows / Note: Max Six Column //////////////////////////////////
+  @media only screen and (min-width: 48em)
+    // How Many Columns
+    grid-template-columns: repeat(4, 1fr)  
+
+  // 6 Column & 1 Row //////////////////////////////////////////////////////////
+  @media only screen and (min-width: 73.75em)
+    // How Many Columns
+    grid-template-columns: repeat(6, 1fr)  
+
+
+//////////////////////////////////////////////////////////////////////////////
+// Example: Responsive Layout in One Line of Code ////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+.example3point5 
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr))  
+
+
+        
+//////////////////////////////////////////////////////////////////////////////
+  // 4 Column - 2 Column Span. //////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////////////////
+// There are 4 columns total
+// The First Column needs a specific alignment.
+// The remaining column uses the mixin that is self explanatory. 3 & 4.
+// I really dislike the fact a gutter is included in the count.
+.colSpan-2
+  > div:nth-of-type(1)
+    grid-column: 1 / span 2
+    
+.reverse-colSpan-3
+  > div:nth-of-type(2)
+    grid-column: 2 / 5
+  
+.reverse-colSpan-3-v2
+  > div:nth-of-type(2)
+    grid-column: 2 / span 3
+  
+.funkyGrid
+  > div:nth-of-type(1)
+    grid-column: 1 / 3
+  > div:nth-of-type(2)
+    grid-column: 4
+
+  
+  
+  
