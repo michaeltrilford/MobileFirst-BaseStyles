@@ -9,7 +9,6 @@ u("a.tIcons").on('click', function(e) {
 ------------------------------------------------------------------- */
 u('.mui-baselineGridSetup').append('<div class="mui-baselineGrid"></div>');
 var baselineGrid = u(".mui-baselineGrid");
-//var gridCount = 36;
 var gridCount = u("html").attr('data-grid-count');
 for (var i=0; i<gridCount; i++) {
    baselineGrid.append("<div>");
@@ -45,6 +44,14 @@ u(".menu button:nth-of-type(2)").on('click', function(e) {
   u(this).addClass("active");
   u(this).parent().siblings(".codeSnippet").children("pre").removeClass('mui-show').addClass('mui-hide');
   u(this).parent().siblings(".codeSnippet").children("pre:nth-of-type(2)").removeClass('mui-hide').addClass('mui-show');
+});
+// Third
+u(".menu button:nth-of-type(3)").on('click', function(e) {
+  e.preventDefault();
+  u(this).parent().children().removeClass("active");
+  u(this).addClass("active");
+  u(this).parent().siblings(".codeSnippet").children("pre").removeClass('mui-show').addClass('mui-hide');
+  u(this).parent().siblings(".codeSnippet").children("pre:nth-of-type(3)").removeClass('mui-hide').addClass('mui-show');
 });
 
 

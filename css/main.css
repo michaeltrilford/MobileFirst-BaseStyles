@@ -834,9 +834,6 @@ a {
       .mui-baselineGridSetup > .mui-baselineGrid div:nth-last-of-type(1),
       .mui-baselineGridSetup > body > .mui-baselineGrid div:nth-last-of-type(1) {
         opacity: 0; }
-  .mui-baselineGridSetup:active .mui-baselineGrid,
-  .mui-baselineGridSetup > body:active .mui-baselineGrid {
-    display: none; }
 
 .browserupgrade {
   text-align: center;
@@ -1457,6 +1454,9 @@ hr {
 
 .darkBg {
   background: #191919; }
+
+.mui-outline > * {
+  outline: 1px solid skyblue; }
 
 /* ==========================================================================
  * Media Queries / Print

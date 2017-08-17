@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js mui-baselineGridSetup" lang="" data-grid-count="40">
+<html class="no-js mui-baselineGridSetup" lang="" data-grid-count="55">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -25,7 +25,7 @@
             <li><a href="index.html">michaeltrilford.mui</a></li>
 
             <li class="mui-subHead">Guides</li>
-            <li><a href="baseline-grid-overlay.html" class="mui-mfn-active">Baseline Overlay</a></li>
+            <li><a href="baseline-grid-overlay.html" class="mui-mfn-active">Baseline Grid</a></li>
 
             <li class="mui-subHead">Base</li>
             <li><a href="resets.html">Resets</a></li>
@@ -42,7 +42,7 @@
             <li><a href="columns.html">Columns</a></li>
             <li><a href="css-grid.html">CSS Grid</a></li>
             <li><a href="wrapper.html">Wrappers</a></li>
-            
+
             <li class="mui-subHead">Components</li>
             <li><a href="browser-upgrade.html">Browser Upgrade</a></li>
             <li><a href="navigation.html">Navigation</a></li>
@@ -70,20 +70,61 @@
         <main class="mui-mfn-offset-wrapper">
           <article class="wrapper--medium">
 
-            <div class="header mt-24 mb-72">
-              <h1 class="large">Baseline Overlay</h1>
-              <hr class="nmb">
+            <div class="header mt-24 mb-48">
+              <h1 class="large">Baseline Grid</h1>
+              <hr>
             </div>
 
-            <section class="mb-72">
-              <h3>Baseline Grid</h3>
-              <pre class="highlight-code">
-                <code class="html">
-  &lt;html class="mui-baselineGridSetup" lang=""&gt;
+            <section class="mb-48">
+
+              <div class="highlight-wrapper">
+                <div class="autoColumn nmb menu">
+                  <button class="active">Baseline Grid</button>
+                  <button>Outline</button>
+                </div>
+                <div class="codeSnippet nmb">
+                  <pre class="highlight-code">
+                    <code class="html">
+  &lt;html class="mui-baselineGridSetup" data-grid-count="55"&gt;
     ...
   &lt;/html&gt;
-                </code>
-              </pre>
+                    </code>
+                  </pre>
+                  <pre class="highlight-code">
+                    <code class="html">
+  &lt;section class="mui-outline"&gt;
+    &lt;&excl;-- Children elements will inherit an outline --&gt;
+  &lt;/section&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </section>
+
+            <section class="mui-outline">
+              <div class="headingGroup mui-outline">
+                <h3>Baseline</h3>
+                <h4>Sub title</h4>
+              </div>
+              <hr>
+              <p>The following content is on the baseline grid</p>
+              <ul class="mui-outline">
+                <li>Venenatis Purus</li>
+                <li>Risus Lorem</li>
+              </ul>
+              <hr>
+              <details open>
+                <summary>Cursus Fusce</summary>
+                <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+              </details>
+              <hr>
+              <form action="#" class="mui-outline">
+                <label for="first-name">First name:</label>
+                <input type="text" name="first-name" id="first-name" placeholder="Hank...">
+                <label for="last-name">Last name:</label>
+                <input type="text" id="last-name" name="last-name" placeholder="Jones...">
+                <input type="submit" value="Submit now">
+              </form>
             </section>
 
           </article>
